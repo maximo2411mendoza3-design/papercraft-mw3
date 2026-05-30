@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papercraft MW3 Max</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:         #1c1c1a;
+      --surface:    #242420;
+      --surface2:   #2c2c28;
+      --border:     rgba(255,255,255,0.07);
+      --border2:    rgba(255,255,255,0.13);
+      --wood:       #6b4c2a;
+      --wood-light: #8a6240;
+      --wood-dim:   rgba(107,76,42,0.15);
+      --wood-border:rgba(107,76,42,0.35);
+      --text:       #f2f0ec;
+      --muted:      #8a8880;
+      --tag-bg:     rgba(255,255,255,0.06);
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+
+    header { max-width: 1000px; margin: 0 auto; padding: 2.5rem 2rem 2rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 18px; }
+    .logo { width: 52px; height: 52px; flex-shrink: 0; background: var(--surface2); border: 1px solid var(--wood-border); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+    .logo svg { width: 28px; height: 28px; }
+    header h1 { font-size: 1.55rem; font-weight: 600; letter-spacing: -0.3px; color: var(--text); }
+    header p  { font-size: 0.82rem; color: var(--muted); margin-top: 3px; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 1.5rem 2rem 5rem; }
+    .search-row { display: flex; gap: 10px; margin-bottom: 1.1rem; }
+    .search-row input { flex: 1; background: var(--surface); border: 1px solid var(--border2); border-radius: 8px; color: var(--text); font-size: 0.88rem; padding: 0.6rem 1rem; outline: none; transition: border-color 0.2s; }
+    .search-row input:focus { border-color: var(--wood-light); }
+    .search-row input::placeholder { color: var(--muted); }
+    .count { font-size: 0.76rem; color: var(--muted); margin-bottom: 1.1rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.15s; cursor: pointer; }
+    .card:hover { border-color: var(--wood-border); transform: translateY(-2px); }
+
+    .card-gallery { position: relative; aspect-ratio: 1/1; background: var(--surface2); overflow: hidden; }
+    .card-gallery img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.4s; }
+    .card-gallery img.active { opacity: 1; }
+    .gallery-dots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.35); cursor: pointer; transition: background 0.2s; }
+    .dot.active { background: #fff; }
+
+    .card-body { padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tag { font-size: 0.68rem; padding: 2px 8px; border-radius: 99px; background: var(--tag-bg); border: 1px solid var(--border2); color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
+    .tag.wood { background: var(--wood-dim); border-color: var(--wood-border); color: var(--wood-light); }
+    .card-name { font-size: 0.95rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+    .card-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+    .card-btn { margin-top: auto; display: flex; align-items: center; justify-content: center; gap: 7px; background: var(--wood-dim); border: 1px solid var(--wood-border); border-radius: 8px; color: var(--wood-light); font-size: 0.82rem; font-weight: 500; padding: 0.55rem 1rem; text-decoration: none; transition: background 0.2s; cursor: pointer; }
+    .card-btn:hover { background: rgba(107,76,42,0.28); }
+    .card-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .empty { grid-column: 1/-1; text-align: center; padding: 4rem 0; color: var(--muted); font-size: 0.88rem; }
+    footer { max-width: 1000px; margin: 0 auto; padding: 1.5rem 2rem; border-top: 1px solid var(--border); font-size: 0.73rem; color: var(--muted); text-align: center; }
+
+    /* ── MODAL ── */
+    .modal-backdrop {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-backdrop.open { display: flex; }
+
+    .modal {
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: 16px;
+      max-width: 860px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .modal-imgs {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: var(--surface2);
+      border-radius: 16px 16px 0 0;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .modal-imgs img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.4s; }
+    .modal-imgs img.active { opacity: 1; }
+
+    .modal-arrows {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      pointer-events: none;
+    }
+    .arrow-btn {
+      pointer-events: all;
+      width: 36px; height: 36px;
+      background: rgba(0,0,0,0.55);
+      border: 1px solid var(--border2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: var(--text);
+      transition: background 0.2s;
+    }
+    .arrow-btn:hover { background: rgba(0,0,0,0.8); }
+    .arrow-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    .modal-thumbs {
+      position: absolute;
+      bottom: 10px;
+      left: 50%; transform: translateX(-50%);
+      display: flex; gap: 6px;
+    }
+    .thumb {
+      width: 48px; height: 34px;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border-color 0.2s;
+      flex-shrink: 0;
+    }
+    .thumb.active { border-color: #fff; }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+    .modal-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 12px; }
+    .modal-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .modal-title { font-size: 1.15rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+    .modal-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+    .modal-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 8px;
+    }
+    .meta-item {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.6rem 0.8rem;
+    }
+    .meta-label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
+    .meta-value { font-size: 0.9rem; font-weight: 500; color: var(--text); margin-top: 2px; }
+
+    .modal-footer { display: flex; gap: 10px; align-items: center; }
+    .modal-dl {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--wood-dim);
+      border: 1px solid var(--wood-border);
+      border-radius: 10px;
+      color: var(--wood-light);
+      font-size: 0.88rem; font-weight: 500;
+      padding: 0.7rem 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .modal-dl:hover { background: rgba(107,76,42,0.28); }
+    .modal-dl svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .modal-close {
+      width: 42px; height: 42px;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: var(--muted);
+      transition: color 0.2s;
+      flex-shrink: 0;
+    }
+    .modal-close:hover { color: var(--text); }
+    .modal-close svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 28 28" fill="none">
+      <rect x="3" y="5" width="16" height="20" rx="2" stroke="#8a6240" stroke-width="1.5"/>
+      <line x1="7" y1="10" x2="15" y2="10" stroke="#8a6240" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="7" y1="14" x2="15" y2="14" stroke="#8a6240" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="7" y1="18" x2="12" y2="18" stroke="#8a6240" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="21" cy="21" r="5" fill="#242420" stroke="#8a6240" stroke-width="1.2"/>
+      <line x1="21" y1="19" x2="21" y2="21" stroke="#8a6240" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="21" cy="22.5" r="0.6" fill="#8a6240"/>
+    </svg>
+  </div>
+  <div>
+    <h1>Papercraft MW3 Max</h1>
+    <p>Modelos a escala para armar &mdash; descarga gratuita</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="search-row">
+    <input type="text" id="search" placeholder="Buscar modelo, escala, piloto..." oninput="filter()" />
+  </div>
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<footer>Papercraft MW3 Max &mdash; Todos los recursos son gratuitos</footer>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modal" onclick="closeModal(event)">
+  <div class="modal" id="modal-box">
+    <div class="modal-imgs" id="modal-imgs"></div>
+    <div class="modal-body">
+      <div class="modal-tags" id="modal-tags"></div>
+      <div class="modal-title" id="modal-title"></div>
+      <div class="modal-desc" id="modal-desc"></div>
+      <div class="modal-meta" id="modal-meta"></div>
+      <div class="modal-footer">
+        <a class="modal-dl" id="modal-dl" href="#" download>
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Descargar PDF
+        </a>
+        <div class="modal-close" onclick="closeModal()">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =====================================================
+   MODELOS — edita aquí para agregar más
+   imgs: nombres de archivo dentro de la carpeta imgs/
+===================================================== */
+const models = [
+  {
+    name: "Alpine A526 — Franco Colapinto · Miami GP Livery",
+    desc: "Modelo a escala del Alpine A526 con la librea especial Miami GP 2026 del piloto argentino Franco Colapinto (#43). Incluye soporte de exhibición y panel de tiempos. Imprime en cartulina 200g para mejores resultados.",
+    scale: "1:24",
+    tags: ["F1", "Alpine", "2026", "Miami GP"],
+    meta: { "Piloto": "Franco Colapinto", "Temporada": "F1 2026", "GP": "Miami", "Escala": "1:24", "Páginas": "—", "Dificultad": "Media" },
+    imgs: [
+      "imgs/Image0181.png",
+      "imgs/Image0183.png",
+      "imgs/Image0193.png",
+      "imgs/Image01732.png"
+    ],
+    file: "pdfs/alpine-a526-colapinto-miami.pdf"
+  }
+];
+
+const dlIcon = `<svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`;
+
+function buildCard(m) {
+  const imgs = m.imgs.map((src, i) =>
+    `<img src="${src}" alt="" class="${i===0?'active':''}">`
+  ).join('');
+  const dots = m.imgs.length > 1 ? `<div class="gallery-dots">` +
+    m.imgs.map((_,i) => `<div class="dot ${i===0?'active':''}" data-dot="${i}"></div>`).join('') +
+    `</div>` : '';
+  const tags = m.tags.map(t=>`<span class="tag">${t}</span>`).join('') +
+    `<span class="tag wood">${m.scale}</span>`;
+
+  return `<div class="card" onclick="openModal(${models.indexOf(m)})">
+    <div class="card-gallery">${imgs}${dots}</div>
+    <div class="card-body">
+      <div class="card-tags">${tags}</div>
+      <div class="card-name">${m.name}</div>
+      <div class="card-desc">${m.desc}</div>
+      <div class="card-btn">${dlIcon} Ver y descargar</div>
+    </div>
+  </div>`;
+}
+
+function render(list) {
+  const g = document.getElementById('grid');
+  document.getElementById('count').textContent =
+    list.length + ' modelo' + (list.length!==1?'s':'') + ' disponible' + (list.length!==1?'s':'');
+  if (!list.length) { g.innerHTML = '<div class="empty">Sin resultados.</div>'; return; }
+  g.innerHTML = list.map(m => buildCard(m)).join('');
+
+  document.querySelectorAll('.card-gallery').forEach(gallery => {
+    const imgs = gallery.querySelectorAll('img');
+    const dots = gallery.querySelectorAll('.dot');
+    let cur = 0;
+    const total = imgs.length;
+    function goTo(n) {
+      imgs.forEach(el=>el.classList.remove('active'));
+      dots.forEach(el=>el.classList.remove('active'));
+      if(imgs[n]) imgs[n].classList.add('active');
+      if(dots[n]) dots[n].classList.add('active');
+      cur = n;
+    }
+    let timer;
+    if(total>1) timer = setInterval(()=>goTo((cur+1)%total), 2500);
+    dots.forEach(dot => {
+      dot.addEventListener('click', e => {
+        e.stopPropagation();
+        clearInterval(timer);
+        goTo(parseInt(dot.dataset.dot));
+        timer = setInterval(()=>goTo((cur+1)%total), 2500);
+      });
+    });
+  });
+}
+
+// Modal
+let modalCur = 0;
+let modalImgs = [];
+
+function openModal(idx) {
+  const m = models[idx];
+  modalImgs = m.imgs;
+  modalCur = 0;
+
+  // Images
+  const mi = document.getElementById('modal-imgs');
+  mi.innerHTML =
+    m.imgs.map((src,i) => `<img src="${src}" alt="" class="${i===0?'active':''}">`).join('') +
+    `<div class="modal-arrows">
+      <div class="arrow-btn" onclick="modalGo(modalCur-1)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
+      <div class="arrow-btn" onclick="modalGo(modalCur+1)"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+    </div>` +
+    `<div class="modal-thumbs">` +
+    m.imgs.map((src,i) => `<div class="thumb ${i===0?'active':''}" onclick="modalGo(${i})"><img src="${src}"></div>`).join('') +
+    `</div>`;
+
+  // Info
+  document.getElementById('modal-tags').innerHTML =
+    m.tags.map(t=>`<span class="tag">${t}</span>`).join('') + `<span class="tag wood">${m.scale}</span>`;
+  document.getElementById('modal-title').textContent = m.name;
+  document.getElementById('modal-desc').textContent = m.desc;
+  document.getElementById('modal-dl').href = m.file;
+
+  // Meta
+  document.getElementById('modal-meta').innerHTML = Object.entries(m.meta).map(([k,v])=>
+    `<div class="meta-item"><div class="meta-label">${k}</div><div class="meta-value">${v}</div></div>`
+  ).join('');
+
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function modalGo(n) {
+  const total = modalImgs.length;
+  modalCur = ((n % total) + total) % total;
+  const imgs = document.querySelectorAll('#modal-imgs img');
+  const thumbs = document.querySelectorAll('.thumb');
+  imgs.forEach(el=>el.classList.remove('active'));
+  thumbs.forEach(el=>el.classList.remove('active'));
+  if(imgs[modalCur]) imgs[modalCur].classList.add('active');
+  if(thumbs[modalCur]) thumbs[modalCur].classList.add('active');
+}
+
+function closeModal(e) {
+  if(e && document.getElementById('modal-box').contains(e.target)) return;
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+
+function filter() {
+  const q = document.getElementById('search').value.toLowerCase();
+  render(models.filter(m =>
+    m.name.toLowerCase().includes(q) ||
+    m.desc.toLowerCase().includes(q) ||
+    m.tags.some(t=>t.toLowerCase().includes(q)) ||
+    m.scale.includes(q)
+  ));
+}
+
+render(models);
+</script>
+</body>
+</html>
