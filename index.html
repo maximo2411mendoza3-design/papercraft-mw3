@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papercraft MW3 Max</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:         #111110;
+      --surface:    #242420;
+      --surface2:   #2c2c28;
+      --border:     rgba(255,255,255,0.07);
+      --border2:    rgba(255,255,255,0.13);
+      --wood:       #ffffff;
+      --wood-light: #ffffff;
+      --wood-dim:   rgba(255,255,255,0.08);
+      --wood-border:rgba(255,255,255,0.25);
+      --text:       #f2f0ec;
+      --muted:      #8a8880;
+      --tag-bg:     rgba(255,255,255,0.06);
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+
+    .header-wrap { position: relative; overflow: hidden; border-bottom: 1px solid var(--border); }
+    .header-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 60%;
+      background: linear-gradient(to bottom, transparent, var(--bg));
+      pointer-events: none;
+      z-index: 1;
+    }
+    #poly-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0.45;
+    }
+    header { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; padding: 2rem 2rem; display: flex; align-items: center; gap: 20px; min-height: 110px; }
+    .logo { width: 90px; height: 90px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .logo img { width: 90px; height: 90px; object-fit: contain; }
+    header h1 { font-size: 1.8rem; font-weight: 600; letter-spacing: -0.3px; color: var(--text); }
+    header p  { font-size: 0.88rem; color: var(--muted); margin-top: 4px; }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 1.5rem 2rem 5rem; }
+    .search-row { display: flex; gap: 10px; margin-bottom: 1.1rem; }
+    .search-row input { flex: 1; background: var(--surface); border: 1px solid var(--border2); border-radius: 8px; color: var(--text); font-size: 0.88rem; padding: 0.6rem 1rem; outline: none; transition: border-color 0.2s; }
+    .search-row input:focus { border-color: var(--wood-light); }
+    .search-row input::placeholder { color: var(--muted); }
+    .count { font-size: 0.76rem; color: var(--muted); margin-bottom: 1.1rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s; cursor: pointer; }
+    .card:hover { border-color: #e75480; transform: translateY(-2px); box-shadow: 0 0 0 2px rgba(231,84,128,0.25), 0 8px 24px rgba(231,84,128,0.12); }
+    .card.f2:hover { border-color: #4e9af1; box-shadow: 0 0 0 2px rgba(78,154,241,0.25), 0 8px 24px rgba(78,154,241,0.14); }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(17,17,16,0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .navbar-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      gap: 4px;
+    }
+    .nav-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.9rem 1.1rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.2s;
+      overflow: hidden;
+      outline: none;
+    }
+    .nav-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .nav-btn::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%) scaleX(0.4);
+      width: 70%;
+      height: 28px;
+      background: radial-gradient(ellipse at center bottom, rgba(255,255,255,0.45) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.25s, transform 0.25s;
+      pointer-events: none;
+    }
+    .nav-btn:hover { color: var(--text); }
+    .nav-btn:hover::after { opacity: 1; transform: translateX(-50%) scaleX(1); }
+    .nav-btn.active { color: var(--text); }
+    .nav-btn.active::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 1.1rem; right: 1.1rem;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px 2px 0 0;
+    }
+
+    /* ── SECTIONS ── */
+    .section { display: none; }
+    .section.active { display: block; }
+
+    /* Inicio */
+    .container { max-width: 1000px; margin: 0 auto; padding: 1.5rem 2rem 5rem; }
+
+    /* Galería de imágenes */
+    .gallery-section { max-width: 1000px; margin: 0 auto; padding: 2rem 2rem 5rem; }
+    .section-title { font-size: 1.1rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+    .section-sub   { font-size: 0.82rem; color: var(--muted); margin-bottom: 1.8rem; }
+    .img-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .img-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .img-card:hover { border-color: rgba(255,255,255,0.3); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .img-card-thumb {
+      aspect-ratio: 4/3;
+      background: var(--surface2);
+      overflow: hidden;
+    }
+    .img-card-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+    .img-card:hover .img-card-thumb img { transform: scale(1.04); }
+    .img-card-info { padding: 0.85rem 1rem; }
+    .img-card-name { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+    .img-card-desc { font-size: 0.78rem; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+
+    /* Próximos proyectos */
+    .proximos-section { max-width: 1000px; margin: 0 auto; padding: 2rem 2rem 5rem; }
+    .prox-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+    .prox-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .prox-card:hover { border-color: rgba(255,255,255,0.2); transform: translateY(-2px); }
+    .prox-thumb {
+      aspect-ratio: 4/3;
+      background: var(--surface2);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .prox-blur-img { width: 100%; height: 100%; object-fit: cover; filter: blur(12px) brightness(0.35); position: absolute; inset: 0; }
+    .prox-badge {
+      position: relative; z-index: 1;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 99px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      padding: 5px 14px;
+    }
+    .prox-info { padding: 0.85rem 1rem; }
+    .prox-name { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+    .prox-desc { font-size: 0.78rem; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+    .prox-eta  { font-size: 0.72rem; color: var(--muted); margin-top: 8px; display: flex; align-items: center; gap: 5px; }
+    .prox-eta span { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,200,0,0.6); display: inline-block; }
+
+    /* Accesorios */
+    .accesorios-section { max-width: 1000px; margin: 0 auto; padding: 2rem 2rem 5rem; }
+    .acc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+    .acc-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .acc-card:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+    .acc-thumb {
+      aspect-ratio: 1/1;
+      background: var(--surface2);
+      overflow: hidden;
+    }
+    .acc-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+    .acc-card:hover .acc-thumb img { transform: scale(1.04); }
+    .acc-info { padding: 0.85rem 1rem; }
+    .acc-name { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+    .acc-desc { font-size: 0.78rem; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+    .acc-tag  { display: inline-block; margin-top: 8px; font-size: 0.68rem; padding: 2px 9px; border-radius: 99px; background: var(--tag-bg); border: 1px solid var(--border2); color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
+
+    .search-row { display: flex; gap: 10px; margin-bottom: 1.1rem; }
+    .card-gallery { position: relative; aspect-ratio: 1/1; background: var(--surface2); overflow: hidden; }
+    .card-gallery img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.4s; }
+    .card-gallery img.active { opacity: 1; }
+    .gallery-dots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.35); cursor: pointer; transition: background 0.2s; }
+    .dot.active { background: #fff; }
+
+    .card-body { padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tag { font-size: 0.68rem; padding: 2px 8px; border-radius: 99px; background: var(--tag-bg); border: 1px solid var(--border2); color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
+    .tag.wood { background: var(--wood-dim); border-color: var(--wood-border); color: var(--wood-light); }
+    .card-name { font-size: 0.95rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+    .card-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+    .card-btn { margin-top: auto; display: flex; align-items: center; justify-content: center; gap: 7px; background: var(--wood-dim); border: 1px solid var(--wood-border); border-radius: 8px; color: var(--wood-light); font-size: 0.82rem; font-weight: 500; padding: 0.55rem 1rem; text-decoration: none; transition: background 0.2s, border-color 0.2s, color 0.2s; cursor: pointer; }
+    .card:not(.f2) .card-btn:hover { background: rgba(231,84,128,0.18); border-color: rgba(231,84,128,0.55); color: #f4a0bc; }
+    .card.f2 .card-btn:hover { background: rgba(78,154,241,0.18); border-color: rgba(78,154,241,0.55); color: #90c4f9; }
+    .card-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    .empty { grid-column: 1/-1; text-align: center; padding: 4rem 0; color: var(--muted); font-size: 0.88rem; }
+    footer { max-width: 1000px; margin: 0 auto; padding: 1.5rem 2rem; border-top: 1px solid var(--border); font-size: 0.73rem; color: var(--muted); text-align: center; }
+
+    /* ── REDES SOCIALES ── */
+    .social-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      border-top: 1px solid var(--border);
+    }
+    .social-title {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 500;
+    }
+    .social-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .social-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: 11px;
+      color: var(--text);
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 0.65rem 1.4rem;
+      text-decoration: none;
+      overflow: hidden;
+      transition: border-color 0.25s, color 0.25s, transform 0.15s;
+      cursor: pointer;
+    }
+    .social-btn svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    /* Luz blanca por debajo */
+    .social-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0.5);
+      width: 80%;
+      height: 40px;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.55) 0%, transparent 70%);
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+      pointer-events: none;
+    }
+    .social-btn:hover::after {
+      opacity: 1;
+      transform: translateX(-50%) scaleX(1);
+      bottom: -10px;
+    }
+    .social-btn:hover {
+      transform: translateY(-2px);
+    }
+    /* Instagram */
+    .social-btn.instagram:hover {
+      border-color: rgba(225, 100, 150, 0.6);
+      color: #fff;
+      box-shadow: 0 0 0 1px rgba(225,100,150,0.2), 0 6px 20px rgba(225,100,150,0.15);
+    }
+    .social-btn.instagram::after {
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.6) 0%, transparent 70%);
+    }
+    /* Facebook */
+    .social-btn.facebook:hover {
+      border-color: rgba(100, 150, 230, 0.6);
+      color: #fff;
+      box-shadow: 0 0 0 1px rgba(100,150,230,0.2), 0 6px 20px rgba(100,150,230,0.15);
+    }
+    .social-btn.facebook::after {
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.6) 0%, transparent 70%);
+    }
+
+    /* ── SIDE POLY CANVASES ── */
+    .side-canvas-wrap {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 180px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .side-canvas-wrap.left  { left: 0; }
+    .side-canvas-wrap.right { right: 0; }
+    .side-canvas-wrap canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    /* fade toward center */
+    .side-canvas-wrap.left::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 0%, var(--bg) 100%);
+    }
+    .side-canvas-wrap.right::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to left, transparent 0%, var(--bg) 100%);
+    }
+    /* fade toward bottom */
+    .side-canvas-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 55%, var(--bg) 100%);
+      z-index: 1;
+    }
+
+    /* ── MODAL ── */
+    .modal-backdrop {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-backdrop.open { display: flex; }
+
+    .modal {
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: 16px;
+      max-width: 860px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .modal-imgs {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: var(--surface2);
+      border-radius: 16px 16px 0 0;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .modal-imgs img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.4s; }
+    .modal-imgs img.active { opacity: 1; }
+
+    .modal-arrows {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      pointer-events: none;
+    }
+    .arrow-btn {
+      pointer-events: all;
+      width: 36px; height: 36px;
+      background: rgba(0,0,0,0.55);
+      border: 1px solid var(--border2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: var(--text);
+      transition: background 0.2s;
+    }
+    .arrow-btn:hover { background: rgba(0,0,0,0.8); }
+    .arrow-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    .modal-thumbs {
+      position: absolute;
+      bottom: 10px;
+      left: 50%; transform: translateX(-50%);
+      display: flex; gap: 6px;
+    }
+    .thumb {
+      width: 48px; height: 34px;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border-color 0.2s;
+      flex-shrink: 0;
+    }
+    .thumb.active { border-color: #fff; }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+    .modal-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 12px; }
+    .modal-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .modal-title { font-size: 1.15rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+    .modal-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+    .modal-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 8px;
+    }
+    .meta-item {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.6rem 0.8rem;
+    }
+    .meta-label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
+    .meta-value { font-size: 0.9rem; font-weight: 500; color: var(--text); margin-top: 2px; }
+
+    .modal-footer { display: flex; gap: 10px; align-items: center; }
+    .modal-dl {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--wood-dim);
+      border: 1px solid var(--wood-border);
+      border-radius: 10px;
+      color: var(--wood-light);
+      font-size: 0.88rem; font-weight: 500;
+      padding: 0.7rem 1rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .modal-dl:hover { background: rgba(107,76,42,0.28); }
+    .modal-dl svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .modal-close {
+      width: 42px; height: 42px;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: var(--muted);
+      transition: color 0.2s;
+      flex-shrink: 0;
+    }
+    .modal-close:hover { color: var(--text); }
+    .modal-close svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+</head>
+<body>
+
+<!-- Side poly animations -->
+<div class="side-canvas-wrap left">
+  <canvas id="poly-left"></canvas>
+</div>
+<div class="side-canvas-wrap right">
+  <canvas id="poly-right"></canvas>
+</div>
+
+<div class="header-wrap">
+  <canvas id="poly-canvas"></canvas>
+  <header>
+    <div class="logo">
+      <img src="logo1.png" alt="Papercraft MW3 Max Logo">
+    </div>
+    <div>
+      <h1>Papercraft MW3 Max</h1>
+      <p>Modelos a escala para armar &mdash; descarga gratuita</p>
+    </div>
+  </header>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <button class="nav-btn active" onclick="showSection('inicio')">
+      <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Inicio
+    </button>
+    <button class="nav-btn" onclick="showSection('imagenes')">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      Imágenes
+    </button>
+    <button class="nav-btn" onclick="showSection('proximos')">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Próximos proyectos
+    </button>
+    <button class="nav-btn" onclick="showSection('accesorios')">
+      <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Accesorios
+    </button>
+  </div>
+</nav>
+
+<!-- INICIO -->
+<div id="section-inicio" class="section active">
+  <div class="container">
+    <div class="search-row">
+      <input type="text" id="search" placeholder="Buscar modelo, escala, piloto..." oninput="filter()" />
+    </div>
+    <div class="count" id="count"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</div>
+
+<!-- IMÁGENES -->
+<!--
+  ╔═══════════════════════════════════════════════════════╗
+  ║              SECCIÓN IMÁGENES                         ║
+  ╠═══════════════════════════════════════════════════════╣
+  ║  Para AGREGAR una foto nueva:                         ║
+  ║  1. Subí la imagen a la carpeta imgs/ en GitHub       ║
+  ║  2. Copiá uno de los bloques <div class="img-card">   ║
+  ║     que están abajo y pegalo al final antes del </div>║
+  ║  3. Cambiá el src="imgs/TU-IMAGEN.png"                ║
+  ║  4. Cambiá el título y la descripción                 ║
+  ║                                                       ║
+  ║  Para EDITAR título de la sección:                    ║
+  ║  · Buscá <div class="section-title"> y editá          ║
+  ║  · Buscá <div class="section-sub"> y editá el texto  ║
+  ╚═══════════════════════════════════════════════════════╝
+-->
+<div id="section-imagenes" class="section">
+  <div class="gallery-section">
+    <div class="section-title">Galería</div>
+    <div class="section-sub">Fotos de modelos armados por la comunidad</div>
+    <div class="img-grid">
+
+      <!-- ↓ FOTO 1 — copiá este bloque para agregar más fotos ↓ -->
+      <div class="img-card">
+        <div class="img-card-thumb"><img src="imgs/Image0181.png" alt="Alpine A526"></div>  <!-- ← nombre de imagen en imgs/ -->
+        <div class="img-card-info">
+          <div class="img-card-name">Alpine A526 — Vista frontal</div>  <!-- ← título de la foto -->
+          <div class="img-card-desc">Modelo terminado con acabado en cartulina 200g, escala 1:24</div>  <!-- ← descripción -->
+        </div>
+      </div>
+      <!-- ↑ fin foto 1 ↑ -->
+
+      <!-- ↓ FOTO 2 ↓ -->
+      <div class="img-card">
+        <div class="img-card-thumb"><img src="imgs/Image0183.png" alt="Alpine A526"></div>
+        <div class="img-card-info">
+          <div class="img-card-name">Alpine A526 — Vista lateral</div>
+          <div class="img-card-desc">Detalle del alerón trasero y difusor del A526</div>
+        </div>
+      </div>
+
+      <!-- ↓ FOTO 3 ↓ -->
+      <div class="img-card">
+        <div class="img-card-thumb"><img src="imgs/Image0193.png" alt="Alpine A526"></div>
+        <div class="img-card-info">
+          <div class="img-card-name">Alpine A526 — Librea Miami GP</div>
+          <div class="img-card-desc">Colores especiales de la livrea exclusiva del Gran Premio de Miami 2026</div>
+        </div>
+      </div>
+
+      <!-- ↓ FOTO 4 ↓ -->
+      <div class="img-card">
+        <div class="img-card-thumb"><img src="imgs/Image01732.png" alt="Alpine A526"></div>
+        <div class="img-card-info">
+          <div class="img-card-name">Alpine A526 — Vista superior</div>
+          <div class="img-card-desc">Vista aérea del modelo con soporte de exhibición incluido</div>
+        </div>
+      </div>
+
+      <!-- ↓ FOTO 5 ↓ -->
+      <div class="img-card">
+        <div class="img-card-thumb"><img src="imgs/f2-colapinto-01.png" alt="Dallara F2"></div>
+        <div class="img-card-info">
+          <div class="img-card-name">Dallara F2 2024 — Vista frontal</div>
+          <div class="img-card-desc">Modelo del Dallara F2 con librea MP Motorsport temporada 2024</div>
+        </div>
+      </div>
+
+      <!-- ↓ FOTO 6 ↓ -->
+      <div class="img-card">
+        <div class="img-card-thumb"><img src="imgs/f2-colapinto-02.png" alt="Dallara F2"></div>
+        <div class="img-card-info">
+          <div class="img-card-name">Dallara F2 2024 — Vista lateral</div>
+          <div class="img-card-desc">Detalle del halo y carrocería del monoplaza de Fórmula 2</div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════
+           PARA AGREGAR UNA FOTO NUEVA, COPIÁ ESTO:
+
+      <div class="img-card">
+        <div class="img-card-thumb"><img src="imgs/TU-IMAGEN.png" alt="descripción"></div>
+        <div class="img-card-info">
+          <div class="img-card-name">TÍTULO DE LA FOTO</div>
+          <div class="img-card-desc">DESCRIPCIÓN CORTA</div>
+        </div>
+      </div>
+
+      ═══════════════════════════════════════════════ -->
+
+    </div><!-- fin img-grid -->
+  </div><!-- fin gallery-section -->
+</div><!-- fin section-imagenes -->
+
+<!-- PRÓXIMOS PROYECTOS -->
+<!--
+  ╔═══════════════════════════════════════════════════════╗
+  ║           SECCIÓN PRÓXIMOS PROYECTOS                  ║
+  ╠═══════════════════════════════════════════════════════╣
+  ║  Para AGREGAR un proyecto nuevo:                      ║
+  ║  1. Copiá el bloque <div class="prox-card"> de abajo  ║
+  ║  2. Cambiá el src="imgs/TU-IMAGEN.png" (se ve         ║
+  ║     borrosa automáticamente, es el efecto)            ║
+  ║  3. Cambiá nombre, descripción y estimación           ║
+  ║                                                       ║
+  ║  El badge "Coming Soon" aparece solo, no lo toques    ║
+  ║  La imagen se pone borrosa automáticamente            ║
+  ╚═══════════════════════════════════════════════════════╝
+-->
+<div id="section-proximos" class="section">
+  <div class="proximos-section">
+    <div class="section-title">Próximos proyectos</div>  <!-- ← título de la sección -->
+    <div class="section-sub">Modelos en desarrollo — volvé pronto para descargarlos</div>  <!-- ← subtítulo -->
+    <div class="prox-grid">
+
+      <!-- ↓ PROYECTO 1 — copiá este bloque para agregar más ↓ -->
+      <div class="prox-card">
+        <div class="prox-thumb">
+          <img class="prox-blur-img" src="imgs/Image0181.png" alt="">  <!-- ← imagen de referencia en imgs/ (sale borrosa) -->
+          <span class="prox-badge">Coming Soon</span>  <!-- ← podés cambiar por "Anuncio", "Nuevo", etc. -->
+        </div>
+        <div class="prox-info">
+          <div class="prox-name">Red Bull RB20 — Max Verstappen</div>  <!-- ← nombre del proyecto -->
+          <div class="prox-desc">Modelo a escala del RB20 con librea temporada 2024 del campeón mundial</div>  <!-- ← descripción -->
+          <div class="prox-eta"><span></span>Estimado: próximas semanas</div>  <!-- ← fecha estimada -->
+        </div>
+      </div>
+      <!-- ↑ fin proyecto 1 ↑ -->
+
+      <!-- ↓ PROYECTO 2 ↓ -->
+      <div class="prox-card">
+        <div class="prox-thumb">
+          <img class="prox-blur-img" src="imgs/Image0183.png" alt="">
+          <span class="prox-badge">Coming Soon</span>
+        </div>
+        <div class="prox-info">
+          <div class="prox-name">Ferrari SF-24 — Charles Leclerc</div>
+          <div class="prox-desc">El monoplaza rojo más esperado, con los detalles del GP de Monza 2024</div>
+          <div class="prox-eta"><span></span>Estimado: próximo mes</div>
+        </div>
+      </div>
+
+      <!-- ↓ PROYECTO 3 ↓ -->
+      <div class="prox-card">
+        <div class="prox-thumb">
+          <img class="prox-blur-img" src="imgs/f2-colapinto-01.png" alt="">
+          <span class="prox-badge">Coming Soon</span>
+        </div>
+        <div class="prox-info">
+          <div class="prox-name">Williams FW46 — Colapinto</div>
+          <div class="prox-desc">El debut de Franco en F1 con Williams, librea del GP de Italia 2024</div>
+          <div class="prox-eta"><span></span>Estimado: en desarrollo</div>
+        </div>
+      </div>
+
+      <!-- ↓ PROYECTO 4 ↓ -->
+      <div class="prox-card">
+        <div class="prox-thumb">
+          <img class="prox-blur-img" src="imgs/Image0193.png" alt="">
+          <span class="prox-badge">Coming Soon</span>
+        </div>
+        <div class="prox-info">
+          <div class="prox-name">McLaren MCL38 — Norris</div>
+          <div class="prox-desc">El MCL38 color papaya con el que Lando Norris ganó su primer GP en Miami</div>
+          <div class="prox-eta"><span></span>Estimado: en desarrollo</div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════
+           PARA AGREGAR UN PROYECTO NUEVO, COPIÁ ESTO:
+
+      <div class="prox-card">
+        <div class="prox-thumb">
+          <img class="prox-blur-img" src="imgs/TU-IMAGEN.png" alt="">
+          <span class="prox-badge">Coming Soon</span>
+        </div>
+        <div class="prox-info">
+          <div class="prox-name">NOMBRE DEL PROYECTO</div>
+          <div class="prox-desc">DESCRIPCIÓN CORTA</div>
+          <div class="prox-eta"><span></span>Estimado: FECHA</div>
+        </div>
+      </div>
+
+      ═══════════════════════════════════════════════ -->
+
+    </div>
+  </div>
+</div>
+
+<!-- ACCESORIOS -->
+<!--
+  ╔═══════════════════════════════════════════════════════╗
+  ║              SECCIÓN ACCESORIOS                       ║
+  ╠═══════════════════════════════════════════════════════╣
+  ║  Para AGREGAR un accesorio nuevo:                     ║
+  ║  1. Subí la imagen a imgs/ en GitHub                  ║
+  ║  2. Copiá el bloque <div class="acc-card"> de abajo   ║
+  ║  3. Cambiá src, nombre, descripción y la etiqueta     ║
+  ║                                                       ║
+  ║  La etiqueta <span class="acc-tag"> puede decir:      ║
+  ║  "Imprimible" / "Próximamente" / "Gratis" / lo que    ║
+  ║  quieras                                              ║
+  ╚═══════════════════════════════════════════════════════╝
+-->
+<div id="section-accesorios" class="section">
+  <div class="accesorios-section">
+    <div class="section-title">Accesorios</div>  <!-- ← título de la sección -->
+    <div class="section-sub">Complementos para armar, exhibir y personalizar tus modelos a escala</div>  <!-- ← subtítulo -->
+    <div class="acc-grid">
+
+      <!-- ↓ ACCESORIO 1 — copiá este bloque para agregar más ↓ -->
+      <div class="acc-card">
+        <div class="acc-thumb"><img src="imgs/Image0181.png" alt="Soporte"></div>  <!-- ← imagen en imgs/ -->
+        <div class="acc-info">
+          <div class="acc-name">Soporte de exhibición estándar</div>  <!-- ← nombre del accesorio -->
+          <div class="acc-desc">Base imprimible para exhibir modelos de escala 1:24. Compatible con todos los modelos del catálogo.</div>  <!-- ← descripción -->
+          <span class="acc-tag">Imprimible</span>  <!-- ← etiqueta: "Imprimible" / "Próximamente" / "Gratis" / etc. -->
+        </div>
+      </div>
+      <!-- ↑ fin accesorio 1 ↑ -->
+
+      <!-- ↓ ACCESORIO 2 ↓ -->
+      <div class="acc-card">
+        <div class="acc-thumb"><img src="imgs/Image0183.png" alt="Panel de tiempos"></div>
+        <div class="acc-info">
+          <div class="acc-name">Panel de tiempos de carrera</div>
+          <div class="acc-desc">Pantalla decorativa con los tiempos del GP correspondiente. Se incluye en cada modelo.</div>
+          <span class="acc-tag">Decorativo</span>
+        </div>
+      </div>
+
+      <!-- ↓ ACCESORIO 3 ↓ -->
+      <div class="acc-card">
+        <div class="acc-thumb"><img src="imgs/Image0193.png" alt="Figura piloto"></div>
+        <div class="acc-info">
+          <div class="acc-name">Figura del piloto en escala</div>
+          <div class="acc-desc">Mini figura recortable del piloto con su casco y overol. Escala 1:24 para acompañar el auto.</div>
+          <span class="acc-tag">Próximamente</span>
+        </div>
+      </div>
+
+      <!-- ↓ ACCESORIO 4 ↓ -->
+      <div class="acc-card">
+        <div class="acc-thumb"><img src="imgs/Image01732.png" alt="Diorama"></div>
+        <div class="acc-info">
+          <div class="acc-name">Diorama de boxes</div>
+          <div class="acc-desc">Escenario de pit lane imprimible con mecánicos, neumáticos y equipamiento del equipo.</div>
+          <span class="acc-tag">Próximamente</span>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════
+           PARA AGREGAR UN ACCESORIO NUEVO, COPIÁ ESTO:
+
+      <div class="acc-card">
+        <div class="acc-thumb"><img src="imgs/TU-IMAGEN.png" alt="descripción"></div>
+        <div class="acc-info">
+          <div class="acc-name">NOMBRE DEL ACCESORIO</div>
+          <div class="acc-desc">DESCRIPCIÓN DEL ACCESORIO</div>
+          <span class="acc-tag">Imprimible</span>
+        </div>
+      </div>
+
+      ═══════════════════════════════════════════════ -->
+
+    </div>
+  </div>
+</div>
+
+<div class="social-section">
+  <span class="social-title">Seguinos en redes</span>
+  <div class="social-btns">
+    <a class="social-btn instagram" href="https://www.instagram.com/mw3model/" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+      Instagram
+    </a>
+    <a class="social-btn facebook" href="https://www.facebook.com/profile.php?id=61566660821624" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+      </svg>
+      Facebook
+    </a>
+  </div>
+</div>
+
+<footer>Papercraft MW3 Max &mdash; Todos los recursos son gratuitos</footer>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modal" onclick="closeModal(event)">
+  <div class="modal" id="modal-box">
+    <div class="modal-imgs" id="modal-imgs"></div>
+    <div class="modal-body">
+      <div class="modal-tags" id="modal-tags"></div>
+      <div class="modal-title" id="modal-title"></div>
+      <div class="modal-desc" id="modal-desc"></div>
+      <div class="modal-meta" id="modal-meta"></div>
+      <div class="modal-footer">
+        <a class="modal-dl" id="modal-dl" href="#" download>
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Descargar PDF
+        </a>
+        <div class="modal-close" onclick="closeModal()">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =====================================================
+   ╔══════════════════════════════════════════════════╗
+   ║         SECCIÓN INICIO — MODELOS                 ║
+   ╠══════════════════════════════════════════════════╣
+   ║  Para AGREGAR un modelo nuevo:                   ║
+   ║  1. Copiá el bloque { ... } de abajo             ║
+   ║  2. Pegalo después de la última } antes del ]    ║
+   ║  3. Separalo con una coma del anterior           ║
+   ║                                                  ║
+   ║  Para EDITAR un modelo existente:                ║
+   ║  · name   → título de la card                   ║
+   ║  · desc   → descripción larga                   ║
+   ║  · scale  → escala (ej: "1:24")                 ║
+   ║  · tags   → etiquetas ["F1","Alpine","2026"]     ║
+   ║  · meta   → datos del popup (Piloto, GP, etc.)  ║
+   ║  · imgs   → imágenes en carpeta imgs/           ║
+   ║             podés poner 1, 2, 3 o 4 fotos       ║
+   ║  · file   → ruta al PDF en carpeta pdfs/        ║
+   ║  · cardClass → "" para F1 (hover rosa)          ║
+   ║                "f2" para F2 (hover celeste)      ║
+   ╚══════════════════════════════════════════════════╝
+===================================================== */
+const models = [
+
+  /* ---- MODELO 1 ---- */
+  {
+    name: "Alpine A526 — Franco Colapinto · Miami GP Livery",
+    desc: "Modelo a escala del Alpine A526 con la librea especial Miami GP 2026 del piloto argentino Franco Colapinto (#43). Incluye soporte de exhibición y panel de tiempos. Imprime en cartulina 200g para mejores resultados.",
+    scale: "1:24",
+    tags: ["F1", "Alpine", "2026", "Miami GP"],
+    meta: { "Piloto": "Franco Colapinto", "Temporada": "F1 2026", "GP": "Miami", "Escala": "1:24", "Páginas": "—", "Dificultad": "Media" },
+    imgs: [
+      "imgs/Image0181.png",   /* ← cambiá por el nombre de tu imagen en imgs/ */
+      "imgs/Image0183.png",
+      "imgs/Image0193.png",
+      "imgs/Image01732.png"
+    ],
+    file: "pdfs/alpine-a526-colapinto-miami.pdf",  /* ← ruta al PDF en pdfs/ */
+    cardClass: ""  /* ← dejá "" para hover rosa (F1) */
+  },
+
+  /* ---- MODELO 2 ---- */
+  {
+    name: "Dallara F2 2024 — Franco Colapinto · MP Motorsport",
+    desc: "Modelo a escala del Dallara F2 2024 con la librea de MP Motorsport del piloto argentino Franco Colapinto (#6). Temporada histórica que lo llevó directamente a la Fórmula 1. Imprime en cartulina 200g para mejores resultados.",
+    scale: "1:24",
+    tags: ["F2", "Dallara", "2024", "MP Motorsport"],
+    meta: { "Piloto": "Franco Colapinto", "Temporada": "F2 2024", "Equipo": "MP Motorsport", "Escala": "1:24", "Páginas": "—", "Dificultad": "Media" },
+    imgs: [
+      "imgs/f2-colapinto-01.png",  /* ← cambiá por el nombre de tu imagen en imgs/ */
+      "imgs/f2-colapinto-02.png",
+      "imgs/f2-colapinto-03.png",
+      "imgs/f2-colapinto-04.png"
+    ],
+    file: "pdfs/dallara-f2-colapinto-2024.pdf",  /* ← ruta al PDF en pdfs/ */
+    cardClass: "f2"  /* ← "f2" para hover celeste */
+  }
+
+  /* ---- PARA AGREGAR MÁS MODELOS, COPIÁ ESTO ----
+
+  ,{
+    name: "NOMBRE DEL MODELO",
+    desc: "DESCRIPCIÓN DEL MODELO",
+    scale: "1:24",
+    tags: ["TAG1", "TAG2", "TAG3"],
+    meta: { "Piloto": "NOMBRE", "Temporada": "AÑO", "GP": "NOMBRE GP", "Escala": "1:24", "Páginas": "—", "Dificultad": "Media" },
+    imgs: [
+      "imgs/TU-IMAGEN-1.png",
+      "imgs/TU-IMAGEN-2.png"
+    ],
+    file: "pdfs/TU-ARCHIVO.pdf",
+    cardClass: ""
+  }
+
+  ------------------------------------------------- */
+];
+
+const dlIcon = `<svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`;
+
+function buildCard(m) {
+  const imgs = m.imgs.map((src, i) =>
+    `<img src="${src}" alt="" class="${i===0?'active':''}">`
+  ).join('');
+  const dots = m.imgs.length > 1 ? `<div class="gallery-dots">` +
+    m.imgs.map((_,i) => `<div class="dot ${i===0?'active':''}" data-dot="${i}"></div>`).join('') +
+    `</div>` : '';
+  const tags = m.tags.map(t=>`<span class="tag">${t}</span>`).join('') +
+    `<span class="tag wood">${m.scale}</span>`;
+
+  return `<div class="card ${m.cardClass||''}" onclick="openModal(${models.indexOf(m)})">
+    <div class="card-gallery">${imgs}${dots}</div>
+    <div class="card-body">
+      <div class="card-tags">${tags}</div>
+      <div class="card-name">${m.name}</div>
+      <div class="card-desc">${m.desc}</div>
+      <div class="card-btn">${dlIcon} Ver y descargar</div>
+    </div>
+  </div>`;
+}
+
+function render(list) {
+  const g = document.getElementById('grid');
+  document.getElementById('count').textContent =
+    list.length + ' modelo' + (list.length!==1?'s':'') + ' disponible' + (list.length!==1?'s':'');
+  if (!list.length) { g.innerHTML = '<div class="empty">Sin resultados.</div>'; return; }
+  g.innerHTML = list.map(m => buildCard(m)).join('');
+
+  document.querySelectorAll('.card-gallery').forEach(gallery => {
+    const imgs = gallery.querySelectorAll('img');
+    const dots = gallery.querySelectorAll('.dot');
+    let cur = 0;
+    const total = imgs.length;
+    function goTo(n) {
+      imgs.forEach(el=>el.classList.remove('active'));
+      dots.forEach(el=>el.classList.remove('active'));
+      if(imgs[n]) imgs[n].classList.add('active');
+      if(dots[n]) dots[n].classList.add('active');
+      cur = n;
+    }
+    let timer;
+    if(total>1) timer = setInterval(()=>goTo((cur+1)%total), 2500);
+    dots.forEach(dot => {
+      dot.addEventListener('click', e => {
+        e.stopPropagation();
+        clearInterval(timer);
+        goTo(parseInt(dot.dataset.dot));
+        timer = setInterval(()=>goTo((cur+1)%total), 2500);
+      });
+    });
+  });
+}
+
+// Modal
+let modalCur = 0;
+let modalImgs = [];
+
+function openModal(idx) {
+  const m = models[idx];
+  modalImgs = m.imgs;
+  modalCur = 0;
+
+  // Images
+  const mi = document.getElementById('modal-imgs');
+  mi.innerHTML =
+    m.imgs.map((src,i) => `<img src="${src}" alt="" class="${i===0?'active':''}">`).join('') +
+    `<div class="modal-arrows">
+      <div class="arrow-btn" onclick="modalGo(modalCur-1)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
+      <div class="arrow-btn" onclick="modalGo(modalCur+1)"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+    </div>` +
+    `<div class="modal-thumbs">` +
+    m.imgs.map((src,i) => `<div class="thumb ${i===0?'active':''}" onclick="modalGo(${i})"><img src="${src}"></div>`).join('') +
+    `</div>`;
+
+  // Info
+  document.getElementById('modal-tags').innerHTML =
+    m.tags.map(t=>`<span class="tag">${t}</span>`).join('') + `<span class="tag wood">${m.scale}</span>`;
+  document.getElementById('modal-title').textContent = m.name;
+  document.getElementById('modal-desc').textContent = m.desc;
+  document.getElementById('modal-dl').href = m.file;
+
+  // Meta
+  document.getElementById('modal-meta').innerHTML = Object.entries(m.meta).map(([k,v])=>
+    `<div class="meta-item"><div class="meta-label">${k}</div><div class="meta-value">${v}</div></div>`
+  ).join('');
+
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function modalGo(n) {
+  const total = modalImgs.length;
+  modalCur = ((n % total) + total) % total;
+  const imgs = document.querySelectorAll('#modal-imgs img');
+  const thumbs = document.querySelectorAll('.thumb');
+  imgs.forEach(el=>el.classList.remove('active'));
+  thumbs.forEach(el=>el.classList.remove('active'));
+  if(imgs[modalCur]) imgs[modalCur].classList.add('active');
+  if(thumbs[modalCur]) thumbs[modalCur].classList.add('active');
+}
+
+function closeModal(e) {
+  if(e && document.getElementById('modal-box').contains(e.target)) return;
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+
+function filter() {
+  const q = document.getElementById('search').value.toLowerCase();
+  render(models.filter(m =>
+    m.name.toLowerCase().includes(q) ||
+    m.desc.toLowerCase().includes(q) ||
+    m.tags.some(t=>t.toLowerCase().includes(q)) ||
+    m.scale.includes(q)
+  ));
+}
+
+render(models);
+
+/* ── NAVIGATION ── */
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('section-' + id).classList.add('active');
+  event.currentTarget.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+<script>
+/* ── POLYGON WIREFRAME ANIMATION ── */
+(function() {
+  const canvas = document.getElementById('poly-canvas');
+  const ctx = canvas.getContext('2d');
+  const POINT_COUNT = 55;
+  const CONNECTION_DIST = 160;
+  const SPEED = 0.28;
+
+  let W, H, points;
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+
+  function randBetween(a, b) { return a + Math.random() * (b - a); }
+
+  function initPoints() {
+    points = Array.from({ length: POINT_COUNT }, () => ({
+      x:  randBetween(0, W),
+      y:  randBetween(0, H),
+      vx: randBetween(-SPEED, SPEED),
+      vy: randBetween(-SPEED, SPEED),
+      r:  randBetween(1.2, 2.4)
+    }));
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    /* move */
+    for (const p of points) {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+    }
+
+    /* edges */
+    for (let i = 0; i < points.length; i++) {
+      for (let j = i + 1; j < points.length; j++) {
+        const a = points[i], b = points[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < CONNECTION_DIST) {
+          const alpha = (1 - dist / CONNECTION_DIST) * 0.55;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
+          ctx.lineWidth = 0.7;
+          ctx.stroke();
+        }
+      }
+    }
+
+    /* nodes */
+    for (const p of points) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.6)';
+      ctx.fill();
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  initPoints();
+  draw();
+
+  window.addEventListener('resize', () => { resize(); initPoints(); });
+})();
+</script>
+
+<script>
+/* ── SIDE POLY ANIMATIONS — F1 team colors ── */
+(function() {
+  // Subtle desaturated F1 team colors
+  const F1_COLORS = [
+    '220,50,50',    // Ferrari red
+    '255,135,0',    // McLaren orange
+    '0,130,200',    // Williams / Alpine blue
+    '0,180,120',    // Aston Martin green
+    '180,0,60',     // Haas / Alfa red-wine
+    '220,180,0',    // Renault/Alpine yellow
+    '60,60,200',    // RB blue
+    '255,255,255',  // white (Mercedes/generic)
+    '100,180,255',  // light blue Alpine
+    '180,60,180',   // Visa RB purple
+  ];
+
+  function randomColor() {
+    return F1_COLORS[Math.floor(Math.random() * F1_COLORS.length)];
+  }
+
+  function makeSideAnim(canvasId) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const POINT_COUNT = 32;
+    const CONNECTION_DIST = 130;
+    const SPEED = 0.22;
+    let W, H, points;
+
+    function resize() {
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+
+    function initPoints() {
+      points = Array.from({ length: POINT_COUNT }, () => ({
+        x:  Math.random() * W,
+        y:  Math.random() * H,
+        vx: (Math.random() - 0.5) * SPEED * 2,
+        vy: (Math.random() - 0.5) * SPEED * 2,
+        r:  0.9 + Math.random() * 1.6,
+        color: randomColor(),
+        // each point slowly drifts its color chance
+        colorTimer: Math.random() * 300,
+        colorInterval: 200 + Math.random() * 400
+      }));
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+
+      for (const p of points) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > W) p.vx *= -1;
+        if (p.y < 0 || p.y > H) p.vy *= -1;
+        p.colorTimer++;
+        if (p.colorTimer > p.colorInterval) {
+          p.color = randomColor();
+          p.colorTimer = 0;
+          p.colorInterval = 200 + Math.random() * 400;
+        }
+      }
+
+      /* edges */
+      for (let i = 0; i < points.length; i++) {
+        for (let j = i + 1; j < points.length; j++) {
+          const a = points[i], b = points[j];
+          const dx = a.x - b.x, dy = a.y - b.y;
+          const dist = Math.sqrt(dx*dx + dy*dy);
+          if (dist < CONNECTION_DIST) {
+            const alpha = (1 - dist / CONNECTION_DIST) * 0.3;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            // blend the two endpoint colors
+            ctx.strokeStyle = `rgba(${a.color},${alpha})`;
+            ctx.lineWidth = 0.65;
+            ctx.stroke();
+          }
+        }
+      }
+
+      /* nodes */
+      for (const p of points) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${p.color},0.55)`;
+        ctx.fill();
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    resize();
+    initPoints();
+    draw();
+    window.addEventListener('resize', () => { resize(); initPoints(); });
+  }
+
+  makeSideAnim('poly-left');
+  makeSideAnim('poly-right');
+})();
+</script>
+</body>
+</html>
