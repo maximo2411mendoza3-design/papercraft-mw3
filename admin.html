@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>ADM — Papercraft MW3 Max</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#111110;--surface:#1a1a18;--surface2:#222220;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.15);
+  --text:#f2f0ec;--muted:#888;
+  --accent:#e75480;--accent-dim:rgba(231,84,128,0.12);--accent-border:rgba(231,84,128,0.35);
+  --green:#4ade80;--green-dim:rgba(74,222,128,0.12);--green-border:rgba(74,222,128,0.3);
+  --red:#f87171;--red-dim:rgba(248,113,113,0.12);--red-border:rgba(248,113,113,0.3);
+}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;}
+
+/* LOGIN */
+#login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;}
+.login-box{background:var(--surface);border:1px solid var(--border2);border-radius:16px;padding:2.5rem 2rem;width:100%;max-width:340px;display:flex;flex-direction:column;gap:16px;}
+.login-box h2{font-size:1.2rem;font-weight:600;text-align:center;}
+.login-box p{font-size:0.8rem;color:var(--muted);text-align:center;}
+.login-err{font-size:0.78rem;color:var(--red);text-align:center;display:none;}
+
+/* PANEL */
+#panel{display:none;}
+.topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+.topbar h1{font-size:1rem;font-weight:600;}
+.topbar-btns{display:flex;gap:8px;}
+
+/* TABS */
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);padding:0 2rem;}
+.tab{font-size:0.82rem;padding:0.8rem 1.2rem;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s;}
+.tab.active{color:var(--text);border-bottom-color:var(--accent);}
+
+/* CONTENT */
+.tab-content{display:none;padding:1.5rem 2rem;max-width:900px;}
+.tab-content.active{display:block;}
+
+/* SECTION TITLE */
+.sec-title{font-size:1rem;font-weight:600;margin-bottom:4px;}
+.sec-sub{font-size:0.78rem;color:var(--muted);margin-bottom:1.2rem;}
+
+/* CARDS LIST */
+.item-list{display:flex;flex-direction:column;gap:10px;margin-bottom:1.5rem;}
+.item-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.item-card-header{display:flex;align-items:center;gap:12px;padding:0.9rem 1rem;cursor:pointer;user-select:none;}
+.item-card-header:hover{background:var(--surface2);}
+.item-thumb{width:48px;height:48px;border-radius:8px;object-fit:cover;background:var(--surface2);flex-shrink:0;}
+.item-title{font-size:0.88rem;font-weight:500;flex:1;}
+.item-badge{font-size:0.68rem;padding:2px 8px;border-radius:99px;background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--accent);}
+.item-chevron{color:var(--muted);font-size:0.8rem;transition:transform 0.2s;}
+.item-card.open .item-chevron{transform:rotate(180deg);}
+.item-body{display:none;padding:0 1rem 1rem;border-top:1px solid var(--border);}
+.item-card.open .item-body{display:block;}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:1rem;}
+.form-grid.full{grid-template-columns:1fr;}
+.field{display:flex;flex-direction:column;gap:5px;}
+.field label{font-size:0.73rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.4px;}
+.field input,.field textarea,.field select{background:var(--surface2);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-size:0.85rem;padding:0.55rem 0.8rem;outline:none;transition:border-color 0.2s;font-family:inherit;}
+.field input:focus,.field textarea:focus{border-color:var(--accent);}
+.field textarea{resize:vertical;min-height:70px;}
+.field .hint{font-size:0.7rem;color:var(--muted);}
+
+/* TAGS INPUT */
+.tags-wrap{display:flex;flex-wrap:wrap;gap:6px;background:var(--surface2);border:1px solid var(--border2);border-radius:8px;padding:6px 8px;min-height:38px;align-items:center;cursor:text;}
+.tags-wrap:focus-within{border-color:var(--accent);}
+.tag-pill{font-size:0.72rem;background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--accent);border-radius:99px;padding:2px 8px;display:flex;align-items:center;gap:4px;}
+.tag-pill button{background:none;border:none;color:var(--accent);cursor:pointer;font-size:0.8rem;line-height:1;padding:0;}
+.tags-input{border:none;outline:none;background:transparent;color:var(--text);font-size:0.82rem;flex:1;min-width:80px;}
+
+/* IMGS INPUT */
+.imgs-list{display:flex;flex-direction:column;gap:6px;margin-top:6px;}
+.img-row{display:flex;gap:6px;align-items:center;}
+.img-row input{flex:1;}
+.img-row button{padding:0.4rem 0.7rem;border-radius:6px;border:1px solid var(--red-border);background:var(--red-dim);color:var(--red);cursor:pointer;font-size:0.78rem;}
+.add-img-btn{font-size:0.78rem;color:var(--accent);background:var(--accent-dim);border:1px solid var(--accent-border);border-radius:6px;padding:0.4rem 0.9rem;cursor:pointer;margin-top:4px;display:inline-block;}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:0.82rem;font-weight:500;padding:0.55rem 1.1rem;border-radius:8px;cursor:pointer;border:1px solid;transition:background 0.2s;}
+.btn-green{background:var(--green-dim);border-color:var(--green-border);color:var(--green);}
+.btn-green:hover{background:rgba(74,222,128,0.22);}
+.btn-red{background:var(--red-dim);border-color:var(--red-border);color:var(--red);}
+.btn-red:hover{background:rgba(248,113,113,0.22);}
+.btn-accent{background:var(--accent-dim);border-color:var(--accent-border);color:var(--accent);}
+.btn-accent:hover{background:rgba(231,84,128,0.22);}
+.btn-muted{background:var(--surface2);border-color:var(--border2);color:var(--muted);}
+.btn-muted:hover{color:var(--text);}
+
+.item-actions{display:flex;gap:8px;margin-top:12px;}
+
+/* ADD NEW */
+.add-new-box{border:1px dashed var(--border2);border-radius:12px;padding:1.2rem;text-align:center;cursor:pointer;color:var(--muted);font-size:0.85rem;transition:border-color 0.2s,color 0.2s;}
+.add-new-box:hover{border-color:var(--accent);color:var(--accent);}
+
+/* GENERATE SECTION */
+.generate-box{background:var(--surface);border:1px solid var(--green-border);border-radius:12px;padding:1.5rem;margin-top:2rem;display:flex;flex-direction:column;gap:12px;}
+.generate-box h3{font-size:0.95rem;font-weight:600;color:var(--green);}
+.generate-box p{font-size:0.8rem;color:var(--muted);line-height:1.5;}
+.generate-steps{display:flex;flex-direction:column;gap:6px;}
+.step{font-size:0.78rem;color:var(--muted);display:flex;gap:8px;align-items:flex-start;}
+.step-n{width:18px;height:18px;border-radius:50%;background:var(--green-dim);border:1px solid var(--green-border);color:var(--green);font-size:0.68rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+
+input[type=text],input[type=password],input[type=url]{width:100%;}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-screen">
+  <div class="login-box">
+    <h2>Panel de Administración</h2>
+    <p>Papercraft MW3 Max</p>
+    <div class="field">
+      <label>Usuario</label>
+      <input type="text" id="user-input" placeholder="usuario" onkeydown="if(event.key==='Enter')login()">
+    </div>
+    <div class="field">
+      <label>Contraseña</label>
+      <input type="password" id="pass-input" placeholder="••••••" onkeydown="if(event.key==='Enter')login()">
+    </div>
+    <div class="login-err" id="login-err">Usuario o contraseña incorrectos</div>
+    <button class="btn btn-accent" style="width:100%;justify-content:center;" onclick="login()">Entrar</button>
+  </div>
+</div>
+
+<!-- PANEL -->
+<div id="panel">
+  <div class="topbar">
+    <h1>⚙️ Panel ADM — Papercraft MW3 Max</h1>
+    <div class="topbar-btns">
+      <button class="btn btn-green" onclick="generateAndDownload()">⬇ Generar index.html</button>
+      <a class="btn btn-muted" href="index.html">← Volver al sitio</a>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('modelos')">🏎 Modelos</div>
+    <div class="tab" onclick="switchTab('proximos')">⏳ Próximos</div>
+    <div class="tab" onclick="switchTab('accesorios')">⭐ Accesorios</div>
+  </div>
+
+  <!-- MODELOS -->
+  <div class="tab-content active" id="tab-modelos">
+    <div class="sec-title">Modelos descargables</div>
+    <div class="sec-sub">Estos son los modelos que aparecen en la sección Inicio con botón de descarga.</div>
+    <div class="item-list" id="list-modelos"></div>
+    <div class="add-new-box" onclick="addModelo()">+ Agregar modelo nuevo</div>
+    <div class="generate-box">
+      <h3>✅ ¿Listo para publicar?</h3>
+      <p>Cuando termines de editar, hacé click en <strong>Generar index.html</strong> arriba a la derecha. Eso descarga el archivo actualizado que tenés que subir a GitHub.</p>
+      <div class="generate-steps">
+        <div class="step"><div class="step-n">1</div>Subí las imágenes nuevas a la carpeta <code>imgs/</code> en GitHub</div>
+        <div class="step"><div class="step-n">2</div>Editá lo que necesites acá en el panel</div>
+        <div class="step"><div class="step-n">3</div>Hacé click en "Generar index.html" y descargá el archivo</div>
+        <div class="step"><div class="step-n">4</div>Subí ese archivo a GitHub reemplazando el anterior</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROXIMOS -->
+  <div class="tab-content" id="tab-proximos">
+    <div class="sec-title">Próximos proyectos</div>
+    <div class="sec-sub">Modelos en desarrollo, sin botón de descarga.</div>
+    <div class="item-list" id="list-proximos"></div>
+    <div class="add-new-box" onclick="addProximo()">+ Agregar proyecto próximo</div>
+  </div>
+
+  <!-- ACCESORIOS -->
+  <div class="tab-content" id="tab-accesorios">
+    <div class="sec-title">Accesorios</div>
+    <div class="sec-sub">Items descargables complementarios.</div>
+    <div class="item-list" id="list-accesorios"></div>
+    <div class="add-new-box" onclick="addAccesorio()">+ Agregar accesorio</div>
+  </div>
+</div>
+
+<script>
+/* ── AUTH ── */
+function login() {
+  const u = document.getElementById('user-input').value.trim();
+  const p = document.getElementById('pass-input').value.trim();
+  if (u === 'maxi' && p === '2411M') {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('panel').style.display = 'block';
+    initPanel();
+  } else {
+    const err = document.getElementById('login-err');
+    err.style.display = 'block';
+    setTimeout(() => err.style.display = 'none', 2500);
+  }
+}
+
+/* ── TABS ── */
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active');
+}
+
+/* ── DATA ── */
+let modelos = [
+  {
+    name: "Alpine A526 — Franco Colapinto · Miami GP Livery",
+    desc: "Modelo a escala del Alpine A526 con la librea especial Miami GP 2026 del piloto argentino Franco Colapinto (#43). Incluye soporte de exhibición y panel de tiempos. Imprime en cartulina 200g para mejores resultados.",
+    scale: "1:24",
+    tags: ["F1","Alpine","2026","Miami GP"],
+    meta: {Piloto:"Franco Colapinto",Temporada:"F1 2026",GP:"Miami",Escala:"1:24","Páginas":"—",Dificultad:"Media"},
+    imgs: ["imgs/Image0181.png","imgs/Image0183.png","imgs/Image0193.png","imgs/Image01732.png"],
+    file: "https://www.mediafire.com/file/4wz3wiqnvt0uax1/A526_Col_MW3_maxi.rar/file",
+    cardClass: ""
+  },
+  {
+    name: "Dallara F2 2024 — Franco Colapinto · MP Motorsport",
+    desc: "Modelo a escala del Dallara F2 2024 con la librea de MP Motorsport del piloto argentino Franco Colapinto (#6). Temporada histórica que lo llevó directamente a la Fórmula 1. Imprime en cartulina 200g para mejores resultados.",
+    scale: "1:24",
+    tags: ["F2","Dallara","2024","MP Motorsport"],
+    meta: {Piloto:"Franco Colapinto",Temporada:"F2 2024",Equipo:"MP Motorsport",Escala:"1:24","Páginas":"—",Dificultad:"Media"},
+    imgs: ["imgs/f2-colapinto-01.png","imgs/f2-colapinto-02.png","imgs/f2-colapinto-03.png","imgs/f2-colapinto-04.png"],
+    file: "https://www.mediafire.com/file/g9ugmw4he7gx0ch/F2+COL+MW3.rar/file",
+    cardClass: "f2"
+  }
+];
+
+let proximos = [
+  {name:"Red Bull RB20 — Max Verstappen", desc:"Modelo en desarrollo", img:"imgs/Image0181.png", eta:"2026"},
+  {name:"Ferrari SF-24 — Charles Leclerc", desc:"Modelo en desarrollo", img:"imgs/Image0183.png", eta:"2026"},
+  {name:"Williams FW46 — Colapinto", desc:"El debut de Franco en F1 con Williams, librea del GP de Italia 2024", img:"imgs/f2-colapinto-01.png", eta:"2026"},
+  {name:"McLaren MCL38 — Norris", desc:"Modelo en desarrollo", img:"imgs/Image0193.png", eta:"2026"},
+];
+
+let accesorios = [
+  {name:"Soporte de exhibición estándar", desc:"Base imprimible para exhibir modelos de escala 1:24.", img:"imgs/Image0181.png", tag:"Imprimible", file:"pdfs/soporte-exhibicion.pdf"},
+  {name:"Panel de tiempos de carrera", desc:"Pantalla decorativa con los tiempos del GP correspondiente.", img:"imgs/Image0183.png", tag:"Imprimible", file:"pdfs/panel-tiempos.pdf"},
+  {name:"Figura del piloto en escala", desc:"Mini figura recortable del piloto con su casco y overol.", img:"imgs/Image0193.png", tag:"Imprimible", file:"pdfs/figura-piloto.pdf"},
+  {name:"Diorama de boxes", desc:"Escenario de pit lane imprimible con mecánicos y equipamiento.", img:"imgs/Image01732.png", tag:"Imprimible", file:"pdfs/diorama-boxes.pdf"},
+];
+
+/* ── INIT ── */
+function initPanel() {
+  renderModelos();
+  renderProximos();
+  renderAccesorios();
+}
+
+/* ═══════════════ MODELOS ═══════════════ */
+function renderModelos() {
+  const list = document.getElementById('list-modelos');
+  list.innerHTML = modelos.map((m, i) => `
+    <div class="item-card" id="modelo-card-${i}">
+      <div class="item-card-header" onclick="toggleCard('modelo-card-${i}')">
+        <img class="item-thumb" src="${m.imgs[0]||''}" onerror="this.style.background='#333'">
+        <div class="item-title">${m.name}</div>
+        <span class="item-badge">${m.scale}</span>
+        <span class="item-chevron">▼</span>
+      </div>
+      <div class="item-body">
+        <div class="form-grid">
+          <div class="field" style="grid-column:1/-1">
+            <label>Nombre</label>
+            <input type="text" value="${esc(m.name)}" onchange="modelos[${i}].name=this.value;refreshCardTitle('modelo-card-${i}',this.value)">
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Descripción</label>
+            <textarea onchange="modelos[${i}].desc=this.value">${esc(m.desc)}</textarea>
+          </div>
+          <div class="field">
+            <label>Escala</label>
+            <input type="text" value="${esc(m.scale)}" onchange="modelos[${i}].scale=this.value">
+          </div>
+          <div class="field">
+            <label>Hover color</label>
+            <select onchange="modelos[${i}].cardClass=this.value">
+              <option value="" ${m.cardClass===''?'selected':''}>Rosa (F1)</option>
+              <option value="f2" ${m.cardClass==='f2'?'selected':''}>Celeste (F2)</option>
+            </select>
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Tags (Enter para agregar)</label>
+            ${buildTagsInput('modelo-tags-'+i, m.tags, `modelos[${i}].tags`)}
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Link de descarga (Mediafire u otro)</label>
+            <input type="url" value="${esc(m.file)}" onchange="modelos[${i}].file=this.value" placeholder="https://www.mediafire.com/...">
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Imágenes (nombre del archivo en imgs/)</label>
+            <div class="hint">Ejemplo: imgs/mi-foto.png</div>
+            ${buildImgsInput('modelo-imgs-'+i, m.imgs, i, 'modelos')}
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Meta (datos del popup)</label>
+            <div class="form-grid">
+              ${Object.entries(m.meta).map(([k,v])=>`
+                <div class="field">
+                  <label>${k}</label>
+                  <input type="text" value="${esc(v)}" onchange="modelos[${i}].meta['${k}']=this.value">
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+        <div class="item-actions">
+          <button class="btn btn-red" onclick="deleteItem('modelos',${i})">🗑 Eliminar</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  initTagsInputs();
+}
+
+function addModelo() {
+  modelos.push({
+    name:"Nuevo modelo",desc:"Descripción del modelo.",scale:"1:24",
+    tags:["F1"],
+    meta:{Piloto:"",Temporada:"",GP:"",Escala:"1:24","Páginas":"—",Dificultad:"Media"},
+    imgs:["imgs/tu-imagen.png"],
+    file:"https://www.mediafire.com/...",
+    cardClass:""
+  });
+  renderModelos();
+  // Open last card
+  const cards = document.querySelectorAll('#list-modelos .item-card');
+  if(cards.length) cards[cards.length-1].classList.add('open');
+}
+
+/* ═══════════════ PROXIMOS ═══════════════ */
+function renderProximos() {
+  const list = document.getElementById('list-proximos');
+  list.innerHTML = proximos.map((p, i) => `
+    <div class="item-card" id="prox-card-${i}">
+      <div class="item-card-header" onclick="toggleCard('prox-card-${i}')">
+        <img class="item-thumb" src="${p.img||''}" onerror="this.style.background='#333'">
+        <div class="item-title">${p.name}</div>
+        <span class="item-badge" style="background:rgba(100,181,246,0.12);border-color:rgba(100,181,246,0.3);color:#64b5f6;">Próximo</span>
+        <span class="item-chevron">▼</span>
+      </div>
+      <div class="item-body">
+        <div class="form-grid">
+          <div class="field" style="grid-column:1/-1">
+            <label>Nombre</label>
+            <input type="text" value="${esc(p.name)}" onchange="proximos[${i}].name=this.value;refreshCardTitle('prox-card-${i}',this.value)">
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Descripción</label>
+            <textarea onchange="proximos[${i}].desc=this.value">${esc(p.desc)}</textarea>
+          </div>
+          <div class="field">
+            <label>Imagen (imgs/nombre.png)</label>
+            <input type="text" value="${esc(p.img)}" onchange="proximos[${i}].img=this.value">
+          </div>
+          <div class="field">
+            <label>Fecha estimada</label>
+            <input type="text" value="${esc(p.eta||'')}" placeholder="ej: 2026" onchange="proximos[${i}].eta=this.value">
+          </div>
+        </div>
+        <div class="item-actions">
+          <button class="btn btn-red" onclick="deleteItem('proximos',${i})">🗑 Eliminar</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function addProximo() {
+  proximos.push({name:"Nuevo proyecto",desc:"En desarrollo.",img:"imgs/tu-imagen.png",eta:"2026"});
+  renderProximos();
+  const cards = document.querySelectorAll('#list-proximos .item-card');
+  if(cards.length) cards[cards.length-1].classList.add('open');
+}
+
+/* ═══════════════ ACCESORIOS ═══════════════ */
+function renderAccesorios() {
+  const list = document.getElementById('list-accesorios');
+  list.innerHTML = accesorios.map((a, i) => `
+    <div class="item-card" id="acc-card-${i}">
+      <div class="item-card-header" onclick="toggleCard('acc-card-${i}')">
+        <img class="item-thumb" src="${a.img||''}" onerror="this.style.background='#333'">
+        <div class="item-title">${a.name}</div>
+        <span class="item-badge" style="background:var(--green-dim);border-color:var(--green-border);color:var(--green);">${a.tag}</span>
+        <span class="item-chevron">▼</span>
+      </div>
+      <div class="item-body">
+        <div class="form-grid">
+          <div class="field" style="grid-column:1/-1">
+            <label>Nombre</label>
+            <input type="text" value="${esc(a.name)}" onchange="accesorios[${i}].name=this.value;refreshCardTitle('acc-card-${i}',this.value)">
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Descripción</label>
+            <textarea onchange="accesorios[${i}].desc=this.value">${esc(a.desc)}</textarea>
+          </div>
+          <div class="field">
+            <label>Imagen (imgs/nombre.png)</label>
+            <input type="text" value="${esc(a.img)}" onchange="accesorios[${i}].img=this.value">
+          </div>
+          <div class="field">
+            <label>Etiqueta</label>
+            <input type="text" value="${esc(a.tag)}" placeholder="ej: Imprimible" onchange="accesorios[${i}].tag=this.value">
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Link / archivo de descarga</label>
+            <input type="text" value="${esc(a.file)}" onchange="accesorios[${i}].file=this.value" placeholder="pdfs/archivo.pdf o https://mediafire...">
+          </div>
+        </div>
+        <div class="item-actions">
+          <button class="btn btn-red" onclick="deleteItem('accesorios',${i})">🗑 Eliminar</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function addAccesorio() {
+  accesorios.push({name:"Nuevo accesorio",desc:"Descripción.",img:"imgs/tu-imagen.png",tag:"Imprimible",file:"pdfs/archivo.pdf"});
+  renderAccesorios();
+  const cards = document.querySelectorAll('#list-accesorios .item-card');
+  if(cards.length) cards[cards.length-1].classList.add('open');
+}
+
+/* ── HELPERS ── */
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+
+function toggleCard(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+function refreshCardTitle(cardId, val) {
+  const el = document.querySelector(`#${cardId} .item-title`);
+  if(el) el.textContent = val;
+}
+
+function deleteItem(arr, i) {
+  if(!confirm('¿Eliminar este elemento?')) return;
+  if(arr==='modelos') { modelos.splice(i,1); renderModelos(); }
+  else if(arr==='proximos') { proximos.splice(i,1); renderProximos(); }
+  else if(arr==='accesorios') { accesorios.splice(i,1); renderAccesorios(); }
+}
+
+/* ── TAGS INPUT ── */
+function buildTagsInput(id, tags, ref) {
+  return `<div class="tags-wrap" id="${id}">
+    ${tags.map((t,ti)=>`<span class="tag-pill">${t}<button onclick="removeTag('${id}',${ti},'${ref}')">×</button></span>`).join('')}
+    <input class="tags-input" placeholder="Agregar tag..." onkeydown="addTag(event,'${id}','${ref}')">
+  </div>`;
+}
+
+function initTagsInputs() {}
+
+function addTag(e, id, ref) {
+  if(e.key !== 'Enter') return;
+  const input = document.querySelector(`#${id} .tags-input`);
+  const val = input.value.trim();
+  if(!val) return;
+  const arr = eval(ref);
+  arr.push(val);
+  input.value = '';
+  // re-render tags wrap
+  const wrap = document.getElementById(id);
+  wrap.innerHTML = arr.map((t,ti)=>`<span class="tag-pill">${t}<button onclick="removeTag('${id}',${ti},'${ref}')">×</button></span>`).join('') +
+    `<input class="tags-input" placeholder="Agregar tag..." onkeydown="addTag(event,'${id}','${ref}')">`;
+}
+
+function removeTag(id, ti, ref) {
+  const arr = eval(ref);
+  arr.splice(ti,1);
+  const wrap = document.getElementById(id);
+  wrap.innerHTML = arr.map((t,i)=>`<span class="tag-pill">${t}<button onclick="removeTag('${id}',${i},'${ref}')">×</button></span>`).join('') +
+    `<input class="tags-input" placeholder="Agregar tag..." onkeydown="addTag(event,'${id}','${ref}')">`;
+}
+
+/* ── IMGS INPUT ── */
+function buildImgsInput(id, imgs, idx, arrName) {
+  return `<div class="imgs-list" id="${id}">
+    ${imgs.map((img,ii)=>`<div class="img-row">
+      <input type="text" class="field input" value="${esc(img)}" onchange="${arrName}[${idx}].imgs[${ii}]=this.value" style="flex:1;background:var(--surface2);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-size:0.83rem;padding:0.5rem 0.8rem;outline:none;">
+      <button onclick="removeImg('${id}',${ii},${idx},'${arrName}')">✕</button>
+    </div>`).join('')}
+    <span class="add-img-btn" onclick="addImg('${id}',${idx},'${arrName}')">+ Agregar imagen</span>
+  </div>`;
+}
+
+function addImg(id, idx, arrName) {
+  const arr = (arrName==='modelos') ? modelos : accesorios;
+  arr[idx].imgs = arr[idx].imgs || [];
+  arr[idx].imgs.push('imgs/nueva-imagen.png');
+  if(arrName==='modelos') renderModelos();
+}
+
+function removeImg(id, ii, idx, arrName) {
+  const arr = (arrName==='modelos') ? modelos : accesorios;
+  arr[idx].imgs.splice(ii,1);
+  if(arrName==='modelos') renderModelos();
+}
+
+/* ── GENERATE index.html ── */
+function generateAndDownload() {
+  fetch('index.html')
+    .then(r => r.text())
+    .then(html => {
+      // Replace models array
+      const modelsJson = JSON.stringify(modelos, null, 2);
+      const newModelsBlock = `const models = ${modelsJson};`;
+      // Find and replace the models const block
+      const modStart = html.indexOf('const models = [');
+      const modEnd = html.indexOf('];', modStart) + 2;
+      if(modStart === -1) { alert('No se encontró el bloque de modelos. Asegurate de que el index.html esté en la misma carpeta.'); return; }
+      let newHtml = html.slice(0, modStart) + newModelsBlock + html.slice(modEnd);
+
+      // Replace prox-grid HTML
+      const proxHtml = proximos.map(p => `
+        <div class="prox-card" style="cursor:pointer" onclick="openProxLightbox('${p.img}','${p.name.replace(/'/g,"\\'")}','${p.desc.replace(/'/g,"\\'")}')">
+          <div class="prox-thumb">
+            <img class="prox-blur-img" src="${p.img}" alt="${p.name}">
+            <div class="prox-badge">Coming Soon</div>
+          </div>
+          <div class="prox-info">
+            <div class="prox-name">${p.name}</div>
+            <div class="prox-desc">${p.desc}</div>
+            <div class="prox-eta">Estimado: ${p.eta||'Próximamente'}</div>
+          </div>
+        </div>`).join('\n');
+
+      const proxStart = newHtml.indexOf('<div class="prox-grid">');
+      const proxEnd = newHtml.indexOf('</div>', proxStart + 100);
+      // Find real end of prox-grid
+      let depth = 0, si = proxStart;
+      while(si < newHtml.length) {
+        if(newHtml.slice(si,si+5)==='<div ') depth++;
+        else if(newHtml.slice(si,si+6)==='</div>') { if(depth===1){si+=6;break;} depth--; }
+        si++;
+      }
+      if(proxStart !== -1) newHtml = newHtml.slice(0, proxStart) + `<div class="prox-grid">\n${proxHtml}\n    </div>` + newHtml.slice(si);
+
+      // Replace acc-grid HTML
+      const accHtml = accesorios.map(a => `
+        <div class="acc-card" onclick="openAccLightbox('${a.img}','${a.name.replace(/'/g,"\\'")}','${a.desc.replace(/'/g,"\\'")}','${a.file}')">
+          <div class="acc-thumb"><img src="${a.img}" alt="${a.name}" loading="lazy"></div>
+          <div class="acc-body">
+            <span class="acc-tag">${a.tag}</span>
+            <div class="acc-name">${a.name}</div>
+            <div class="acc-desc">${a.desc}</div>
+          </div>
+        </div>`).join('\n');
+
+      const accStart = newHtml.indexOf('<div class="acc-grid">');
+      if(accStart !== -1) {
+        let d2=0, s2=accStart;
+        while(s2 < newHtml.length){
+          if(newHtml.slice(s2,s2+5)==='<div ') d2++;
+          else if(newHtml.slice(s2,s2+6)==='</div>'){ if(d2===1){s2+=6;break;} d2--; }
+          s2++;
+        }
+        newHtml = newHtml.slice(0,accStart) + `<div class="acc-grid">\n${accHtml}\n    </div>` + newHtml.slice(s2);
+      }
+
+      // Download
+      const blob = new Blob([newHtml], {type:'text/html'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'index.html';
+      a.click();
+      alert('✅ index.html generado. Subilo a GitHub para publicar los cambios.');
+    })
+    .catch(() => alert('Error: abrí el panel desde el mismo servidor donde está el index.html (no como archivo local).'));
+}
+</script>
+</body>
+</html>
