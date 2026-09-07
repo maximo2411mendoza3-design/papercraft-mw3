@@ -1,5 +1,17 @@
 [
   {
+    "name": "Encargá tu modelo personalizado",
+    "desc": "¿Hay un auto de F1 que no está en el catálogo? Te lo armo a pedido, a la escala que prefieras.",
+    "isCommission": true,
+    "imgs": [
+      "imgs/COMISION1.png"
+    ],
+    "commissionInfo": {
+      "title": "Cómo funciona el encargo",
+      "html": "Diseño y armo el modelo a papercraft de cualquier auto de F1 de esta temporada o de anteriores, en la escala que necesites — vos elegís.<br><br><strong>Precio:</strong> USD $14 por modelo.<br><br><strong>Entrega:</strong> de 10 a 15 días hábiles desde que se confirma el pago, ya que cada encargo se diseña de cero.<br><br><strong>Qué incluye:</strong> el PDF completo listo para imprimir y armar, con la misma calidad que el resto del catálogo.<br><br>El encargo se gestiona directo por Ko-fi, a través de la sección de <strong>Commissions</strong> — ahí vas a poder contarme los detalles exactos de lo que necesitás (auto, livery, escala) antes de pagar."
+    }
+  },
+  {
     "name": "Aston Martin F1 2026 — Fernando Alonso",
     "desc": "Modelo a escala del Aston Martin F1 2026 con la decoración estándar de Fernando Alonso. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
     "scale": "1:24",
@@ -24,8 +36,8 @@
       "imgs/AMK4.png",
       "imgs/AMK5.png"
     ],
-    "file": " ",
-    "cardClass": "https://www.mediafire.com/file/2f8nfg0q51yuto2/MW3+AM+2.rar/file",
+    "file": "https://www.mediafire.com/file/1v8zgrjn7co4swk/MW3+AM+14+MOC.rar/file",
+    "cardClass": "",
     "pepakura": {
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",

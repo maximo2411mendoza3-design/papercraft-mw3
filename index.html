@@ -160,6 +160,14 @@
     }
     .card-price-tag.free { color: var(--text); border-color: var(--border2); background: #ffffff; }
     .card-price-cta { font-size: 0.72rem; font-weight: 600; color: var(--muted); white-space: nowrap; }
+    .commission-cta {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #16a34a; color: #ffffff; font-size: 0.85rem; font-weight: 700;
+      padding: 0.6rem 1.6rem; border-radius: 99px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .card:hover .commission-cta { background: #15803d; transform: translateY(-1px); }
 
     /* Modal buy buttons */
     .modal-buy-row { flex: 1; display: flex; gap: 8px; }
@@ -1647,6 +1655,17 @@
         <div class="pepakura-imgs" id="pepakura-imgs"></div>
       </div>
     </div>
+    <div class="pepakura-panel" id="info-panel">
+      <div class="pepakura-panel-inner">
+        <div class="updates-panel-head">
+          <h3 id="info-panel-title"></h3>
+          <div class="updates-panel-close" onclick="closeInfoPanel()" role="button" tabindex="0" aria-label="Cerrar información">
+            <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </div>
+        </div>
+        <div class="updates-panel-intro" id="info-panel-text" style="border-bottom:none;"></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1841,7 +1860,11 @@ function buildCard(m) {
     `<span class="tag wood">${m.scale}</span>` + premiumBadge + cascoBadge + updatesBadge;
 
   let actionBtn;
-  if (m.isPremium) {
+  if (m.isCommission) {
+    actionBtn = `<div class="card-price-row" style="justify-content:center;">
+        <span class="commission-cta">Ver más</span>
+      </div>`;
+  } else if (m.isPremium) {
     const p = getPricing(m);
     actionBtn = `<div class="card-price-row">
         <span class="card-price-tag">${p.originalPrice}</span>
@@ -1857,7 +1880,7 @@ function buildCard(m) {
   return `<div class="card ${m.cardClass||''}" onclick="openModal(${idx})" role="button" tabindex="0" aria-label="Ver detalle de ${m.name}">
     <div class="card-gallery${m.tags.includes('Piloto') ? ' figure-thumb' : ''}">${imgs}${dots}</div>
     <div class="card-body">
-      <div class="card-tags">${tags}</div>
+      <div class="card-tags">${m.isCommission ? '' : tags}</div>
       <div class="card-name">${m.name}</div>
       <div class="card-desc">${m.desc}</div>
       ${actionBtn}
@@ -1941,7 +1964,7 @@ function openModal(idx) {
   const cascoTagModal = m.isCasco ? `<span class="casco-badge">Casco</span>` : '';
   const updatesTagModal = (m.updates && m.updates.length)
     ? `<span class="updates-badge"><svg viewBox="0 0 24 24"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>Actualizado</span>` : '';
-  document.getElementById('modal-tags').innerHTML =
+  document.getElementById('modal-tags').innerHTML = m.isCommission ? '' :
     m.tags.map(t=>`<span class="tag ${t==='Mini'?'mini':''}">${t}</span>`).join('') + `<span class="tag wood">${m.scale}</span>` + premiumTagModal + cascoTagModal + updatesTagModal;
   document.getElementById('modal-title').textContent = m.name;
   document.getElementById('modal-desc').textContent = m.desc;
@@ -1996,7 +2019,13 @@ function openModal(idx) {
   }
 
   const dlBtn = document.getElementById('modal-dl');
-  if (m.file === '#') {
+  closeInfoPanel();
+  if (m.isCommission) {
+    dlBtn.outerHTML = `<div id="modal-dl" style="flex:1;"></div>`;
+    document.getElementById('info-panel-title').textContent = m.commissionInfo?.title || 'Cómo funciona';
+    document.getElementById('info-panel-text').innerHTML = m.commissionInfo?.html || '';
+    setTimeout(openInfoPanel, 180);
+  } else if (m.file === '#') {
     dlBtn.outerHTML = `<a class="modal-dl modal-dl-soon" id="modal-dl" href="#" style="pointer-events:none;">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Próximamente
     </a>`;
@@ -2077,15 +2106,22 @@ function openPepakuraPanel() {
 function closePepakuraPanel() {
   document.getElementById('pepakura-panel').classList.remove('open');
 }
+function openInfoPanel() {
+  document.getElementById('info-panel').classList.add('open');
+}
+function closeInfoPanel() {
+  document.getElementById('info-panel').classList.remove('open');
+}
 
 function closeModal(e) {
-  if(e && (document.getElementById('modal-box').contains(e.target) || document.getElementById('updates-panel').contains(e.target) || document.getElementById('pepakura-panel').contains(e.target))) return;
+  if(e && (document.getElementById('modal-box').contains(e.target) || document.getElementById('updates-panel').contains(e.target) || document.getElementById('pepakura-panel').contains(e.target) || document.getElementById('info-panel').contains(e.target))) return;
   const modalBox = document.getElementById('modal-box');
   modalBox.scrollTop = 0;
   document.getElementById('modal').classList.remove('open');
   document.body.style.overflow = '';
   closeUpdatesPanel();
   closePepakuraPanel();
+  closeInfoPanel();
 }
 
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
