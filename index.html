@@ -2167,7 +2167,12 @@ fetch('models.json')
     // El orden que ves en la web es el mismo orden del archivo models.json.
     // Para que un modelo nuevo aparezca primero en la web, agregalo primero
     // en el archivo (arriba de todo, no al final).
-    models = data;
+    // Excepción fija: la publicación de "Encargá tu modelo personalizado"
+    // (isCommission: true) siempre se muestra primero, sin importar en qué
+    // posición del archivo esté — no hace falta acordarse de ponerla arriba.
+    const fijos = data.filter(m => m.isCommission);
+    const resto = data.filter(m => !m.isCommission);
+    models = [...fijos, ...resto];
     render(models);
   })
   .catch(err => {

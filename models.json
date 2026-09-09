@@ -14,6 +14,45 @@
     }
   },
   {
+    "name": "Williams F1 2026",
+    "desc": "Modelo a escala del Williams F1 2026. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Williams",
+      "2026"
+    ],
+    "meta": {
+      "Auto": "Williams F1 2026",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/W1.png",
+      "imgs/W2.png",
+      "imgs/W3.png",
+      "imgs/W4.png",
+      "imgs/W5.png",
+      "imgs/W6.png"
+    ],
+    "file": "https://ko-fi.com/s/c4ab83eb5c",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 15,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/W7.png",
+        "imgs/W8.png"
+      ]
+    }
+  },
+  {
     "name": "Aston Martin F1 2026 — Fernando Alonso",
     "desc": "Modelo a escala del Aston Martin F1 2026 con la decoración estándar de Fernando Alonso. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
     "scale": "1:24",
