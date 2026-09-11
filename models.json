@@ -14,6 +14,48 @@
     }
   },
   {
+    "name": "Williams FW48 F1 2026 — GP Madrid · Livery Especial \"1981\"",
+    "desc": "Modelo a escala del Williams FW48 con la livery especial revelada para el debut de F1 en el circuito de Madring, en el GP de España 2026. El diseño blanco, verde y azul marino rinde homenaje a la FW07C de 1981, con la que Williams ganó su segundo título de constructores consecutivo — la última vez que la Fórmula 1 corrió en Madrid (en el Jarama). La lucen los autos de Carlos Sainz, corriendo en su ciudad natal por primera vez, y Alex Albon. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Williams",
+      "2026",
+      "GP Madrid",
+      "Sainz"
+    ],
+    "meta": {
+      "Auto": "Williams FW48 F1 2026 (Livery GP Madrid)",
+      "Piloto": "Carlos Sainz / Alex Albon",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/WW1.png",
+      "imgs/WW2.png",
+      "imgs/WW3.png",
+      "imgs/WW4.png",
+      "imgs/WW5.png",
+      "imgs/WW6.png"
+    ],
+    "file": "https://ko-fi.com/s/b247c2c341",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 15,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/WW7.png",
+        "imgs/WW8.png"
+      ]
+    }
+  },
+  {
     "name": "Williams F1 2026",
     "desc": "Modelo a escala del Williams F1 2026. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
     "scale": "1:24",
