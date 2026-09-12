@@ -99,6 +99,14 @@
     .count { font-size: 0.76rem; color: var(--muted); margin-bottom: 1.1rem; }
 
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .load-more-wrap { grid-column: 1 / -1; display: flex; justify-content: center; padding: 1.5rem 0 0.5rem; }
+    .load-more-btn {
+      background: #16a34a; color: #ffffff; font-size: 0.9rem; font-weight: 700;
+      border: none; border-radius: 99px; padding: 0.75rem 2.2rem; cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .load-more-btn:hover { background: #15803d; transform: translateY(-1px); }
 
     .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s; cursor: pointer; }
     .card:hover { border-color: #e75480; transform: translateY(-2px); box-shadow: 0 0 0 2px rgba(231,84,128,0.25), 0 8px 24px rgba(231,84,128,0.12); }
@@ -1457,6 +1465,9 @@
   <div class="container">
     <div class="filter-tabs" role="group" aria-label="Filtrar modelos">
       <div class="filter-tab active" data-filter="all" onclick="setFilter('all')" role="button" tabindex="0">Todos</div>
+      <div class="filter-tab" data-filter="autos" onclick="setFilter('autos')" role="button" tabindex="0">Autos</div>
+      <div class="filter-tab" data-filter="cascos" onclick="setFilter('cascos')" role="button" tabindex="0">Cascos</div>
+      <div class="filter-tab" data-filter="figuras" onclick="setFilter('figuras')" role="button" tabindex="0">Figuras</div>
       <div class="filter-tab premium-tab" data-filter="premium" onclick="setFilter('premium')" role="button" tabindex="0">★ Premium</div>
     </div>
     <div class="search-row">
@@ -1846,11 +1857,12 @@ function positionDeck(deckEl, count, activeIdx) {
 function buildCard(m) {
   const idx = models.indexOf(m);
   if (m.isMini) return buildMiniCard(m, idx);
-  const imgs = m.imgs.map((src, i) =>
+  const previewImgs = m.imgs.slice(0, 2);
+  const imgs = previewImgs.map((src, i) =>
     `<img src="${src}" alt="${m.name} — foto ${i+1}" class="${i===0?'active':''}" loading="lazy" decoding="async">`
   ).join('');
-  const dots = m.imgs.length > 1 ? `<div class="gallery-dots">` +
-    m.imgs.map((_,i) => `<div class="dot ${i===0?'active':''}" data-dot="${i}" role="button" tabindex="0" aria-label="Ver foto ${i+1} de ${m.name}"></div>`).join('') +
+  const dots = previewImgs.length > 1 ? `<div class="gallery-dots">` +
+    previewImgs.map((_,i) => `<div class="dot ${i===0?'active':''}" data-dot="${i}" role="button" tabindex="0" aria-label="Ver foto ${i+1} de ${m.name}"></div>`).join('') +
     `</div>` : '';
 
   const premiumBadge = m.isPremium
@@ -1896,7 +1908,14 @@ function render(list) {
   document.getElementById('count').textContent =
     list.length + ' modelo' + (list.length!==1?'s':'') + ' disponible' + (list.length!==1?'s':'');
   if (!list.length) { g.innerHTML = '<div class="empty">Sin resultados.</div>'; return; }
-  g.innerHTML = list.map(m => buildCard(m)).join('');
+
+  const shown = list.slice(0, visibleCount);
+  const hasMore = list.length > visibleCount;
+
+  g.innerHTML = shown.map(m => buildCard(m)).join('') +
+    (hasMore
+      ? `<div class="load-more-wrap"><button class="load-more-btn" onclick="loadMore()">Ver más</button></div>`
+      : '');
 
   document.querySelectorAll('.card-gallery').forEach(gallery => {
     const imgs = gallery.querySelectorAll('img');
@@ -2091,10 +2110,10 @@ function renderModalPair(modelName) {
     ).join('') +
     (modalPairs.length > 1 ? `
       <div class="modal-arrows">
-        <div class="arrow-btn" onclick="modalPairGo(-1)" role="button" tabindex="0" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
-        <div class="arrow-btn" onclick="modalPairGo(1)" role="button" tabindex="0" aria-label="Más fotos"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
+        <div class="arrow-btn" onclick="event.stopPropagation(); modalPairGo(-1)" role="button" tabindex="0" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
+        <div class="arrow-btn" onclick="event.stopPropagation(); modalPairGo(1)" role="button" tabindex="0" aria-label="Más fotos"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
       </div>
-      <div class="modal-pair-dots">${modalPairs.map((_, i) => `<div class="pair-dot ${i === modalPairIdx ? 'active' : ''}" onclick="modalPairGoTo(${i})" role="button" tabindex="0" aria-label="Ver fotos ${i * 2 + 1}${modalPairs[i].length > 1 ? '-' + (i * 2 + 2) : ''}"></div>`).join('')}</div>
+      <div class="modal-pair-dots">${modalPairs.map((_, i) => `<div class="pair-dot ${i === modalPairIdx ? 'active' : ''}" onclick="event.stopPropagation(); modalPairGoTo(${i})" role="button" tabindex="0" aria-label="Ver fotos ${i * 2 + 1}${modalPairs[i].length > 1 ? '-' + (i * 2 + 2) : ''}"></div>`).join('')}</div>
     ` : '');
 }
 
@@ -2142,11 +2161,27 @@ function closeModal(e) {
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
 
 let currentFilter = 'all';
+const PAGE_SIZE = 16;
+let visibleCount = PAGE_SIZE;
+let lastList = [];
+
+function loadMore() {
+  visibleCount += PAGE_SIZE;
+  render(lastList);
+}
 
 function setFilter(f) {
   currentFilter = f;
   document.querySelectorAll('.filter-tab').forEach(t => t.classList.toggle('active', t.dataset.filter === f));
   filter();
+}
+
+function getCategory(m) {
+  if (m.isCommission) return 'especial';
+  const tags = m.tags || [];
+  if (tags.includes('Casco') || m.isCasco) return 'cascos';
+  if (tags.includes('Piloto')) return 'figuras';
+  return 'autos';
 }
 
 function filter() {
@@ -2158,6 +2193,11 @@ function filter() {
     (m.scale||'').includes(q)
   );
   if (currentFilter === 'premium') list = list.filter(m => m.isPremium);
+  else if (['autos','cascos','figuras'].includes(currentFilter)) {
+    list = list.filter(m => m.isCommission || getCategory(m) === currentFilter);
+  }
+  lastList = list;
+  visibleCount = PAGE_SIZE;
   render(list);
 }
 
@@ -2173,7 +2213,7 @@ fetch('models.json')
     const fijos = data.filter(m => m.isCommission);
     const resto = data.filter(m => !m.isCommission);
     models = [...fijos, ...resto];
-    render(models);
+    filter();
   })
   .catch(err => {
     console.error('No se pudo cargar models.json', err);
