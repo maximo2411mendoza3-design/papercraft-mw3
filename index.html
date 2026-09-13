@@ -1857,7 +1857,8 @@ function positionDeck(deckEl, count, activeIdx) {
 function buildCard(m) {
   const idx = models.indexOf(m);
   if (m.isMini) return buildMiniCard(m, idx);
-  const previewImgs = m.imgs.slice(0, 2);
+  const previewCount = m.singleCover ? 1 : 2;
+  const previewImgs = m.imgs.slice(0, previewCount);
   const imgs = previewImgs.map((src, i) =>
     `<img src="${src}" alt="${m.name} — foto ${i+1}" class="${i===0?'active':''}" loading="lazy" decoding="async">`
   ).join('');
