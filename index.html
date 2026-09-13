@@ -98,7 +98,7 @@
     .search-box input::placeholder { color: var(--muted); }
     .count { font-size: 0.76rem; color: var(--muted); margin-bottom: 1.1rem; }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 16px; }
     .load-more-wrap { grid-column: 1 / -1; display: flex; justify-content: center; padding: 1.5rem 0 0.5rem; }
     .load-more-btn {
       background: #16a34a; color: #ffffff; font-size: 0.9rem; font-weight: 700;
@@ -1174,22 +1174,15 @@
     }
   
 
-    /* ── SIDEBAR IZQUIERDO: NOVEDADES + GATO ── */
+    /* ── GATO: ahora al final de la página, no como sidebar fijo ── */
     .left-sidebar {
-      position: fixed;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 60;
+      position: static;
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 14px;
-      pointer-events: none;
-    }
-    .left-sidebar > * { pointer-events: auto; }
-
-    @media (max-width: 1240px) {
-      .left-sidebar { display: none; }
+      margin: 3rem auto 1rem;
+      width: fit-content;
     }
 
     /* ── BOTÓN "PASTINA" ── */
@@ -1197,9 +1190,8 @@
       width: 170px;
       background: var(--surface);
       border: 1px solid var(--border2);
-      border-left: none;
-      border-radius: 0 14px 14px 0;
-      box-shadow: 4px 0 24px rgba(0,0,0,0.35);
+      border-radius: 99px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
       color: var(--muted);
       font-size: 0.78rem;
       font-weight: 700;
@@ -1207,6 +1199,7 @@
       text-transform: uppercase;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       padding: 0.65rem 0.9rem;
       cursor: pointer;
@@ -1359,54 +1352,6 @@
 <!-- ╔══════════════════════════════════════════════════════╗
      ║  SIDEBAR IZQUIERDO: GATITO                           ║
      ╚══════════════════════════════════════════════════════╝ -->
-<div class="left-sidebar">
-  <!-- Botón para mostrar/ocultar al gatito -->
-  <button class="pastina-toggle" id="pastina-toggle" onclick="togglePastina()">
-    <svg viewBox="0 0 24 24"><path d="M6 12c0-3 2-5 6-5s6 2 6 5-2 6-6 6-6-3-6-6z"/><circle cx="9.5" cy="10.5" r="0.6" fill="currentColor"/><circle cx="14.5" cy="10.5" r="0.6" fill="currentColor"/><polyline points="19 8 22 6 20 4"/></svg>
-    Pastina
-  </button>
-
-  <!-- Gatito minimalista — apretá "Pastina" para mostrarlo, pasá el mouse para acariciarlo -->
-  <div class="gato-wrap" id="gato-wrap">
-  <div class="gato-box" title="¡Acariciame!">
-    <svg viewBox="0 0 110 90" xmlns="http://www.w3.org/2000/svg">
-      <g class="cat-group">
-        <!-- Cola -->
-        <path class="cat-tail" d="M86 70 C 102 66, 104 48, 92 40" fill="none" stroke="#cfcfca" stroke-width="7" stroke-linecap="round"/>
-        <!-- Cuerpo -->
-        <ellipse class="cat-body" cx="55" cy="72" rx="28" ry="14"/>
-        <!-- Patas -->
-        <ellipse class="cat-paw" cx="40" cy="84" rx="6" ry="4"/>
-        <ellipse class="cat-paw" cx="68" cy="84" rx="6" ry="4"/>
-        <!-- Orejas -->
-        <path class="cat-ear cat-ear-l" d="M30 38 L22 18 L44 32 Z"/>
-        <path class="cat-ear cat-ear-r" d="M80 32 L88 14 L66 28 Z"/>
-        <!-- Cabeza -->
-        <circle class="cat-head" cx="55" cy="42" r="24"/>
-        <!-- Sombra interna oreja -->
-        <path class="cat-shade" d="M30 35 L25 22 L40 32 Z"/>
-        <path class="cat-shade" d="M80 30 L85 17 L68 27 Z"/>
-        <!-- Ojos -->
-        <ellipse class="cat-eye-open" cx="46" cy="42" rx="3" ry="4"/>
-        <ellipse class="cat-eye-open" cx="64" cy="42" rx="3" ry="4"/>
-        <path class="cat-eye-closed" d="M42 43 Q46 47 50 43"/>
-        <path class="cat-eye-closed" d="M60 43 Q64 47 68 43"/>
-        <!-- Nariz -->
-        <path class="cat-nose" d="M52 50 L58 50 L55 54 Z"/>
-        <!-- Bigotes -->
-        <line class="cat-whisker" x1="36" y1="48" x2="20" y2="46"/>
-        <line class="cat-whisker" x1="36" y1="52" x2="20" y2="54"/>
-        <line class="cat-whisker" x1="74" y1="48" x2="90" y2="46"/>
-        <line class="cat-whisker" x1="74" y1="52" x2="90" y2="54"/>
-        <!-- Corazoncitos al acariciar -->
-        <path class="cat-heart cat-heart-1" d="M50 16 c0-2 3-2 3 0 c0-2 3-2 3 0 c0 2-3 4-3 4 c0 0-3-2-3-4z"/>
-        <path class="cat-heart cat-heart-2" d="M64 10 c0-2 3-2 3 0 c0-2 3-2 3 0 c0 2-3 4-3 4 c0 0-3-2-3-4z"/>
-        <path class="cat-heart cat-heart-3" d="M40 12 c0-1.6 2.4-1.6 2.4 0 c0-1.6 2.4-1.6 2.4 0 c0 1.6-2.4 3.2-2.4 3.2 c0 0-2.4-1.6-2.4-3.2z"/>
-      </g>
-    </svg>
-  </div>
-  <div class="gato-credit">By Mela</div>
-  </div>
 </div>
 
 <div class="header-wrap">
@@ -1614,6 +1559,55 @@
 </div>
 
 
+
+<div class="left-sidebar">
+  <!-- Botón para mostrar/ocultar al gatito -->
+  <button class="pastina-toggle" id="pastina-toggle" onclick="togglePastina()">
+    <svg viewBox="0 0 24 24"><path d="M6 12c0-3 2-5 6-5s6 2 6 5-2 6-6 6-6-3-6-6z"/><circle cx="9.5" cy="10.5" r="0.6" fill="currentColor"/><circle cx="14.5" cy="10.5" r="0.6" fill="currentColor"/><polyline points="19 8 22 6 20 4"/></svg>
+    Pastina
+  </button>
+
+  <!-- Gatito minimalista — apretá "Pastina" para mostrarlo, pasá el mouse para acariciarlo -->
+  <div class="gato-wrap" id="gato-wrap">
+  <div class="gato-box" title="¡Acariciame!">
+    <svg viewBox="0 0 110 90" xmlns="http://www.w3.org/2000/svg">
+      <g class="cat-group">
+        <!-- Cola -->
+        <path class="cat-tail" d="M86 70 C 102 66, 104 48, 92 40" fill="none" stroke="#cfcfca" stroke-width="7" stroke-linecap="round"/>
+        <!-- Cuerpo -->
+        <ellipse class="cat-body" cx="55" cy="72" rx="28" ry="14"/>
+        <!-- Patas -->
+        <ellipse class="cat-paw" cx="40" cy="84" rx="6" ry="4"/>
+        <ellipse class="cat-paw" cx="68" cy="84" rx="6" ry="4"/>
+        <!-- Orejas -->
+        <path class="cat-ear cat-ear-l" d="M30 38 L22 18 L44 32 Z"/>
+        <path class="cat-ear cat-ear-r" d="M80 32 L88 14 L66 28 Z"/>
+        <!-- Cabeza -->
+        <circle class="cat-head" cx="55" cy="42" r="24"/>
+        <!-- Sombra interna oreja -->
+        <path class="cat-shade" d="M30 35 L25 22 L40 32 Z"/>
+        <path class="cat-shade" d="M80 30 L85 17 L68 27 Z"/>
+        <!-- Ojos -->
+        <ellipse class="cat-eye-open" cx="46" cy="42" rx="3" ry="4"/>
+        <ellipse class="cat-eye-open" cx="64" cy="42" rx="3" ry="4"/>
+        <path class="cat-eye-closed" d="M42 43 Q46 47 50 43"/>
+        <path class="cat-eye-closed" d="M60 43 Q64 47 68 43"/>
+        <!-- Nariz -->
+        <path class="cat-nose" d="M52 50 L58 50 L55 54 Z"/>
+        <!-- Bigotes -->
+        <line class="cat-whisker" x1="36" y1="48" x2="20" y2="46"/>
+        <line class="cat-whisker" x1="36" y1="52" x2="20" y2="54"/>
+        <line class="cat-whisker" x1="74" y1="48" x2="90" y2="46"/>
+        <line class="cat-whisker" x1="74" y1="52" x2="90" y2="54"/>
+        <!-- Corazoncitos al acariciar -->
+        <path class="cat-heart cat-heart-1" d="M50 16 c0-2 3-2 3 0 c0-2 3-2 3 0 c0 2-3 4-3 4 c0 0-3-2-3-4z"/>
+        <path class="cat-heart cat-heart-2" d="M64 10 c0-2 3-2 3 0 c0-2 3-2 3 0 c0 2-3 4-3 4 c0 0-3-2-3-4z"/>
+        <path class="cat-heart cat-heart-3" d="M40 12 c0-1.6 2.4-1.6 2.4 0 c0-1.6 2.4-1.6 2.4 0 c0 1.6-2.4 3.2-2.4 3.2 c0 0-2.4-1.6-2.4-3.2z"/>
+      </g>
+    </svg>
+  </div>
+  <div class="gato-credit">By Mela</div>
+  </div>
 
 <footer>
   Papercraft MW3 Max &mdash; Todos los recursos son gratuitos
