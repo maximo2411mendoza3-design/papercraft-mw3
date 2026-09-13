@@ -14,6 +14,126 @@
     }
   },
   {
+    "name": "TGR Haas F1 2026",
+    "desc": "Modelo a escala del Haas VF-26, el auto de la temporada 2026 del equipo, ahora rebautizado TGR Haas F1 Team tras su alianza con Toyota Gazoo Racing. Mantiene el esquema blanco, negro y rojo característico del equipo, con mayor presencia de marca Toyota. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Haas",
+      "2026"
+    ],
+    "meta": {
+      "Auto": "Haas VF-26",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/HA1.png",
+      "imgs/HA2.png",
+      "imgs/HA3.png",
+      "imgs/HA4.png",
+      "imgs/HA5.png",
+      "imgs/HA6.png"
+    ],
+    "file": "https://ko-fi.com/s/05704bb0d5",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 15,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/HA7.png",
+        "imgs/HA8.png"
+      ]
+    }
+  },
+  {
+    "name": "TGR Haas F1 2026 — GP Japón · Livery Especial \"Godzilla\"",
+    "desc": "Modelo a escala del Haas VF-26 con la livery especial revelada para el GP de Japón en Suzuka, fruto de la primera colaboración del equipo con una marca de entretenimiento en toda su historia: Godzilla, de Toho. El diseño llevó al \"Rey de los Monstruos\" a la Fórmula 1 por primera vez, presentado por Esteban Ocon y Ollie Bearman en un evento en Tokio. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Haas",
+      "2026",
+      "GP Japón"
+    ],
+    "meta": {
+      "Auto": "Haas VF-26 (Livery GP Japón \"Godzilla\")",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/HS1.png",
+      "imgs/HS2.png",
+      "imgs/HS3.png",
+      "imgs/HS4.png",
+      "imgs/HS5.png",
+      "imgs/HS6.png"
+    ],
+    "file": "https://ko-fi.com/s/26a38d4ca9",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 15,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/HS7.png",
+        "imgs/HS8.png"
+      ]
+    }
+  },
+  {
+    "name": "TGR Haas F1 2026 — Pack Normal + GP Japón \"Godzilla\"",
+    "desc": "Pack 2 en 1 con el Haas VF-26 de la temporada 2026: la livery estándar del equipo y la edición especial \"Godzilla\" del GP de Japón, en colaboración con Toho. Armá las dos versiones del mismo auto y compará el diseño clásico del equipo con la decoración única que llevó al Rey de los Monstruos a la Fórmula 1. Incluye detalles de carrocería, alerones y soporte de exhibición para ambos modelos. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Haas",
+      "2026",
+      "GP Japón",
+      "Pack"
+    ],
+    "meta": {
+      "Auto": "Haas VF-26 (Normal + Livery GP Japón)",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/HS6.png",
+      "imgs/HS1.png",
+      "imgs/HA1.png",
+      "imgs/HA2.png",
+      "imgs/HS2.png",
+      "imgs/HS5.png"
+    ],
+    "file": "https://ko-fi.com/s/f0faace7e2",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 15,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft de ambas liveries.",
+      "imgs": [
+        "imgs/HS7.png",
+        "imgs/HA7.png"
+      ]
+    }
+  },
+  {
     "name": "Williams FW48 F1 2026 — GP Madrid · Livery Especial \"1981\"",
     "desc": "Modelo a escala del Williams FW48 con la livery especial revelada para el debut de F1 en el circuito de Madring, en el GP de España 2026. El diseño blanco, verde y azul marino rinde homenaje a la FW07C de 1981, con la que Williams ganó su segundo título de constructores consecutivo — la última vez que la Fórmula 1 corrió en Madrid (en el Jarama). La lucen los autos de Carlos Sainz, corriendo en su ciudad natal por primera vez, y Alex Albon. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
     "scale": "1:24",
