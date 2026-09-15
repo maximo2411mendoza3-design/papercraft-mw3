@@ -14,6 +14,52 @@
     }
   },
   {
+    "name": "Mercedes W17 F1 2026 — Pack Russell + Antonelli (Normal + GP Japón \"Wolf\")",
+    "desc": "Pack con los dos pilotos de Mercedes, George Russell y Kimi Antonelli, cada uno en dos versiones: la livery estándar del W17 de esta temporada y la edición especial revelada para el GP de Japón en Suzuka. La decoración de Japón, bajo el lema \"Unleashing the Beast\", nace de una colaboración inédita del equipo con el diseñador japonés Yohji Yamamoto y su marca Y-3 — la primera vez que Mercedes lleva una colección de moda completa al auto, los monos de carrera y los cascos de ambos pilotos. El diseño incorpora un lobo de mirada amarilla en el alerón delantero, presente en los dos W17. Llega en un momento clave: Mercedes arrancó el 2026 ganando las dos primeras carreras (Russell en Australia, Antonelli en China), liderando ambos campeonatos. Incluye 4 modelos a escala en total, con detalles de carrocería, alerones y soporte de exhibición para cada uno. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Mercedes",
+      "2026",
+      "Russell",
+      "Antonelli",
+      "GP Japón",
+      "Pack"
+    ],
+    "meta": {
+      "Auto": "Mercedes W17 F1 2026 (Normal + Livery GP Japón \"Wolf\")",
+      "Piloto": "George Russell / Kimi Antonelli",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/MF1.png",
+      "imgs/MF2.png",
+      "imgs/MF3.png",
+      "imgs/MF4.png",
+      "imgs/MF5.png",
+      "imgs/MF6.png",
+      "imgs/MF7.png"
+    ],
+    "file": "https://ko-fi.com/s/650a2fbb3e",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 36,
+    "mpFinalPriceLabel": "$9.900 ARS",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/MF8.png",
+        "imgs/MF9.png"
+      ]
+    }
+  },
+  {
     "name": "TGR Haas F1 2026 — Pack Normal + GP Japón \"Godzilla\"",
     "desc": "Pack 2 en 1 con el Haas VF-26 de la temporada 2026: la livery estándar del equipo y la edición especial \"Godzilla\" del GP de Japón, en colaboración con Toho. Armá las dos versiones del mismo auto y compará el diseño clásico del equipo con la decoración única que llevó al Rey de los Monstruos a la Fórmula 1. Incluye detalles de carrocería, alerones y soporte de exhibición para ambos modelos. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
     "scale": "1:24",
@@ -43,7 +89,7 @@
     "isPremium": true,
     "price": 9.99,
     "priceCurrency": "USD",
-    "mpDiscount": 15,
+    "mpDiscount": 36,
     "pepakura": {
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft de ambas liveries.",
@@ -52,7 +98,8 @@
         "imgs/HA7.png"
       ]
     },
-    "singleCover": true
+    "singleCover": true,
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "TGR Haas F1 2026 — GP Japón · Livery Especial \"Godzilla\"",
@@ -84,7 +131,7 @@
     "isPremium": true,
     "price": 9.99,
     "priceCurrency": "USD",
-    "mpDiscount": 15,
+    "mpDiscount": 36,
     "pepakura": {
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
@@ -92,7 +139,8 @@
         "imgs/HS7.png",
         "imgs/HS8.png"
       ]
-    }
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "TGR Haas F1 2026",
@@ -123,7 +171,7 @@
     "isPremium": true,
     "price": 9.99,
     "priceCurrency": "USD",
-    "mpDiscount": 15,
+    "mpDiscount": 36,
     "pepakura": {
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
@@ -131,7 +179,8 @@
         "imgs/HA7.png",
         "imgs/HA8.png"
       ]
-    }
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "Williams FW48 F1 2026 — GP Madrid · Livery Especial \"1981\"",
@@ -165,7 +214,7 @@
     "isPremium": true,
     "price": 9.99,
     "priceCurrency": "USD",
-    "mpDiscount": 15,
+    "mpDiscount": 36,
     "pepakura": {
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
@@ -173,7 +222,8 @@
         "imgs/WW7.png",
         "imgs/WW8.png"
       ]
-    }
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "Williams F1 2026",
@@ -204,7 +254,7 @@
     "isPremium": true,
     "price": 9.99,
     "priceCurrency": "USD",
-    "mpDiscount": 15,
+    "mpDiscount": 36,
     "pepakura": {
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
@@ -212,7 +262,8 @@
         "imgs/W7.png",
         "imgs/W8.png"
       ]
-    }
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "Aston Martin F1 2026 — Fernando Alonso",
@@ -282,7 +333,7 @@
     "isPremium": true,
     "price": 9.5,
     "priceCurrency": "USD",
-    "mpDiscount": 15,
+    "mpDiscount": 33,
     "pepakura": {
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
@@ -290,7 +341,8 @@
         "imgs/PKFR1.png",
         "imgs/PKFR2.png"
       ]
-    }
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "McLaren F1 2025 — Lando Norris · GP Gran Bretaña",
@@ -364,7 +416,7 @@
     "isPremium": true,
     "price": 9.99,
     "priceCurrency": "USD",
-    "mpDiscount": 15,
+    "mpDiscount": 36,
     "pepakura": {
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
@@ -372,7 +424,8 @@
         "imgs/PMZ1.png",
         "imgs/PMZ2.png"
       ]
-    }
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "Figura de Piloto F1 2026 — Sergio \"Checo\" Pérez (Cadillac)",
@@ -590,7 +643,7 @@
     "isPremium": true,
     "price": 14,
     "priceCurrency": "USD",
-    "mpDiscount": 15,
+    "mpDiscount": 54,
     "pepakura": {
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
@@ -598,7 +651,8 @@
         "imgs/pepakura-mclaren-01.png",
         "imgs/pepakura-mclaren-02.png"
       ]
-    }
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "Ferrari F1 2026 — Charles Leclerc",
@@ -674,7 +728,7 @@
     "mpPopupKey": "astonmartin",
     "price": 15,
     "priceCurrency": "USD",
-    "mpDiscount": 15,
+    "mpDiscount": 57,
     "pepakura": {
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
@@ -682,7 +736,8 @@
         "imgs/pepakura-aston-01.png",
         "imgs/pepakura-aston-02.png"
       ]
-    }
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "Visa Cash App F1 2026",
@@ -757,7 +812,7 @@
     "isPremium": true,
     "price": 14,
     "priceCurrency": "USD",
-    "mpDiscount": 15,
+    "mpDiscount": 54,
     "pepakura": {
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
@@ -765,7 +820,8 @@
         "imgs/pepakura-mclaren-silverstone-01.png",
         "imgs/pepakura-mclaren-silverstone-02.png"
       ]
-    }
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "Cadillac F1 2026",
@@ -838,7 +894,7 @@
     "mpPopupKey": "espana",
     "price": 15,
     "priceCurrency": "USD",
-    "mpDiscount": 15,
+    "mpDiscount": 57,
     "pepakura": {
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
@@ -846,7 +902,8 @@
         "imgs/pepakura-vcarb-espana-01.png",
         "imgs/pepakura-vcarb-espana-02.png"
       ]
-    }
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "McLaren MCL40 — Monaco GP 2026",
