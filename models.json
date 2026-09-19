@@ -14,6 +14,44 @@
     }
   },
   {
+    "name": "McLaren F1 2025 — Lando Norris",
+    "desc": "Modelo a escala del McLaren F1 2025 con la decoración estándar de Lando Norris. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "McLaren",
+      "2025",
+      "Norris"
+    ],
+    "meta": {
+      "Auto": "McLaren F1 2025",
+      "Piloto": "Lando Norris",
+      "Temporada": "F1 2025",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/MJ1.png",
+      "imgs/MJ2.png",
+      "imgs/MJ3.png",
+      "imgs/MJ4.png",
+      "imgs/MJ5.png",
+      "imgs/MJ6.png",
+      "imgs/MJ7.png"
+    ],
+    "file": "https://www.mediafire.com/file/fmehtvwzcc4ddd9/MW3_F25_mc_3.rar/file",
+    "cardClass": "",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/MJ8.png",
+        "imgs/MJ9.png"
+      ]
+    }
+  },
+  {
     "name": "Mercedes W17 F1 2026 — Pack Russell + Antonelli (Normal + GP Japón \"Wolf\")",
     "desc": "Pack con los dos pilotos de Mercedes, George Russell y Kimi Antonelli, cada uno en dos versiones: la livery estándar del W17 de esta temporada y la edición especial revelada para el GP de Japón en Suzuka. La decoración de Japón, bajo el lema \"Unleashing the Beast\", nace de una colaboración inédita del equipo con el diseñador japonés Yohji Yamamoto y su marca Y-3 — la primera vez que Mercedes lleva una colección de moda completa al auto, los monos de carrera y los cascos de ambos pilotos. El diseño incorpora un lobo de mirada amarilla en el alerón delantero, presente en los dos W17. Llega en un momento clave: Mercedes arrancó el 2026 ganando las dos primeras carreras (Russell en Australia, Antonelli en China), liderando ambos campeonatos. Incluye 4 modelos a escala en total, con detalles de carrocería, alerones y soporte de exhibición para cada uno. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
     "scale": "1:24",
