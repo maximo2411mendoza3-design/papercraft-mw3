@@ -68,7 +68,7 @@
   },
   {
     "name": "McLaren MCL40 F1 2026 — GP Italia y Madrid · Livery Especial OKX + Number Boards",
-    "desc": "Modelo a escala del McLaren MCL40 con la livery especial que Lando Norris y Oscar Piastri corrieron en el GP de Italia, en Monza, y repiten en el GP de España, en Madrid. La decoración celebra la alianza del equipo con OKX, su socio principal desde 2022: mantiene el papaya y suma detalles en blanco y negro, con el logo de OKX en el costado y en el alerón trasero y una franja negra más ancha en los pontones. Se suman los dos podium number boards de las victorias consecutivas de Lando Norris: el GP de Hungría, su primer triunfo de la temporada, y el GP de Países Bajos en Zandvoort, la última carrera de la historia en ese circuito. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
+    "desc": "Modelo a escala del McLaren MCL40 con la livery especial que Lando Norris y Oscar Piastri corrieron en el GP de Italia, en Monza, y volvieron a llevar una semana después en el GP de España, en Madrid. La decoración celebra la alianza del equipo con OKX, su socio principal desde 2022: mantiene el papaya y suma detalles en blanco y negro, con el logo de OKX en el costado y en el alerón trasero y una franja negra más ancha en los pontones. Se suman los dos podium number boards de las victorias consecutivas de Lando Norris: el GP de Hungría, su primer triunfo de la temporada, y el GP de Países Bajos en Zandvoort, la última carrera de la historia en ese circuito. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -153,6 +153,44 @@
       ]
     },
     "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
+    "name": "Figura de Piloto F1 2026 — Charles Leclerc (Ferrari)",
+    "desc": "Figura de piloto de F1 a escala 1:10 en papercraft, con el diseño de Charles Leclerc (Ferrari F1 2026). Incluye detalles del mono de carrera, casco y pose de piloto, lista para armar y exhibir. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
+    "scale": "1:10",
+    "tags": [
+      "Piloto",
+      "Ferrari",
+      "2026",
+      "Leclerc"
+    ],
+    "meta": {
+      "Piloto": "Charles Leclerc",
+      "Equipo": "Ferrari",
+      "Temporada": "F1 2026",
+      "Escala": "1:10",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/LC1.png",
+      "imgs/LC2.png",
+      "imgs/LC3.png",
+      "imgs/LC4.png"
+    ],
+    "file": "https://ko-fi.com/s/06962ac637",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 5.9,
+    "priceCurrency": "USD",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/LC5.png",
+        "imgs/LC6.png"
+      ]
+    }
   },
   {
     "name": "McLaren F1 2025 — Lando Norris",
