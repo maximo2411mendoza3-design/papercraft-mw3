@@ -788,6 +788,48 @@
     "mpBadgeLabel": "Precio con Mercado Pago"
   },
   {
+    "name": "Pack Casco Max Verstappen — GP Austria + GP Miami",
+    "desc": "Pack con dos réplicas de casco de F1 en papercraft de Max Verstappen: el diseño especial del GP de Austria y el diseño especial del GP de Miami. Modelos detallados, con visera y decoración lista para armar en casa. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.",
+    "scale": "1:1",
+    "tags": [
+      "Casco",
+      "Verstappen",
+      "Pack"
+    ],
+    "meta": {
+      "Tipo": "Pack Casco F1 (2 unidades)",
+      "Piloto": "Max Verstappen",
+      "Escala": "Réplica",
+      "Formato": "PDF A4",
+      "Dificultad": "Media",
+      "Precio": "USD 6.99 · MP $6.000 ARS"
+    },
+    "imgs": [
+      "imgs/CVS1.png",
+      "imgs/CVS3.png",
+      "imgs/CVS2.png",
+      "imgs/CVS4.png"
+    ],
+    "file": "https://ko-fi.com/s/87e815d379",
+    "cardClass": "premium",
+    "isPremium": true,
+    "isCasco": true,
+    "price": 6.99,
+    "priceCurrency": "USD",
+    "mpFinalPriceLabel": "$6.000 ARS",
+    "mpBadgeLabel": "Precio con Mercado Pago",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las imágenes muestran cómo quedan distribuidas las piezas del papercraft de los dos cascos.",
+      "imgs": [
+        "imgs/Captura de pantalla 2026-09-24 105651.png",
+        "imgs/Captura de pantalla 2026-09-24 105700.png",
+        "imgs/Captura de pantalla 2026-09-24 105717.png",
+        "imgs/Captura de pantalla 2026-09-24 105724.png"
+      ]
+    }
+  },
+  {
     "name": "Red Bull F1 2026 — Max Verstappen",
     "desc": "Modelo a escala del Red Bull F1 2026 con la decoración de Max Verstappen. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
     "scale": "1:24",
