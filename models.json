@@ -14,6 +14,48 @@
     }
   },
   {
+    "name": "Pack Casco Max Verstappen — GP Austria + GP Miami",
+    "desc": "Pack con dos réplicas de casco de F1 en papercraft de Max Verstappen: el diseño especial del GP de Austria y el diseño especial del GP de Miami. Modelos detallados, con visera y decoración lista para armar en casa. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.",
+    "scale": "1:1",
+    "tags": [
+      "Casco",
+      "Verstappen",
+      "Pack"
+    ],
+    "meta": {
+      "Tipo": "Pack Casco F1 (2 unidades)",
+      "Piloto": "Max Verstappen",
+      "Escala": "Réplica",
+      "Formato": "PDF A4",
+      "Dificultad": "Media",
+      "Precio": "USD 6.99 · MP $6.000 ARS"
+    },
+    "imgs": [
+      "imgs/CVS1.png",
+      "imgs/CVS3.png",
+      "imgs/CVS2.png",
+      "imgs/CVS4.png"
+    ],
+    "file": "https://ko-fi.com/s/87e815d379",
+    "cardClass": "premium",
+    "isPremium": true,
+    "isCasco": true,
+    "price": 6.99,
+    "priceCurrency": "USD",
+    "mpFinalPriceLabel": "$6.000 ARS",
+    "mpBadgeLabel": "Precio con Mercado Pago",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las imágenes muestran cómo quedan distribuidas las piezas del papercraft de los dos cascos.",
+      "imgs": [
+        "imgs/Captura de pantalla 2026-09-24 105651.png",
+        "imgs/Captura de pantalla 2026-09-24 105700.png",
+        "imgs/Captura de pantalla 2026-09-24 105717.png",
+        "imgs/Captura de pantalla 2026-09-24 105724.png"
+      ]
+    }
+  },
+  {
     "name": "McLaren MCL40 F1 2026 — Pack Livery Base + Livery Especial OKX + Number Boards",
     "desc": "Pack 2 en 1 con el McLaren MCL40 de la temporada 2026: la livery estándar del equipo y la edición especial de OKX que corrió en el GP de Italia y en el GP de Madrid. Armá las dos versiones del mismo auto y compará el papaya clásico con los detalles en blanco y negro de la edición especial. Incluye además los dos podium number boards de las victorias consecutivas de Lando Norris: el GP de Hungría, su primer triunfo de la temporada, y el GP de Países Bajos en Zandvoort, la última carrera de la historia en ese circuito. Detalles de carrocería, alerones y soporte de exhibición para ambos modelos. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
     "scale": "1:24",
@@ -786,48 +828,6 @@
     "priceCurrency": "USD",
     "mpFinalPriceLabel": "$7.999 ARS",
     "mpBadgeLabel": "Precio con Mercado Pago"
-  },
-  {
-    "name": "Pack Casco Max Verstappen — GP Austria + GP Miami",
-    "desc": "Pack con dos réplicas de casco de F1 en papercraft de Max Verstappen: el diseño especial del GP de Austria y el diseño especial del GP de Miami. Modelos detallados, con visera y decoración lista para armar en casa. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.",
-    "scale": "1:1",
-    "tags": [
-      "Casco",
-      "Verstappen",
-      "Pack"
-    ],
-    "meta": {
-      "Tipo": "Pack Casco F1 (2 unidades)",
-      "Piloto": "Max Verstappen",
-      "Escala": "Réplica",
-      "Formato": "PDF A4",
-      "Dificultad": "Media",
-      "Precio": "USD 6.99 · MP $6.000 ARS"
-    },
-    "imgs": [
-      "imgs/CVS1.png",
-      "imgs/CVS3.png",
-      "imgs/CVS2.png",
-      "imgs/CVS4.png"
-    ],
-    "file": "https://ko-fi.com/s/87e815d379",
-    "cardClass": "premium",
-    "isPremium": true,
-    "isCasco": true,
-    "price": 6.99,
-    "priceCurrency": "USD",
-    "mpFinalPriceLabel": "$6.000 ARS",
-    "mpBadgeLabel": "Precio con Mercado Pago",
-    "pepakura": {
-      "title": "Vista previa en Pepakura",
-      "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las imágenes muestran cómo quedan distribuidas las piezas del papercraft de los dos cascos.",
-      "imgs": [
-        "imgs/Captura de pantalla 2026-09-24 105651.png",
-        "imgs/Captura de pantalla 2026-09-24 105700.png",
-        "imgs/Captura de pantalla 2026-09-24 105717.png",
-        "imgs/Captura de pantalla 2026-09-24 105724.png"
-      ]
-    }
   },
   {
     "name": "Red Bull F1 2026 — Max Verstappen",
