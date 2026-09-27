@@ -1982,7 +1982,7 @@ function openModal(idx) {
   document.getElementById('modal-tags').innerHTML = m.isCommission ? '' :
     m.tags.map(t=>`<span class="tag ${t==='Mini'?'mini':''}">${t}</span>`).join('') + `<span class="tag wood">${m.scale}</span>` + premiumTagModal + cascoTagModal + updatesTagModal;
   document.getElementById('modal-title').textContent = m.name;
-  document.getElementById('modal-desc').textContent = m.desc;
+  document.getElementById('modal-desc').innerHTML = m.desc;
 
   // Actualizaciones de piezas — se abren solas, sin necesidad de tocar ningún botón
   const toggleWrap = document.getElementById('modal-updates-toggle-wrap');

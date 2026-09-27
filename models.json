@@ -1,7 +1,7 @@
 [
   {
     "name": "Encargá tu modelo personalizado",
-    "desc": "¿Hay un auto de F1 que no está en el catálogo? Te lo armo a pedido, a la escala que prefieras.",
+    "desc": "¿Hay un auto de F1 que no está en el catálogo? Te lo armo a pedido, a la escala que prefieras.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "isCommission": true,
     "imgs": [
       "imgs/kj.png"
@@ -14,8 +14,40 @@
     }
   },
   {
+    "name": "Pack Trofeos GP Azerbaiyán 2026",
+    "desc": "Pack con los 3 trofeos del GP de Azerbaiyán de esta temporada: el trofeo de 1er puesto, el de 2do puesto y el de 3er puesto. Modelos detallados en papercraft, listos para armar y exhibir juntos en el podio. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "tags": [
+      "Trofeo",
+      "Azerbaiyán",
+      "Pack"
+    ],
+    "scale": "",
+    "meta": {
+      "Tipo": "Pack Trofeos (3 unidades)",
+      "Evento": "GP Azerbaiyán 2026",
+      "Formato": "PDF",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/TROF1.png",
+      "imgs/TROF2.png",
+      "imgs/TROF3.png",
+      "imgs/TROF4.png"
+    ],
+    "file": "https://www.mediafire.com/file/mopn82rjrz4ch1i/MW3+AZE+TRO+.rar/file",
+    "cardClass": "",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las imágenes muestran cómo quedan distribuidas las piezas de los 3 trofeos.",
+      "imgs": [
+        "imgs/TROFPRE1.png",
+        "imgs/TROFPRE2.png"
+      ]
+    }
+  },
+  {
     "name": "Pack Casco Max Verstappen — GP Austria + GP Miami",
-    "desc": "Pack con dos réplicas de casco de F1 en papercraft de Max Verstappen: el diseño especial del GP de Austria y el diseño especial del GP de Miami. Modelos detallados, con visera y decoración lista para armar en casa. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.",
+    "desc": "Pack con dos réplicas de casco de F1 en papercraft de Max Verstappen: el diseño especial del GP de Austria y el diseño especial del GP de Miami. Modelos detallados, con visera y decoración lista para armar en casa. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:1",
     "tags": [
       "Casco",
@@ -57,7 +89,7 @@
   },
   {
     "name": "McLaren MCL40 F1 2026 — Pack Livery Base + Livery Especial OKX + Number Boards",
-    "desc": "Pack 2 en 1 con el McLaren MCL40 de la temporada 2026: la livery estándar del equipo y la edición especial de OKX que corrió en el GP de Italia y en el GP de Madrid. Armá las dos versiones del mismo auto y compará el papaya clásico con los detalles en blanco y negro de la edición especial. Incluye además los dos podium number boards de las victorias consecutivas de Lando Norris: el GP de Hungría, su primer triunfo de la temporada, y el GP de Países Bajos en Zandvoort, la última carrera de la historia en ese circuito. Detalles de carrocería, alerones y soporte de exhibición para ambos modelos. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
+    "desc": "Pack 2 en 1 con el McLaren MCL40 de la temporada 2026: la livery estándar del equipo y la edición especial de OKX que corrió en el GP de Italia y en el GP de Madrid. Armá las dos versiones del mismo auto y compará el papaya clásico con los detalles en blanco y negro de la edición especial. Incluye además los dos podium number boards de las victorias consecutivas de Lando Norris: el GP de Hungría, su primer triunfo de la temporada, y el GP de Países Bajos en Zandvoort, la última carrera de la historia en ese circuito. Detalles de carrocería, alerones y soporte de exhibición para ambos modelos. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -110,7 +142,7 @@
   },
   {
     "name": "McLaren MCL40 F1 2026 — GP Italia y Madrid · Livery Especial OKX + Number Boards",
-    "desc": "Modelo a escala del McLaren MCL40 con la livery especial que Lando Norris y Oscar Piastri corrieron en el GP de Italia, en Monza, y volvieron a llevar una semana después en el GP de España, en Madrid. La decoración celebra la alianza del equipo con OKX, su socio principal desde 2022: mantiene el papaya y suma detalles en blanco y negro, con el logo de OKX en el costado y en el alerón trasero y una franja negra más ancha en los pontones. Se suman los dos podium number boards de las victorias consecutivas de Lando Norris: el GP de Hungría, su primer triunfo de la temporada, y el GP de Países Bajos en Zandvoort, la última carrera de la historia en ese circuito. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
+    "desc": "Modelo a escala del McLaren MCL40 con la livery especial que Lando Norris y Oscar Piastri corrieron en el GP de Italia, en Monza, y volvieron a llevar una semana después en el GP de España, en Madrid. La decoración celebra la alianza del equipo con OKX, su socio principal desde 2022: mantiene el papaya y suma detalles en blanco y negro, con el logo de OKX en el costado y en el alerón trasero y una franja negra más ancha en los pontones. Se suman los dos podium number boards de las victorias consecutivas de Lando Norris: el GP de Hungría, su primer triunfo de la temporada, y el GP de Países Bajos en Zandvoort, la última carrera de la historia en ese circuito. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -154,7 +186,7 @@
   },
   {
     "name": "McLaren MCL40 F1 2026 — Livery Base + Number Boards",
-    "desc": "Modelo a escala del McLaren MCL40 de la temporada 2026 con la livery estándar del equipo, en su esquema papaya y antracita. Se suman los dos podium number boards de las victorias consecutivas de Lando Norris: el GP de Hungría, su primer triunfo de la temporada, y el GP de Países Bajos en Zandvoort, la última carrera de la historia en ese circuito. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
+    "desc": "Modelo a escala del McLaren MCL40 de la temporada 2026 con la livery estándar del equipo, en su esquema papaya y antracita. Se suman los dos podium number boards de las victorias consecutivas de Lando Norris: el GP de Hungría, su primer triunfo de la temporada, y el GP de Países Bajos en Zandvoort, la última carrera de la historia en ese circuito. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -198,7 +230,7 @@
   },
   {
     "name": "Figura de Piloto F1 2026 — Charles Leclerc (Ferrari)",
-    "desc": "Figura de piloto de F1 a escala 1:10 en papercraft, con el diseño de Charles Leclerc (Ferrari F1 2026). Incluye detalles del mono de carrera, casco y pose de piloto, lista para armar y exhibir. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
+    "desc": "Figura de piloto de F1 a escala 1:10 en papercraft, con el diseño de Charles Leclerc (Ferrari F1 2026). Incluye detalles del mono de carrera, casco y pose de piloto, lista para armar y exhibir. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:10",
     "tags": [
       "Piloto",
@@ -236,7 +268,7 @@
   },
   {
     "name": "McLaren F1 2025 — Lando Norris",
-    "desc": "Modelo a escala del McLaren F1 2025 con la decoración estándar de Lando Norris. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del McLaren F1 2025 con la decoración estándar de Lando Norris. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -274,7 +306,7 @@
   },
   {
     "name": "Mercedes W17 F1 2026 — Pack Russell + Antonelli (Normal + GP Japón \"Wolf\")",
-    "desc": "Pack con los dos pilotos de Mercedes, George Russell y Kimi Antonelli, cada uno en dos versiones: la livery estándar del W17 de esta temporada y la edición especial revelada para el GP de Japón en Suzuka. La decoración de Japón, bajo el lema \"Unleashing the Beast\", nace de una colaboración inédita del equipo con el diseñador japonés Yohji Yamamoto y su marca Y-3 — la primera vez que Mercedes lleva una colección de moda completa al auto, los monos de carrera y los cascos de ambos pilotos. El diseño incorpora un lobo de mirada amarilla en el alerón delantero, presente en los dos W17. Llega en un momento clave: Mercedes arrancó el 2026 ganando las dos primeras carreras (Russell en Australia, Antonelli en China), liderando ambos campeonatos. Incluye 4 modelos a escala en total, con detalles de carrocería, alerones y soporte de exhibición para cada uno. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
+    "desc": "Pack con los dos pilotos de Mercedes, George Russell y Kimi Antonelli, cada uno en dos versiones: la livery estándar del W17 de esta temporada y la edición especial revelada para el GP de Japón en Suzuka. La decoración de Japón, bajo el lema \"Unleashing the Beast\", nace de una colaboración inédita del equipo con el diseñador japonés Yohji Yamamoto y su marca Y-3 — la primera vez que Mercedes lleva una colección de moda completa al auto, los monos de carrera y los cascos de ambos pilotos. El diseño incorpora un lobo de mirada amarilla en el alerón delantero, presente en los dos W17. Llega en un momento clave: Mercedes arrancó el 2026 ganando las dos primeras carreras (Russell en Australia, Antonelli en China), liderando ambos campeonatos. Incluye 4 modelos a escala en total, con detalles de carrocería, alerones y soporte de exhibición para cada uno. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -320,7 +352,7 @@
   },
   {
     "name": "TGR Haas F1 2026 — Pack Normal + GP Japón \"Godzilla\"",
-    "desc": "Pack 2 en 1 con el Haas VF-26 de la temporada 2026: la livery estándar del equipo y la edición especial \"Godzilla\" del GP de Japón, en colaboración con Toho. Armá las dos versiones del mismo auto y compará el diseño clásico del equipo con la decoración única que llevó al Rey de los Monstruos a la Fórmula 1. Incluye detalles de carrocería, alerones y soporte de exhibición para ambos modelos. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.",
+    "desc": "Pack 2 en 1 con el Haas VF-26 de la temporada 2026: la livery estándar del equipo y la edición especial \"Godzilla\" del GP de Japón, en colaboración con Toho. Armá las dos versiones del mismo auto y compará el diseño clásico del equipo con la decoración única que llevó al Rey de los Monstruos a la Fórmula 1. Incluye detalles de carrocería, alerones y soporte de exhibición para ambos modelos. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -362,7 +394,7 @@
   },
   {
     "name": "TGR Haas F1 2026 — GP Japón · Livery Especial \"Godzilla\"",
-    "desc": "Modelo a escala del Haas VF-26 con la livery especial revelada para el GP de Japón en Suzuka, fruto de la primera colaboración del equipo con una marca de entretenimiento en toda su historia: Godzilla, de Toho. El diseño llevó al \"Rey de los Monstruos\" a la Fórmula 1 por primera vez, presentado por Esteban Ocon y Ollie Bearman en un evento en Tokio. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Haas VF-26 con la livery especial revelada para el GP de Japón en Suzuka, fruto de la primera colaboración del equipo con una marca de entretenimiento en toda su historia: Godzilla, de Toho. El diseño llevó al \"Rey de los Monstruos\" a la Fórmula 1 por primera vez, presentado por Esteban Ocon y Ollie Bearman en un evento en Tokio. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -403,7 +435,7 @@
   },
   {
     "name": "TGR Haas F1 2026",
-    "desc": "Modelo a escala del Haas VF-26, el auto de la temporada 2026 del equipo, ahora rebautizado TGR Haas F1 Team tras su alianza con Toyota Gazoo Racing. Mantiene el esquema blanco, negro y rojo característico del equipo, con mayor presencia de marca Toyota. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Haas VF-26, el auto de la temporada 2026 del equipo, ahora rebautizado TGR Haas F1 Team tras su alianza con Toyota Gazoo Racing. Mantiene el esquema blanco, negro y rojo característico del equipo, con mayor presencia de marca Toyota. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -443,7 +475,7 @@
   },
   {
     "name": "Williams FW48 F1 2026 — GP Madrid · Livery Especial \"1981\"",
-    "desc": "Modelo a escala del Williams FW48 con la livery especial revelada para el debut de F1 en el circuito de Madring, en el GP de España 2026. El diseño blanco, verde y azul marino rinde homenaje a la FW07C de 1981, con la que Williams ganó su segundo título de constructores consecutivo — la última vez que la Fórmula 1 corrió en Madrid (en el Jarama). La lucen los autos de Carlos Sainz, corriendo en su ciudad natal por primera vez, y Alex Albon. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Williams FW48 con la livery especial revelada para el debut de F1 en el circuito de Madring, en el GP de España 2026. El diseño blanco, verde y azul marino rinde homenaje a la FW07C de 1981, con la que Williams ganó su segundo título de constructores consecutivo — la última vez que la Fórmula 1 corrió en Madrid (en el Jarama). La lucen los autos de Carlos Sainz, corriendo en su ciudad natal por primera vez, y Alex Albon. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -486,7 +518,7 @@
   },
   {
     "name": "Williams F1 2026",
-    "desc": "Modelo a escala del Williams F1 2026. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Williams F1 2026. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -526,7 +558,7 @@
   },
   {
     "name": "Aston Martin F1 2026 — Fernando Alonso",
-    "desc": "Modelo a escala del Aston Martin F1 2026 con la decoración estándar de Fernando Alonso. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Aston Martin F1 2026 con la decoración estándar de Fernando Alonso. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -562,7 +594,7 @@
   },
   {
     "name": "Visa Cash App F1 2026 — Liam Lawson · GP Japón \"Sakura\"",
-    "desc": "Modelo a escala del Visa Cash App Racing Bulls F1 2026 de Liam Lawson (#30), con la livery especial \"Sakura\" (Red Bull Spring Edition) presentada para el GP de Japón en Suzuka, inspirada en la floración de los cerezos japoneses, con diseño de caligrafía en blanco, rojo y plata. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Visa Cash App Racing Bulls F1 2026 de Liam Lawson (#30), con la livery especial \"Sakura\" (Red Bull Spring Edition) presentada para el GP de Japón en Suzuka, inspirada en la floración de los cerezos japoneses, con diseño de caligrafía en blanco, rojo y plata. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -605,7 +637,7 @@
   },
   {
     "name": "McLaren F1 2025 — Lando Norris · GP Gran Bretaña",
-    "desc": "Modelo a escala del McLaren F1 2025 con la decoración usada por Lando Norris en el GP de Gran Bretaña, en Silverstone, su carrera de local. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del McLaren F1 2025 con la decoración usada por Lando Norris en el GP de Gran Bretaña, en Silverstone, su carrera de local. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -648,7 +680,7 @@
   },
   {
     "name": "Ferrari F1 2026 — GP Monza · Livery Especial",
-    "desc": "Modelo a escala del Ferrari F1 2026 con la decoración especial usada en el GP de Monza. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Ferrari F1 2026 con la decoración especial usada en el GP de Monza. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -688,7 +720,7 @@
   },
   {
     "name": "Figura de Piloto F1 2026 — Sergio \"Checo\" Pérez (Cadillac)",
-    "desc": "Figura de piloto de F1 a escala 1:10 en papercraft, con el diseño de Sergio \"Checo\" Pérez (Cadillac F1 2026). Incluye detalles del mono de carrera, casco y pose de piloto, lista para armar y exhibir. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá los autos y liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Figura de piloto de F1 a escala 1:10 en papercraft, con el diseño de Sergio \"Checo\" Pérez (Cadillac F1 2026). Incluye detalles del mono de carrera, casco y pose de piloto, lista para armar y exhibir. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá los autos y liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:10",
     "tags": [
       "Piloto",
@@ -723,7 +755,7 @@
   },
   {
     "name": "Aston Martin F1 2025 — GP EE.UU. · Livery Especial",
-    "desc": "Modelo a escala del Aston Martin F1 2025 con la decoración especial usada en el GP de Estados Unidos. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Aston Martin F1 2025 con la decoración especial usada en el GP de Estados Unidos. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -762,7 +794,7 @@
   },
   {
     "name": "McLaren F1 2025 — Lando Norris · Campeón del Mundo",
-    "desc": "Modelo a escala del McLaren F1 2025 con la decoración especial del auto de Lando Norris, el mismo con el que se consagró Campeón del Mundo en 2025. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del McLaren F1 2025 con la decoración especial del auto de Lando Norris, el mismo con el que se consagró Campeón del Mundo en 2025. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -802,7 +834,7 @@
   },
   {
     "name": "Casco F1 2026 — Réplica a escala",
-    "desc": "Réplica de casco de F1 a escala en papercraft. Modelo detallado, con visera y diseño listo para armar en casa. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.",
+    "desc": "Réplica de casco de F1 a escala en papercraft. Modelo detallado, con visera y diseño listo para armar en casa. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:1",
     "tags": [
       "Casco"
@@ -831,7 +863,7 @@
   },
   {
     "name": "Red Bull F1 2026 — Max Verstappen",
-    "desc": "Modelo a escala del Red Bull F1 2026 con la decoración de Max Verstappen. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Red Bull F1 2026 con la decoración de Max Verstappen. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -873,7 +905,7 @@
   },
   {
     "name": "McLaren F1 2026 — Lando Norris · Pretemporada",
-    "desc": "Modelo a escala del McLaren F1 2026 con la librea especial de los test de pretemporada del piloto Lando Norris. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.",
+    "desc": "Modelo a escala del McLaren F1 2026 con la librea especial de los test de pretemporada del piloto Lando Norris. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -915,7 +947,7 @@
   },
   {
     "name": "Ferrari F1 2026 — Charles Leclerc",
-    "desc": "Modelo a escala del Ferrari F1 2026 con la decoración de Charles Leclerc. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Ferrari F1 2026 con la decoración de Charles Leclerc. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -957,7 +989,7 @@
   },
   {
     "name": "Aston Martin F1 2026 — Fernando Alonso · GP Mónaco",
-    "desc": "Modelo a escala del Aston Martin F1 2026 con la decoración especial de Fernando Alonso usada en el GP de Mónaco. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.",
+    "desc": "Modelo a escala del Aston Martin F1 2026 con la decoración especial de Fernando Alonso usada en el GP de Mónaco. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -1000,7 +1032,7 @@
   },
   {
     "name": "Visa Cash App F1 2026",
-    "desc": "Modelo a escala del Visa Cash App F1 2026. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Visa Cash App F1 2026. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -1041,7 +1073,7 @@
   },
   {
     "name": "McLaren F1 2026 — Lando Norris · Silverstone GP Livery",
-    "desc": "Modelo a escala del McLaren F1 2026 con la librea especial del Gran Premio de Silverstone del piloto Lando Norris. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.",
+    "desc": "Modelo a escala del McLaren F1 2026 con la librea especial del Gran Premio de Silverstone del piloto Lando Norris. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -1084,7 +1116,7 @@
   },
   {
     "name": "Cadillac F1 2026",
-    "desc": "Modelo a escala del nuevo Cadillac F1 2026, la última incorporación a la parrilla del Mundial. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del nuevo Cadillac F1 2026, la última incorporación a la parrilla del Mundial. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -1125,7 +1157,7 @@
   },
   {
     "name": "Visa Cash App F1 2026 — GP España",
-    "desc": "Modelo a escala del Visa Cash App F1 2026 con la librea especial del Gran Premio de España 2026. Incluye detalles de carrocería, alerones y soporte de exhibición. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.",
+    "desc": "Modelo a escala del Visa Cash App F1 2026 con la librea especial del Gran Premio de España 2026. Incluye detalles de carrocería, alerones y soporte de exhibición. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -1166,7 +1198,7 @@
   },
   {
     "name": "McLaren MCL40 — Monaco GP 2026",
-    "desc": "Modelo a escala del McLaren MCL40 con la decoración utilizada en el Gran Premio de Mónaco 2026. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del McLaren MCL40 con la decoración utilizada en el Gran Premio de Mónaco 2026. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -1207,7 +1239,7 @@
   },
   {
     "name": "Alpine A526 — Franco Colapinto · Austria GP Livery",
-    "desc": "Armá a escala el Mercedes-AMG W15 con la librea especial del Gran Premio de Austria 2024. Colores plateados con detalles en verde esmeralda característicos del equipo Mercedes. PDF listo para imprimir en A4, incluye todas las piezas, instrucciones de ensamblaje y soporte de exhibición. Solo necesitás tijera y pegamento.",
+    "desc": "Armá a escala el Mercedes-AMG W15 con la librea especial del Gran Premio de Austria 2024. Colores plateados con detalles en verde esmeralda característicos del equipo Mercedes. PDF listo para imprimir en A4, incluye todas las piezas, instrucciones de ensamblaje y soporte de exhibición. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -1241,7 +1273,7 @@
   },
   {
     "name": "Alpine A526 — Franco Colapinto · Miami GP Livery",
-    "desc": "Modelo a escala del Alpine A526 con la librea especial Miami GP 2026 del piloto argentino Franco Colapinto (#43). Incluye soporte de exhibición y panel de tiempos. Imprime en cartulina 200g para mejores resultados. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Alpine A526 con la librea especial Miami GP 2026 del piloto argentino Franco Colapinto (#43). Incluye soporte de exhibición y panel de tiempos. Imprime en cartulina 200g para mejores resultados. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -1283,7 +1315,7 @@
   },
   {
     "name": "Mercedes-Benz 190E — Carlos Reutemann",
-    "desc": "Armá a escala el auto que piloteó Reutemann. Diseño detallado, fiel al original. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.",
+    "desc": "Armá a escala el auto que piloteó Reutemann. Diseño detallado, fiel al original. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "Auto",
@@ -1323,7 +1355,7 @@
   },
   {
     "name": "Dallara F2 2024 — Franco Colapinto · MP Motorsport",
-    "desc": "Modelo a escala del Dallara F2 2024 con la librea de MP Motorsport del piloto argentino Franco Colapinto (#6). Temporada histórica que lo llevó directamente a la Fórmula 1. Imprime en cartulina 200g para mejores resultados. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.",
+    "desc": "Modelo a escala del Dallara F2 2024 con la librea de MP Motorsport del piloto argentino Franco Colapinto (#6). Temporada histórica que lo llevó directamente a la Fórmula 1. Imprime en cartulina 200g para mejores resultados. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F2",
@@ -1358,7 +1390,7 @@
   },
   {
     "name": "Red Bull RB19 — Max Verstappen · Campeón del Mundo 2023",
-    "desc": "Modelo mini a escala 1:24 del Red Bull RB19, con la librea especial del GP de Las Vegas 2023 que Max Verstappen usó para coronarse Campeón del Mundo. Incluye 4 fotos de referencia del armado terminado para que veas el detalle desde distintos ángulos. Imprime en cartulina 200g para mejores resultados.",
+    "desc": "Modelo mini a escala 1:24 del Red Bull RB19, con la librea especial del GP de Las Vegas 2023 que Max Verstappen usó para coronarse Campeón del Mundo. Incluye 4 fotos de referencia del armado terminado para que veas el detalle desde distintos ángulos. Imprime en cartulina 200g para mejores resultados.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -1407,7 +1439,7 @@
   },
   {
     "name": "McLaren MCL36 — Lando Norris · GP Singapur 2022",
-    "desc": "Modelo mini a escala 1:24 del McLaren MCL36 con la librea de Lando Norris en el GP de Singapur 2022. Incluye 4 fotos de referencia del armado terminado para apreciar los detalles del acabado. Imprime en cartulina 200g para mejores resultados.",
+    "desc": "Modelo mini a escala 1:24 del McLaren MCL36 con la librea de Lando Norris en el GP de Singapur 2022. Incluye 4 fotos de referencia del armado terminado para apreciar los detalles del acabado. Imprime en cartulina 200g para mejores resultados.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -1456,7 +1488,7 @@
   },
   {
     "name": "AlphaTauri AT04 — GP Las Vegas 2023",
-    "desc": "Modelo mini a escala 1:24 del AlphaTauri AT04 con la librea especial del GP de Las Vegas 2023. Incluye 3 fotos de referencia del armado terminado para ver el detalle desde distintos ángulos. Imprime en cartulina 200g para mejores resultados.",
+    "desc": "Modelo mini a escala 1:24 del AlphaTauri AT04 con la librea especial del GP de Las Vegas 2023. Incluye 3 fotos de referencia del armado terminado para ver el detalle desde distintos ángulos. Imprime en cartulina 200g para mejores resultados.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
     "tags": [
       "F1",
@@ -1499,7 +1531,7 @@
   },
   {
     "name": "Williams FW46 2024 — Mini Pack (3 Liverys)",
-    "desc": "Pack mini a escala 1:32 del Williams FW46 2024, pensado para la sección de modelos simples y rápidos de armar. Incluye 3 liverys en el mismo pack: librea normal, librea especial GP Silverstone y librea GP Brasil (edición Mercado Libre). Ideal para coleccionar variantes sin complicarte con un armado extenso. Imprime en cartulina 200g para mejores resultados.",
+    "desc": "Pack mini a escala 1:32 del Williams FW46 2024, pensado para la sección de modelos simples y rápidos de armar. Incluye 3 liverys en el mismo pack: librea normal, librea especial GP Silverstone y librea GP Brasil (edición Mercado Libre). Ideal para coleccionar variantes sin complicarte con un armado extenso. Imprime en cartulina 200g para mejores resultados.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:32",
     "tags": [
       "F1",
@@ -1540,7 +1572,7 @@
   },
   {
     "name": "Red Bull RB20 2024 — Mini Pack (2 Liverys)",
-    "desc": "Pack mini a escala 1:32 del Red Bull RB20 2024, parte de la sección de modelos simples con mayor variedad de liverys. Incluye librea normal y librea especial GP Silverstone en el mismo pack. Armado rápido, ideal para sumar variantes a tu colección. Imprime en cartulina 200g para mejores resultados.",
+    "desc": "Pack mini a escala 1:32 del Red Bull RB20 2024, parte de la sección de modelos simples con mayor variedad de liverys. Incluye librea normal y librea especial GP Silverstone en el mismo pack. Armado rápido, ideal para sumar variantes a tu colección. Imprime en cartulina 200g para mejores resultados.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:32",
     "tags": [
       "F1",
