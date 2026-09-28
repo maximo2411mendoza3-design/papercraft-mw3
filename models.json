@@ -14,6 +14,44 @@
     }
   },
   {
+    "name": "Figura de Piloto F1 2026 — Lando Norris (McLaren)",
+    "desc": "Figura de piloto de F1 a escala 1:10 en papercraft, con el diseño de Lando Norris (McLaren F1 2026). Incluye detalles del mono de carrera, casco y pose de piloto, lista para armar y exhibir. El PDF viene con las piezas para imprimir en A4 y un instructivo paso a paso dentro del mismo archivo. Solo necesitás tijera y pegamento. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:10",
+    "tags": [
+      "Piloto",
+      "McLaren",
+      "2026",
+      "Norris"
+    ],
+    "meta": {
+      "Piloto": "Lando Norris",
+      "Equipo": "McLaren",
+      "Temporada": "F1 2026",
+      "Escala": "1:10",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/PIL1.png",
+      "imgs/PIL2.png",
+      "imgs/PIL3.png",
+      "imgs/PIL4.png"
+    ],
+    "file": "https://ko-fi.com/s/98560bfddb",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 6.99,
+    "priceCurrency": "USD",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/PIL5.png",
+        "imgs/PIL6.png"
+      ]
+    }
+  },
+  {
     "name": "Pack Trofeos GP Azerbaiyán 2026",
     "desc": "Pack con los 3 trofeos del GP de Azerbaiyán de esta temporada: el trofeo de 1er puesto, el de 2do puesto y el de 3er puesto. Modelos detallados en papercraft, listos para armar y exhibir juntos en el podio. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "tags": [
