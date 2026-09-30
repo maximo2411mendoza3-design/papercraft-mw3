@@ -305,6 +305,46 @@
     }
   },
   {
+    "name": "Figura de Piloto F1 2026 — Charles Leclerc, Mono Especial GP Singapur (Ferrari)",
+    "desc": "Figura de piloto de F1 a escala 1:10 en papercraft, con el diseño del mono especial que Ferrari le preparó a Charles Leclerc para el GP de Singapur 2026. Una edición completamente en negro, alejada del rojo tradicional de Ferrari, con detalles claros en hombros y costados y el escudo de la Scuderia bien visible. Incluye la gorra a juego del mismo diseño. El PDF viene con las piezas para imprimir en A4 y un instructivo paso a paso dentro del mismo archivo. Solo necesitás tijera y pegamento. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:10",
+    "tags": [
+      "Piloto",
+      "Ferrari",
+      "2026",
+      "Leclerc",
+      "GP Singapur"
+    ],
+    "meta": {
+      "Piloto": "Charles Leclerc",
+      "Equipo": "Ferrari",
+      "Edición": "Mono Especial GP Singapur",
+      "Temporada": "F1 2026",
+      "Escala": "1:10",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/HIO1.png",
+      "imgs/HIO2.png",
+      "imgs/HIO3.png",
+      "imgs/HIO4.png"
+    ],
+    "file": "https://ko-fi.com/s/cf4fa250e2",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 5.99,
+    "priceCurrency": "USD",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/HIO5.png",
+        "imgs/HIO6.png"
+      ]
+    }
+  },
+  {
     "name": "McLaren F1 2025 — Lando Norris",
     "desc": "Modelo a escala del McLaren F1 2025 con la decoración estándar de Lando Norris. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
