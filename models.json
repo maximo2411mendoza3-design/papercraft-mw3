@@ -14,6 +14,44 @@
     }
   },
   {
+    "name": "Figura de Piloto F1 2026 — Lando Norris (McLaren)",
+    "desc": "Figura de piloto de F1 a escala 1:10 en papercraft, con el diseño de Lando Norris (McLaren F1 2026). Incluye detalles del mono de carrera, casco y pose de piloto, lista para armar y exhibir. El PDF viene con las piezas para imprimir en A4 y un instructivo paso a paso dentro del mismo archivo. Solo necesitás tijera y pegamento. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:10",
+    "tags": [
+      "Piloto",
+      "McLaren",
+      "2026",
+      "Norris"
+    ],
+    "meta": {
+      "Piloto": "Lando Norris",
+      "Equipo": "McLaren",
+      "Temporada": "F1 2026",
+      "Escala": "1:10",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/PIL1.png",
+      "imgs/PIL2.png",
+      "imgs/PIL3.png",
+      "imgs/PIL4.png"
+    ],
+    "file": "https://ko-fi.com/s/98560bfddb",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 6.99,
+    "priceCurrency": "USD",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/PIL5.png",
+        "imgs/PIL6.png"
+      ]
+    }
+  },
+  {
     "name": "Pack Trofeos GP Azerbaiyán 2026",
     "desc": "Pack con los 3 trofeos del GP de Azerbaiyán de esta temporada: el trofeo de 1er puesto, el de 2do puesto y el de 3er puesto. Modelos detallados en papercraft, listos para armar y exhibir juntos en el podio. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "tags": [
@@ -42,6 +80,267 @@
       "imgs": [
         "imgs/TROFPRE1.png",
         "imgs/TROFPRE2.png"
+      ]
+    }
+  },
+  {
+    "name": "Pack Casco Max Verstappen — GP Austria + GP Miami",
+    "desc": "Pack con dos réplicas de casco de F1 en papercraft de Max Verstappen: el diseño especial del GP de Austria y el diseño especial del GP de Miami. Modelos detallados, con visera y decoración lista para armar en casa. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:1",
+    "tags": [
+      "Casco",
+      "Verstappen",
+      "Pack"
+    ],
+    "meta": {
+      "Tipo": "Pack Casco F1 (2 unidades)",
+      "Piloto": "Max Verstappen",
+      "Escala": "Réplica",
+      "Formato": "PDF A4",
+      "Dificultad": "Media",
+      "Precio": "USD 6.99 · MP $6.000 ARS"
+    },
+    "imgs": [
+      "imgs/CVS1.png",
+      "imgs/CVS3.png",
+      "imgs/CVS2.png",
+      "imgs/CVS4.png"
+    ],
+    "file": "https://ko-fi.com/s/87e815d379",
+    "cardClass": "premium",
+    "isPremium": true,
+    "isCasco": true,
+    "price": 6.99,
+    "priceCurrency": "USD",
+    "mpFinalPriceLabel": "$6.000 ARS",
+    "mpBadgeLabel": "Precio con Mercado Pago",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las imágenes muestran cómo quedan distribuidas las piezas del papercraft de los dos cascos.",
+      "imgs": [
+        "imgs/Captura de pantalla 2026-09-24 105651.png",
+        "imgs/Captura de pantalla 2026-09-24 105700.png",
+        "imgs/Captura de pantalla 2026-09-24 105717.png",
+        "imgs/Captura de pantalla 2026-09-24 105724.png"
+      ]
+    }
+  },
+  {
+    "name": "McLaren MCL40 F1 2026 — Pack Livery Base + Livery Especial OKX + Number Boards",
+    "desc": "Pack 2 en 1 con el McLaren MCL40 de la temporada 2026: la livery estándar del equipo y la edición especial de OKX que corrió en el GP de Italia y en el GP de Madrid. Armá las dos versiones del mismo auto y compará el papaya clásico con los detalles en blanco y negro de la edición especial. Incluye además los dos podium number boards de las victorias consecutivas de Lando Norris: el GP de Hungría, su primer triunfo de la temporada, y el GP de Países Bajos en Zandvoort, la última carrera de la historia en ese circuito. Detalles de carrocería, alerones y soporte de exhibición para ambos modelos. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "McLaren",
+      "2026",
+      "Norris",
+      "GP Italia",
+      "GP Madrid",
+      "Pack"
+    ],
+    "meta": {
+      "Auto": "McLaren MCL40 F1 2026 (Livery Base + Livery Especial OKX + Number Boards)",
+      "Piloto": "Lando Norris",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/pkc1.png",
+      "imgs/X1.png",
+      "imgs/X2.png",
+      "imgs/X3.png",
+      "imgs/X4.png",
+      "imgs/X5.png",
+      "imgs/X6.png",
+      "imgs/Z1.png",
+      "imgs/Z2.png",
+      "imgs/Z3.png",
+      "imgs/Z4.png",
+      "imgs/Z5.png",
+      "imgs/Z6.png"
+    ],
+    "file": "https://ko-fi.com/s/6b4c24c5b6",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 36,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft de ambas liveries.",
+      "imgs": [
+        "imgs/Z7.png",
+        "imgs/X7.png"
+      ]
+    },
+    "singleCover": true,
+    "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
+    "name": "McLaren MCL40 F1 2026 — GP Italia y Madrid · Livery Especial OKX + Number Boards",
+    "desc": "Modelo a escala del McLaren MCL40 con la livery especial que Lando Norris y Oscar Piastri corrieron en el GP de Italia, en Monza, y volvieron a llevar una semana después en el GP de España, en Madrid. La decoración celebra la alianza del equipo con OKX, su socio principal desde 2022: mantiene el papaya y suma detalles en blanco y negro, con el logo de OKX en el costado y en el alerón trasero y una franja negra más ancha en los pontones. Se suman los dos podium number boards de las victorias consecutivas de Lando Norris: el GP de Hungría, su primer triunfo de la temporada, y el GP de Países Bajos en Zandvoort, la última carrera de la historia en ese circuito. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "McLaren",
+      "2026",
+      "Norris",
+      "GP Italia",
+      "GP Madrid"
+    ],
+    "meta": {
+      "Auto": "McLaren MCL40 F1 2026 (Livery Especial OKX GP Italia y Madrid + Number Boards)",
+      "Piloto": "Lando Norris",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/Z1.png",
+      "imgs/Z2.png",
+      "imgs/Z3.png",
+      "imgs/Z4.png",
+      "imgs/Z5.png",
+      "imgs/Z6.png"
+    ],
+    "file": "https://ko-fi.com/s/1706163675",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 36,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/Z7.png",
+        "imgs/Z8.png"
+      ]
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
+    "name": "McLaren MCL40 F1 2026 — Livery Base + Number Boards",
+    "desc": "Modelo a escala del McLaren MCL40 de la temporada 2026 con la livery estándar del equipo, en su esquema papaya y antracita. Se suman los dos podium number boards de las victorias consecutivas de Lando Norris: el GP de Hungría, su primer triunfo de la temporada, y el GP de Países Bajos en Zandvoort, la última carrera de la historia en ese circuito. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "McLaren",
+      "2026",
+      "Norris",
+      "GP Hungría",
+      "GP Zandvoort"
+    ],
+    "meta": {
+      "Auto": "McLaren MCL40 F1 2026 (Livery Base + Number Boards)",
+      "Piloto": "Lando Norris",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/X1.png",
+      "imgs/X2.png",
+      "imgs/X3.png",
+      "imgs/X4.png",
+      "imgs/X5.png",
+      "imgs/X6.png"
+    ],
+    "file": "https://ko-fi.com/s/208fc22c6c",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 36,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/X7.png",
+        "imgs/X8.png"
+      ]
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
+    "name": "Figura de Piloto F1 2026 — Charles Leclerc (Ferrari)",
+    "desc": "Figura de piloto de F1 a escala 1:10 en papercraft, con el diseño de Charles Leclerc (Ferrari F1 2026). Incluye detalles del mono de carrera, casco y pose de piloto, lista para armar y exhibir. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:10",
+    "tags": [
+      "Piloto",
+      "Ferrari",
+      "2026",
+      "Leclerc"
+    ],
+    "meta": {
+      "Piloto": "Charles Leclerc",
+      "Equipo": "Ferrari",
+      "Temporada": "F1 2026",
+      "Escala": "1:10",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/LC1.png",
+      "imgs/LC2.png",
+      "imgs/LC3.png",
+      "imgs/LC4.png"
+    ],
+    "file": "https://ko-fi.com/s/06962ac637",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 5.9,
+    "priceCurrency": "USD",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/LC5.png",
+        "imgs/LC6.png"
+      ]
+    }
+  },
+  {
+    "name": "Figura de Piloto F1 2026 — Charles Leclerc, Mono Especial GP Singapur (Ferrari)",
+    "desc": "Figura de piloto de F1 a escala 1:10 en papercraft, con el diseño del mono especial que Ferrari le preparó a Charles Leclerc para el GP de Singapur 2026. Una edición completamente en negro, alejada del rojo tradicional de Ferrari, con detalles claros en hombros y costados y el escudo de la Scuderia bien visible. Incluye la gorra a juego del mismo diseño. El PDF viene con las piezas para imprimir en A4 y un instructivo paso a paso dentro del mismo archivo. Solo necesitás tijera y pegamento. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:10",
+    "tags": [
+      "Piloto",
+      "Ferrari",
+      "2026",
+      "Leclerc",
+      "GP Singapur"
+    ],
+    "meta": {
+      "Piloto": "Charles Leclerc",
+      "Equipo": "Ferrari",
+      "Edición": "Mono Especial GP Singapur",
+      "Temporada": "F1 2026",
+      "Escala": "1:10",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/HIO1.png",
+      "imgs/HIO2.png",
+      "imgs/HIO3.png",
+      "imgs/HIO4.png"
+    ],
+    "file": "https://ko-fi.com/s/cf4fa250e2",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 5.99,
+    "priceCurrency": "USD",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/HIO5.png",
+        "imgs/HIO6.png"
       ]
     }
   },
@@ -84,6 +383,258 @@
     }
   },
   {
+    "name": "Mercedes W17 F1 2026 — Pack Russell + Antonelli (Normal + GP Japón \"Wolf\")",
+    "desc": "Pack con los dos pilotos de Mercedes, George Russell y Kimi Antonelli, cada uno en dos versiones: la livery estándar del W17 de esta temporada y la edición especial revelada para el GP de Japón en Suzuka. La decoración de Japón, bajo el lema \"Unleashing the Beast\", nace de una colaboración inédita del equipo con el diseñador japonés Yohji Yamamoto y su marca Y-3 — la primera vez que Mercedes lleva una colección de moda completa al auto, los monos de carrera y los cascos de ambos pilotos. El diseño incorpora un lobo de mirada amarilla en el alerón delantero, presente en los dos W17. Llega en un momento clave: Mercedes arrancó el 2026 ganando las dos primeras carreras (Russell en Australia, Antonelli en China), liderando ambos campeonatos. Incluye 4 modelos a escala en total, con detalles de carrocería, alerones y soporte de exhibición para cada uno. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Mercedes",
+      "2026",
+      "Russell",
+      "Antonelli",
+      "GP Japón",
+      "Pack"
+    ],
+    "meta": {
+      "Auto": "Mercedes W17 F1 2026 (Normal + Livery GP Japón \"Wolf\")",
+      "Piloto": "George Russell / Kimi Antonelli",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/MF1.png",
+      "imgs/MF2.png",
+      "imgs/MF3.png",
+      "imgs/MF4.png",
+      "imgs/MF5.png",
+      "imgs/MF6.png",
+      "imgs/MF7.png"
+    ],
+    "file": "https://ko-fi.com/s/650a2fbb3e",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 36,
+    "mpFinalPriceLabel": "$9.900 ARS",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/MF8.png",
+        "imgs/MF9.png"
+      ]
+    }
+  },
+  {
+    "name": "TGR Haas F1 2026 — Pack Normal + GP Japón \"Godzilla\"",
+    "desc": "Pack 2 en 1 con el Haas VF-26 de la temporada 2026: la livery estándar del equipo y la edición especial \"Godzilla\" del GP de Japón, en colaboración con Toho. Armá las dos versiones del mismo auto y compará el diseño clásico del equipo con la decoración única que llevó al Rey de los Monstruos a la Fórmula 1. Incluye detalles de carrocería, alerones y soporte de exhibición para ambos modelos. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Haas",
+      "2026",
+      "GP Japón",
+      "Pack"
+    ],
+    "meta": {
+      "Auto": "Haas VF-26 (Normal + Livery GP Japón)",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/HS6.png",
+      "imgs/HS1.png",
+      "imgs/HA1.png",
+      "imgs/HA2.png",
+      "imgs/HS5.png"
+    ],
+    "file": "https://ko-fi.com/s/f0faace7e2",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 36,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft de ambas liveries.",
+      "imgs": [
+        "imgs/HS7.png",
+        "imgs/HA7.png"
+      ]
+    },
+    "singleCover": true,
+    "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
+    "name": "TGR Haas F1 2026 — GP Japón · Livery Especial \"Godzilla\"",
+    "desc": "Modelo a escala del Haas VF-26 con la livery especial revelada para el GP de Japón en Suzuka, fruto de la primera colaboración del equipo con una marca de entretenimiento en toda su historia: Godzilla, de Toho. El diseño llevó al \"Rey de los Monstruos\" a la Fórmula 1 por primera vez, presentado por Esteban Ocon y Ollie Bearman en un evento en Tokio. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Haas",
+      "2026",
+      "GP Japón"
+    ],
+    "meta": {
+      "Auto": "Haas VF-26 (Livery GP Japón \"Godzilla\")",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/HS1.png",
+      "imgs/HS2.png",
+      "imgs/HS3.png",
+      "imgs/HS4.png",
+      "imgs/HS5.png",
+      "imgs/HS6.png"
+    ],
+    "file": "https://ko-fi.com/s/26a38d4ca9",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 36,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/HS7.png",
+        "imgs/HS8.png"
+      ]
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
+    "name": "TGR Haas F1 2026",
+    "desc": "Modelo a escala del Haas VF-26, el auto de la temporada 2026 del equipo, ahora rebautizado TGR Haas F1 Team tras su alianza con Toyota Gazoo Racing. Mantiene el esquema blanco, negro y rojo característico del equipo, con mayor presencia de marca Toyota. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Haas",
+      "2026"
+    ],
+    "meta": {
+      "Auto": "Haas VF-26",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/HA1.png",
+      "imgs/HA2.png",
+      "imgs/HA3.png",
+      "imgs/HA4.png",
+      "imgs/HA5.png",
+      "imgs/HA6.png"
+    ],
+    "file": "https://ko-fi.com/s/05704bb0d5",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 36,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/HA7.png",
+        "imgs/HA8.png"
+      ]
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
+    "name": "Williams FW48 F1 2026 — GP Madrid · Livery Especial \"1981\"",
+    "desc": "Modelo a escala del Williams FW48 con la livery especial revelada para el debut de F1 en el circuito de Madring, en el GP de España 2026. El diseño blanco, verde y azul marino rinde homenaje a la FW07C de 1981, con la que Williams ganó su segundo título de constructores consecutivo — la última vez que la Fórmula 1 corrió en Madrid (en el Jarama). La lucen los autos de Carlos Sainz, corriendo en su ciudad natal por primera vez, y Alex Albon. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Williams",
+      "2026",
+      "GP Madrid",
+      "Sainz"
+    ],
+    "meta": {
+      "Auto": "Williams FW48 F1 2026 (Livery GP Madrid)",
+      "Piloto": "Carlos Sainz / Alex Albon",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/WW1.png",
+      "imgs/WW2.png",
+      "imgs/WW3.png",
+      "imgs/WW4.png",
+      "imgs/WW5.png",
+      "imgs/WW6.png"
+    ],
+    "file": "https://ko-fi.com/s/b247c2c341",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 36,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/WW7.png",
+        "imgs/WW8.png"
+      ]
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
+    "name": "Williams F1 2026",
+    "desc": "Modelo a escala del Williams F1 2026. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Williams",
+      "2026"
+    ],
+    "meta": {
+      "Auto": "Williams F1 2026",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/W1.png",
+      "imgs/W2.png",
+      "imgs/W3.png",
+      "imgs/W4.png",
+      "imgs/W5.png",
+      "imgs/W6.png"
+    ],
+    "file": "https://ko-fi.com/s/c4ab83eb5c",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 36,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/W7.png",
+        "imgs/W8.png"
+      ]
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
     "name": "Aston Martin F1 2026 — Fernando Alonso",
     "desc": "Modelo a escala del Aston Martin F1 2026 con la decoración estándar de Fernando Alonso. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
@@ -120,6 +671,132 @@
     }
   },
   {
+    "name": "Visa Cash App F1 2026 — Liam Lawson · GP Japón \"Sakura\"",
+    "desc": "Modelo a escala del Visa Cash App Racing Bulls F1 2026 de Liam Lawson (#30), con la livery especial \"Sakura\" (Red Bull Spring Edition) presentada para el GP de Japón en Suzuka, inspirada en la floración de los cerezos japoneses, con diseño de caligrafía en blanco, rojo y plata. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Visa Cash App",
+      "2026",
+      "Lawson",
+      "GP Japón"
+    ],
+    "meta": {
+      "Auto": "Visa Cash App RB F1 2026",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media",
+      "Piloto": "Liam Lawson"
+    },
+    "imgs": [
+      "imgs/BV1.png",
+      "imgs/BV2.png",
+      "imgs/BV3.png",
+      "imgs/BV4.png",
+      "imgs/BV5.png",
+      "imgs/BV6.png"
+    ],
+    "file": "https://ko-fi.com/s/9f537200a1",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.5,
+    "priceCurrency": "USD",
+    "mpDiscount": 33,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/PKFR1.png",
+        "imgs/PKFR2.png"
+      ]
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
+    "name": "McLaren F1 2025 — Lando Norris · GP Gran Bretaña",
+    "desc": "Modelo a escala del McLaren F1 2025 con la decoración usada por Lando Norris en el GP de Gran Bretaña, en Silverstone, su carrera de local. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "McLaren",
+      "2025",
+      "Norris",
+      "GP Gran Bretaña"
+    ],
+    "meta": {
+      "Auto": "McLaren F1 2025",
+      "Piloto": "Lando Norris",
+      "Temporada": "F1 2025",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/SD1.png",
+      "imgs/SD2.png",
+      "imgs/SD3.png",
+      "imgs/SD4.png",
+      "imgs/SD5.png",
+      "imgs/SD6.png"
+    ],
+    "file": "https://ko-fi.com/s/a84fc5ea3c",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.5,
+    "priceCurrency": "USD",
+    "mpDiscount": 32,
+    "mpFinalPriceLabel": "$10.000 ARS",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/PKW1.png",
+        "imgs/PKW2.png"
+      ]
+    }
+  },
+  {
+    "name": "Ferrari F1 2026 — GP Monza · Livery Especial",
+    "desc": "Modelo a escala del Ferrari F1 2026 con la decoración especial usada en el GP de Monza. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Ferrari",
+      "2026",
+      "GP Monza"
+    ],
+    "meta": {
+      "Auto": "Ferrari F1 2026",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/MON1.png",
+      "imgs/MON2.png",
+      "imgs/MON3.png",
+      "imgs/MON4.png",
+      "imgs/MON5.png"
+    ],
+    "file": "https://ko-fi.com/s/fd52778928",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.99,
+    "priceCurrency": "USD",
+    "mpDiscount": 36,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/PMZ1.png",
+        "imgs/PMZ2.png"
+      ]
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
     "name": "Figura de Piloto F1 2026 — Sergio \"Checo\" Pérez (Cadillac)",
     "desc": "Figura de piloto de F1 a escala 1:10 en papercraft, con el diseño de Sergio \"Checo\" Pérez (Cadillac F1 2026). Incluye detalles del mono de carrera, casco y pose de piloto, lista para armar y exhibir. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá los autos y liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:10",
@@ -153,6 +830,114 @@
         "imgs/PEK2.png"
       ]
     }
+  },
+  {
+    "name": "Aston Martin F1 2025 — GP EE.UU. · Livery Especial",
+    "desc": "Modelo a escala del Aston Martin F1 2025 con la decoración especial usada en el GP de Estados Unidos. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Aston Martin",
+      "2025",
+      "GP EE.UU."
+    ],
+    "meta": {
+      "Auto": "Aston Martin F1 2025",
+      "Temporada": "F1 2025",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/25MC1.png",
+      "imgs/25MC2.png",
+      "imgs/25MC3.png",
+      "imgs/25MC4.png",
+      "imgs/25MC5.png"
+    ],
+    "file": "https://ko-fi.com/s/a4e2103e7b",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.9,
+    "priceCurrency": "USD",
+    "mpDiscount": 15,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/pepakura-aston-us2025-01.png",
+        "imgs/pepakura-aston-us2025-02.png"
+      ]
+    }
+  },
+  {
+    "name": "McLaren F1 2025 — Lando Norris · Campeón del Mundo",
+    "desc": "Modelo a escala del McLaren F1 2025 con la decoración especial del auto de Lando Norris, el mismo con el que se consagró Campeón del Mundo en 2025. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "McLaren",
+      "2025",
+      "Norris",
+      "Campeón"
+    ],
+    "meta": {
+      "Auto": "McLaren F1 2025",
+      "Piloto": "Lando Norris",
+      "Temporada": "F1 2025",
+      "Escala": "1:24",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/MCA1.png",
+      "imgs/MCA2.png",
+      "imgs/MCA3.png",
+      "imgs/MCA4.png"
+    ],
+    "file": "https://ko-fi.com/s/7239403566",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9.9,
+    "priceCurrency": "USD",
+    "mpDiscount": 15,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/MCP1.png",
+        "imgs/MCP2.png"
+      ]
+    }
+  },
+  {
+    "name": "Casco F1 2026 — Réplica a escala",
+    "desc": "Réplica de casco de F1 a escala en papercraft. Modelo detallado, con visera y diseño listo para armar en casa. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:1",
+    "tags": [
+      "Casco"
+    ],
+    "meta": {
+      "Tipo": "Casco F1",
+      "Escala": "Réplica",
+      "Formato": "PDF A4",
+      "Dificultad": "Media",
+      "Precio": "USD 5.53 · MP $8.000 ARS"
+    },
+    "imgs": [
+      "imgs/C001.png",
+      "imgs/C002.png",
+      "imgs/C003.png",
+      "imgs/C0004.png"
+    ],
+    "file": "https://ko-fi.com/s/f4865b7bae",
+    "cardClass": "premium",
+    "isPremium": true,
+    "isCasco": true,
+    "price": 5.53,
+    "priceCurrency": "USD",
+    "mpFinalPriceLabel": "$7.999 ARS",
+    "mpBadgeLabel": "Precio con Mercado Pago"
   },
   {
     "name": "Red Bull F1 2026 — Max Verstappen",
@@ -197,6 +982,48 @@
     }
   },
   {
+    "name": "McLaren F1 2026 — Lando Norris · Pretemporada",
+    "desc": "Modelo a escala del McLaren F1 2026 con la librea especial de los test de pretemporada del piloto Lando Norris. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "McLaren",
+      "2026",
+      "Norris",
+      "Pretemporada"
+    ],
+    "meta": {
+      "Auto": "McLaren F1 2026",
+      "Piloto": "Lando Norris",
+      "Temporada": "F1 2026",
+      "Librea": "Test de pretemporada",
+      "Escala": "1:24",
+      "Formato": "PDF A4",
+      "Dificultad": "Media",
+      "Precio": "USD 14 · MP 15% OFF"
+    },
+    "imgs": [
+      "imgs/MCL1.png",
+      "imgs/MCL14.png",
+      "imgs/MCL12.png"
+    ],
+    "file": "https://ko-fi.com/s/3cfaf7e680",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 14,
+    "priceCurrency": "USD",
+    "mpDiscount": 54,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/pepakura-mclaren-01.png",
+        "imgs/pepakura-mclaren-02.png"
+      ]
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
     "name": "Ferrari F1 2026 — Charles Leclerc",
     "desc": "Modelo a escala del Ferrari F1 2026 con la decoración de Charles Leclerc. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
@@ -237,6 +1064,49 @@
         "imgs/pepakura-ferrari-02.png"
       ]
     }
+  },
+  {
+    "name": "Aston Martin F1 2026 — Fernando Alonso · GP Mónaco",
+    "desc": "Modelo a escala del Aston Martin F1 2026 con la decoración especial de Fernando Alonso usada en el GP de Mónaco. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Aston Martin",
+      "2026",
+      "Alonso",
+      "GP Mónaco"
+    ],
+    "meta": {
+      "Auto": "Aston Martin F1 2026 (Livery GP Mónaco)",
+      "Piloto": "Fernando Alonso",
+      "Temporada": "F1 2026",
+      "Escala": "1:24",
+      "Formato": "PDF A4",
+      "Dificultad": "Media",
+      "Precio": "USD 15 · MP 15% OFF"
+    },
+    "imgs": [
+      "imgs/M1.png",
+      "imgs/M2.png",
+      "imgs/M3.png",
+      "imgs/M4.png"
+    ],
+    "file": "https://ko-fi.com/s/24cd442293",
+    "cardClass": "premium",
+    "isPremium": true,
+    "mpPopupKey": "astonmartin",
+    "price": 15,
+    "priceCurrency": "USD",
+    "mpDiscount": 57,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/pepakura-aston-01.png",
+        "imgs/pepakura-aston-02.png"
+      ]
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "Visa Cash App F1 2026",
@@ -280,6 +1150,49 @@
     }
   },
   {
+    "name": "McLaren F1 2026 — Lando Norris · Silverstone GP Livery",
+    "desc": "Modelo a escala del McLaren F1 2026 con la librea especial del Gran Premio de Silverstone del piloto Lando Norris. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "McLaren",
+      "2026",
+      "Norris",
+      "Silverstone GP"
+    ],
+    "meta": {
+      "Auto": "McLaren F1 2026",
+      "Piloto": "Lando Norris",
+      "Temporada": "F1 2026",
+      "GP": "Silverstone · Librea especial",
+      "Escala": "1:24",
+      "Formato": "PDF A4",
+      "Dificultad": "Media",
+      "Precio": "USD 14 · MP 15% OFF"
+    },
+    "imgs": [
+      "imgs/CM1.png",
+      "imgs/CM2.png",
+      "imgs/CM3.png",
+      "imgs/CM4.png"
+    ],
+    "file": "https://ko-fi.com/s/13ff6dd375",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 14,
+    "priceCurrency": "USD",
+    "mpDiscount": 54,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/pepakura-mclaren-silverstone-01.png",
+        "imgs/pepakura-mclaren-silverstone-02.png"
+      ]
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
+  },
+  {
     "name": "Cadillac F1 2026",
     "desc": "Modelo a escala del nuevo Cadillac F1 2026, la última incorporación a la parrilla del Mundial. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
@@ -319,6 +1232,47 @@
         "imgs/pepakura-cadillac-02.png"
       ]
     }
+  },
+  {
+    "name": "Visa Cash App F1 2026 — GP España",
+    "desc": "Modelo a escala del Visa Cash App F1 2026 con la librea especial del Gran Premio de España 2026. Incluye detalles de carrocería, alerones y soporte de exhibición. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Visa Cash App",
+      "2026",
+      "España GP"
+    ],
+    "meta": {
+      "Auto": "Visa Cash App F1 2026",
+      "Temporada": "F1 2026",
+      "GP": "España · Librea especial",
+      "Escala": "1:24",
+      "Formato": "PDF A4",
+      "Dificultad": "Media",
+      "Precio": "USD 15 · MP 15% OFF"
+    },
+    "imgs": [
+      "imgs/v12.png",
+      "imgs/v13.png",
+      "imgs/v14.png"
+    ],
+    "file": "https://ko-fi.com/s/74557fc3f9",
+    "cardClass": "premium",
+    "isPremium": true,
+    "mpPopupKey": "espana",
+    "price": 15,
+    "priceCurrency": "USD",
+    "mpDiscount": 57,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/pepakura-vcarb-espana-01.png",
+        "imgs/pepakura-vcarb-espana-02.png"
+      ]
+    },
+    "mpFinalPriceLabel": "$9.900 ARS"
   },
   {
     "name": "McLaren MCL40 — Monaco GP 2026",
@@ -362,6 +1316,40 @@
     }
   },
   {
+    "name": "Alpine A526 — Franco Colapinto · Austria GP Livery",
+    "desc": "Armá a escala el Mercedes-AMG W15 con la librea especial del Gran Premio de Austria 2024. Colores plateados con detalles en verde esmeralda característicos del equipo Mercedes. PDF listo para imprimir en A4, incluye todas las piezas, instrucciones de ensamblaje y soporte de exhibición. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "F1",
+      "Mercedes",
+      "Austria GP",
+      "2024"
+    ],
+    "meta": {
+      "Auto": "Alpine A526",
+      "GP": "Austria 2026",
+      "Librea": "Especial GP Austria",
+      "Escala": "1:24",
+      "Formato": "PDF A3",
+      "Dificultad": "Media",
+      "Precio": "USD 15 · MP 33% OFF"
+    },
+    "imgs": [
+      "imgs/imgsmercedes-w15-austria-01.png",
+      "imgs/imgsmercedes-w15-austria-02.png",
+      "imgs/imgsmercedes-w15-austria-03.png",
+      "imgs/imgsmercedes-w15-austria-04.png"
+    ],
+    "file": "https://ko-fi.com/s/c9843c80f5",
+    "cardClass": "premium",
+    "isPremium": true,
+    "mpPopupKey": "austria",
+    "price": 15,
+    "priceCurrency": "USD",
+    "mpDiscount": 33,
+    "mpFinalPriceLabel": "$15.000 ARS"
+  },
+  {
     "name": "Alpine A526 — Franco Colapinto · Miami GP Livery",
     "desc": "Modelo a escala del Alpine A526 con la librea especial Miami GP 2026 del piloto argentino Franco Colapinto (#43). Incluye soporte de exhibición y panel de tiempos. Imprime en cartulina 200g para mejores resultados. ¿Te gustó este modelo? Mirá las liveries especiales premium en la web — decoraciones exclusivas en PDF listas para imprimir.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:24",
@@ -400,6 +1388,46 @@
       "imgs": [
         "imgs/pepakura-alpine-miami-01.png",
         "imgs/pepakura-alpine-miami-02.png"
+      ]
+    }
+  },
+  {
+    "name": "Mercedes-Benz 190E — Carlos Reutemann",
+    "desc": "Armá a escala el auto que piloteó Reutemann. Diseño detallado, fiel al original. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24",
+    "tags": [
+      "Auto",
+      "Mercedes",
+      "Reutemann",
+      "Clásico"
+    ],
+    "meta": {
+      "Piloto": "Carlos Reutemann",
+      "Auto": "Mercedes-Benz 190E",
+      "Escala": "1:24",
+      "Formato": "PDF A4",
+      "Dificultad": "Media",
+      "Precio": "USD 15 · MP 15% OFF"
+    },
+    "imgs": [
+      "imgs/mercedes-190e-reutemann-01.jpg",
+      "imgs/mercedes-190e-reutemann-02.jpg",
+      "imgs/mercedes-190e-reutemann-03.jpg",
+      "imgs/mercedes-190e-reutemann-04.jpg"
+    ],
+    "file": "https://ko-fi.com/s/8ee4975d1a",
+    "cardClass": "premium",
+    "isPremium": true,
+    "mpPopupKey": "190e",
+    "price": 15,
+    "priceCurrency": "USD",
+    "mpDiscount": 15,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/pepakura-190e-01.png",
+        "imgs/pepakura-190e-02.png"
       ]
     }
   },
