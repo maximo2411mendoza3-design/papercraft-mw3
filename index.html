@@ -655,9 +655,11 @@
     footer { max-width: 1000px; margin: 0 auto; padding: 1.5rem 2rem; border-top: 1px solid var(--border); font-size: 0.73rem; color: var(--muted); text-align: center; }
 
     /* ── MOBILE ── */
-    @media (max-width: 700px) {
-      /* Ocultar animaciones laterales en mobile */
+    @media (max-width: 950px) {
+      /* Ocultar animaciones laterales en mobile/tablet */
       .side-canvas-wrap { display: none !important; }
+    }
+    @media (max-width: 700px) {
 
       /* Header más compacto */
       header { padding: 0.4rem 1rem; gap: 12px; min-height: auto; }
@@ -1452,8 +1454,8 @@
 <!-- INICIO -->
 <div id="section-inicio" class="section active">
   <div class="container">
-    <div style="background:#ffecec;border:1px solid #f5b5b5;color:#c40000;font-weight:600;text-align:center;padding:0.8rem 1rem;border-radius:8px;margin-bottom:1rem;font-size:0.9rem;">
-      ⚠️ Los modelos premium (de pago) están temporalmente no disponibles por mantenimiento. Vuelven a estar disponibles el 2 de octubre.
+    <div style="background:#eafff0;border:1px solid #a8e6b8;color:#157a3a;font-weight:600;text-align:center;padding:0.8rem 1rem;border-radius:8px;margin-bottom:1rem;font-size:0.9rem;">
+      ✅ Ya está resuelto: los modelos premium (de pago) volvieron a estar disponibles.
     </div>
     <div class="filter-tabs" role="group" aria-label="Filtrar modelos">
       <div class="filter-tab active" data-filter="all" onclick="setFilter('all')" role="button" tabindex="0">Todos</div>
