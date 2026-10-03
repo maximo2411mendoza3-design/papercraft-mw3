@@ -14,6 +14,51 @@
     }
   },
   {
+    "name": "Mercedes W17 F1 2026 — Pack Actualizaciones + Livery Especial GP Baréin (Russell + Antonelli) + Casco Especial",
+    "desc": "Pack con los Mercedes W17 de George Russell y Kimi Antonelli con las actualizaciones nuevas que el equipo trajo para este fin de semana del GP de Baréin, disputado en Malasia (circuito de Sepang): nuevo piso, sidepods rediseñados y retoques aerodinámicos en ambos alerones. Es la carrocería más reciente del auto, con las actualizaciones en la forma, distinta a la del Mercedes que ya tenés en la web. Incluye además la livery especial de un solo fin de semana que llevan los autos, en homenaje a Petronas, y el casco especial de esta carrera. Los autos a escala 1:24 y el casco a escala 1:8, todo en papercraft. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:24 / 1:8",
+    "tags": [
+      "F1",
+      "Mercedes",
+      "2026",
+      "Russell",
+      "Antonelli",
+      "GP Baréin",
+      "Pack"
+    ],
+    "meta": {
+      "Auto": "Mercedes W17 F1 2026 (Actualizado)",
+      "Pilotos": "George Russell / Kimi Antonelli",
+      "Evento": "GP Baréin (Sepang, Malasia)",
+      "Escala Autos": "1:24",
+      "Escala Casco": "1:8",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/MAY1.png",
+      "imgs/MAY2.png",
+      "imgs/MAY3.png",
+      "imgs/MAY4.png",
+      "imgs/MAY5.png",
+      "imgs/MAY6.png",
+      "imgs/MAY7.png",
+      "imgs/MAY8.png"
+    ],
+    "file": "https://ko-fi.com/s/428d3e244e",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 11.9,
+    "priceCurrency": "USD",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las imágenes muestran cómo quedan distribuidas las piezas de los autos y el casco.",
+      "imgs": [
+        "imgs/MAY9.png",
+        "imgs/MAY10.png"
+      ]
+    }
+  },
+  {
     "name": "Figura de Piloto F1 2026 — Lando Norris (McLaren)",
     "desc": "Figura de piloto de F1 a escala 1:10 en papercraft, con el diseño de Lando Norris (McLaren F1 2026). Incluye detalles del mono de carrera, casco y pose de piloto, lista para armar y exhibir. El PDF viene con las piezas para imprimir en A4 y un instructivo paso a paso dentro del mismo archivo. Solo necesitás tijera y pegamento. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:10",
@@ -379,51 +424,6 @@
       "imgs": [
         "imgs/MJ8.png",
         "imgs/MJ9.png"
-      ]
-    }
-  },
-  {
-    "name": "Mercedes W17 F1 2026 — Pack Actualizaciones + Livery Especial GP Baréin (Russell + Antonelli) + Casco Especial",
-    "desc": "Pack con los Mercedes W17 de George Russell y Kimi Antonelli con las actualizaciones nuevas que el equipo trajo para este fin de semana del GP de Baréin, disputado en Malasia (circuito de Sepang): nuevo piso, sidepods rediseñados y retoques aerodinámicos en ambos alerones. Es la carrocería más reciente del auto, con las actualizaciones en la forma, distinta a la del Mercedes que ya tenés en la web. Incluye además la livery especial de un solo fin de semana que llevan los autos, en homenaje a Petronas, y el casco especial de esta carrera. Los autos a escala 1:24 y el casco a escala 1:8, todo en papercraft. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
-    "scale": "1:24 / 1:8",
-    "tags": [
-      "F1",
-      "Mercedes",
-      "2026",
-      "Russell",
-      "Antonelli",
-      "GP Baréin",
-      "Pack"
-    ],
-    "meta": {
-      "Auto": "Mercedes W17 F1 2026 (Actualizado)",
-      "Pilotos": "George Russell / Kimi Antonelli",
-      "Evento": "GP Baréin (Sepang, Malasia)",
-      "Escala Autos": "1:24",
-      "Escala Casco": "1:8",
-      "Dificultad": "Media"
-    },
-    "imgs": [
-      "imgs/MAY1.png",
-      "imgs/MAY2.png",
-      "imgs/MAY3.png",
-      "imgs/MAY4.png",
-      "imgs/MAY5.png",
-      "imgs/MAY6.png",
-      "imgs/MAY7.png",
-      "imgs/MAY8.png"
-    ],
-    "file": "https://ko-fi.com/s/428d3e244e",
-    "cardClass": "premium",
-    "isPremium": true,
-    "price": 11.9,
-    "priceCurrency": "USD",
-    "pepakura": {
-      "title": "Vista previa en Pepakura",
-      "desc": "Así se ve este pack desarrollado en Pepakura antes de imprimirlo y armarlo. Las imágenes muestran cómo quedan distribuidas las piezas de los autos y el casco.",
-      "imgs": [
-        "imgs/MAY9.png",
-        "imgs/MAY10.png"
       ]
     }
   },
