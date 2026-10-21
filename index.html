@@ -188,38 +188,38 @@
     }
     .updates-badge svg { width: 9px; height: 9px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
     /* ── Tarjeta nueva — modelos GRATUITOS (rediseño minimalista) ──
-       Todo bajo .card-free para no afectar premium/comisión/mini viejas. ── */
-    .card.card-free {
+       Todo bajo .card-v2 para no afectar premium/comisión/mini viejas. ── */
+    .card.card-v2 {
       background: #ffffff;
       border: 1px solid #e5e5e2;
       border-radius: 14px;
     }
-    .card.card-free:hover { border-color: #c9c9c4; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
-    .fc-img-wrap { position: relative; width: 100%; aspect-ratio: 4 / 5; background: #f1f1ee; overflow: hidden; }
-    .fc-img-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    .fc-body { padding: 0.9rem 1rem 1rem; display: flex; flex-direction: column; gap: 6px; }
-    .fc-title { font-size: 0.97rem; font-weight: 700; color: #1a1a18; line-height: 1.3; }
-    .fc-sub { font-size: 0.72rem; color: #8a8a84; font-weight: 500; }
-    .fc-boxes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 4px; }
-    .fc-box {
+    .card.card-v2:hover { border-color: #c9c9c4; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    .cv-img-wrap { position: relative; width: 100%; aspect-ratio: 4 / 5; background: #f1f1ee; overflow: hidden; }
+    .cv-img-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .cv-body { padding: 0.9rem 1rem 1rem; display: flex; flex-direction: column; gap: 6px; }
+    .cv-title { font-size: 0.97rem; font-weight: 700; color: #1a1a18; line-height: 1.3; }
+    .cv-sub { font-size: 0.72rem; color: #8a8a84; font-weight: 500; }
+    .cv-boxes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 4px; }
+    .cv-box {
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       gap: 2px; padding: 7px 4px; border: 1px solid #ececE8; border-radius: 9px;
       background: #fafaf8; text-align: center;
     }
-    .fc-box-icon { width: 14px; height: 14px; color: #8a8a84; display: inline-flex; }
-    .fc-box-icon svg { width: 100%; height: 100%; }
-    .fc-box-val { font-size: 0.74rem; font-weight: 700; color: #1a1a18; line-height: 1.1; }
-    .fc-box-label { font-size: 0.58rem; color: #a3a39c; text-transform: uppercase; letter-spacing: 0.3px; }
-    .fc-action-row {
+    .cv-box-icon { width: 14px; height: 14px; color: #8a8a84; display: inline-flex; }
+    .cv-box-icon svg { width: 100%; height: 100%; }
+    .cv-box-val { font-size: 0.74rem; font-weight: 700; color: #1a1a18; line-height: 1.1; }
+    .cv-box-label { font-size: 0.58rem; color: #a3a39c; text-transform: uppercase; letter-spacing: 0.3px; }
+    .cv-action-row {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 2px;
       align-items: center;
     }
-    .fc-caption {
+    .cv-caption {
       grid-column: 1 / span 2;
       font-size: 0.68rem; color: #a3a39c;
       overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     }
-    .fc-dl {
+    .cv-dl {
       grid-column: 3 / span 2;
       display: flex; align-items: center; justify-content: center;
       background: #111111; color: #ffffff; font-size: 0.7rem; font-weight: 700;
@@ -227,13 +227,13 @@
       text-decoration: none; text-align: center;
       transition: background 0.18s, transform 0.12s;
     }
-    .fc-dl:hover { background: #2a2a2a; transform: translateY(-1px); }
-    .fc-dl.fc-dl-soon { background: #d8d8d3; color: #7a7a74; cursor: default; }
-    .fc-dl.fc-dl-soon:hover { transform: none; }
+    .cv-dl:hover { background: #2a2a2a; transform: translateY(-1px); }
+    .cv-dl.cv-dl-soon { background: #d8d8d3; color: #7a7a74; cursor: default; }
+    .cv-dl.cv-dl-soon:hover { transform: none; }
     @media (max-width: 420px) {
-      .fc-box-val { font-size: 0.68rem; }
-      .fc-box-label { font-size: 0.54rem; }
-      .fc-dl { font-size: 0.64rem; padding: 8px 4px; }
+      .cv-box-val { font-size: 0.68rem; }
+      .cv-box-label { font-size: 0.54rem; }
+      .cv-dl { font-size: 0.64rem; padding: 8px 4px; }
     }
     .card-price-row {
       margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border);
@@ -1874,13 +1874,13 @@ const starIcon = `<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9
 const shieldIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>`;
 
 /* ── Íconos para las tarjetas de modelos GRATUITOS (rediseño) ── */
-const fcYearIcon  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`;
-const fcPdfIcon   = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`;
-const fcPdoIcon   = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>`;
-const fcScaleIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="10" rx="1.5" transform="rotate(-25 12 12)"/><path d="m8.5 9.2.7 1.6M11 7.8l.7 1.6M13.5 6.4l.7 1.6" transform="rotate(-25 12 12)"/></svg>`;
+const cvYearIcon  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`;
+const cvPdfIcon   = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`;
+const cvPdoIcon   = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>`;
+const cvScaleIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="10" rx="1.5" transform="rotate(-25 12 12)"/><path d="m8.5 9.2.7 1.6M11 7.8l.7 1.6M13.5 6.4l.7 1.6" transform="rotate(-25 12 12)"/></svg>`;
 
 /* Extrae un año de 4 dígitos de tags/meta/nombre — nunca lo inventa */
-function fcExtractYear(m) {
+function cvExtractYear(m) {
   const re = /(19|20)\d{2}/;
   const pool = [...(m.tags||[])];
   if (m.meta) pool.push(...Object.values(m.meta));
@@ -1892,7 +1892,7 @@ function fcExtractYear(m) {
   return null;
 }
 /* Categoría (F1/F2/etc, tomada de los tags reales) y equipo (de meta.Equipo o meta.Auto) */
-function fcExtractInfo(m) {
+function cvExtractInfo(m) {
   const champ = (m.tags||[]).find(t => ['F1','F2','F3','GT3','GTE','LMGT3','WEC'].includes(t)) || null;
   let team = null;
   if (m.meta) {
@@ -1971,48 +1971,83 @@ function positionDeck(deckEl, count, activeIdx) {
   });
 }
 
-/* ── Tarjeta nueva (minimalista) para modelos GRATUITOS ──
-   Solo se usa para modelos sin isPremium y sin isCommission.
-   No toca ni reutiliza estilos de las tarjetas premium/comisión. ── */
-function buildFreeCard(m, idx) {
+/* ── Tarjeta nueva (minimalista) — usada por modelos GRATIS y PREMIUM ──
+   La estructura (imagen, título, subtítulo, 4 cuadros) es compartida.
+   Lo único que cambia es la fila de acción de abajo (botón). No se usa
+   para la card de "Encargá tu modelo" (comisión), que sigue aparte. ── */
+function cvCaption(m) {
+  if (m.isCasco) return 'Casco papercraft';
+  if ((m.tags||[]).includes('Piloto')) return 'Figura papercraft';
+  return 'Modelo papercraft';
+}
+function cvCardBase(m, idx) {
   const img = (m.isMini && m.liveries && m.liveries.length) ? m.liveries[0].img : (m.imgs ? m.imgs[0] : '');
-  const year = fcExtractYear(m);
-  const { champ, team } = fcExtractInfo(m);
+  const year = cvExtractYear(m);
+  const { champ, team } = cvExtractInfo(m);
   const secondaryParts = [champ, team].filter(Boolean);
   const secondaryLine = secondaryParts.length
-    ? `<div class="fc-sub">${secondaryParts.join(' &middot; ')}</div>` : '';
+    ? `<div class="cv-sub">${secondaryParts.join(' &middot; ')}</div>` : '';
 
   const hasPdo = !!(m.pepakura);
   const boxes = [
-    { col: 1, icon: fcYearIcon,  val: year,     label: 'Año' },
-    { col: 2, icon: fcPdfIcon,   val: 'PDF',    label: 'Formato' },
-    { col: 3, icon: fcPdoIcon,   val: hasPdo ? 'PDO' : null, label: 'Edición' },
-    { col: 4, icon: fcScaleIcon, val: m.scale || null, label: 'Escala' },
+    { col: 1, icon: cvYearIcon,  val: year,     label: 'Año' },
+    { col: 2, icon: cvPdfIcon,   val: 'PDF',    label: 'Formato' },
+    { col: 3, icon: cvPdoIcon,   val: hasPdo ? 'PDO' : null, label: 'Edición' },
+    { col: 4, icon: cvScaleIcon, val: m.scale || null, label: 'Escala' },
   ].filter(b => b.val);
 
   const boxesHtml = boxes.map(b =>
-    `<div class="fc-box" style="grid-column:${b.col}">
-      <span class="fc-box-icon">${b.icon}</span>
-      <span class="fc-box-val">${b.val}</span>
-      <span class="fc-box-label">${b.label}</span>
+    `<div class="cv-box" style="grid-column:${b.col}">
+      <span class="cv-box-icon">${b.icon}</span>
+      <span class="cv-box-val">${b.val}</span>
+      <span class="cv-box-label">${b.label}</span>
     </div>`).join('');
 
+  return { img, secondaryLine, boxesHtml };
+}
+
+function buildFreeCard(m, idx) {
+  const { img, secondaryLine, boxesHtml } = cvCardBase(m, idx);
   const isComingSoon = !m.file || m.file === '#';
   const dlBtn = isComingSoon
-    ? `<span class="fc-dl fc-dl-soon" onclick="event.stopPropagation()">Próximamente</span>`
-    : `<a class="fc-dl" href="${m.file}" target="_blank" rel="noopener" onclick="event.stopPropagation()">GRATIS &rarr;</a>`;
+    ? `<span class="cv-dl cv-dl-soon" onclick="event.stopPropagation()">Próximamente</span>`
+    : `<a class="cv-dl" href="${m.file}" target="_blank" rel="noopener" onclick="event.stopPropagation()">GRATIS &rarr;</a>`;
 
-  return `<div class="card card-free" onclick="openModal(${idx})" role="button" tabindex="0" aria-label="Ver detalle de ${m.name}">
-    <div class="fc-img-wrap">
+  return `<div class="card card-v2" onclick="openModal(${idx})" role="button" tabindex="0" aria-label="Ver detalle de ${m.name}">
+    <div class="cv-img-wrap">
       <img src="${img}" alt="${m.name}" loading="lazy" decoding="async">
     </div>
-    <div class="fc-body">
-      <div class="fc-title">${m.name}</div>
+    <div class="cv-body">
+      <div class="cv-title">${m.name}</div>
       ${secondaryLine}
-      <div class="fc-boxes">${boxesHtml}</div>
-      <div class="fc-action-row">
-        <span class="fc-caption">Modelo papercraft</span>
+      <div class="cv-boxes">${boxesHtml}</div>
+      <div class="cv-action-row">
+        <span class="cv-caption">${cvCaption(m)}</span>
         ${dlBtn}
+      </div>
+    </div>
+  </div>`;
+}
+
+/* Premium: mismo armado, pero el botón muestra el precio en USD y, al
+   tocarlo, abre la ficha (igual que tocar el resto de la card) para que
+   ahí elija forma de pago (Ko-fi / Mercado Pago) — no hay descarga directa. */
+function buildPremiumCard(m, idx) {
+  const { img, secondaryLine, boxesHtml } = cvCardBase(m, idx);
+  const p = getPricing(m);
+  const priceLabel = `${p.originalPrice} &rarr;`;
+
+  return `<div class="card card-v2 card-v2-paid" onclick="openModal(${idx})" role="button" tabindex="0" aria-label="Ver detalle de ${m.name}">
+    <div class="cv-img-wrap">
+      <img src="${img}" alt="${m.name}" loading="lazy" decoding="async">
+    </div>
+    <div class="cv-body">
+      <div class="cv-title">${m.name}</div>
+      ${secondaryLine}
+      <div class="cv-boxes">${boxesHtml}</div>
+      <div class="cv-action-row">
+        <span class="cv-caption">${cvCaption(m)}</span>
+        <span class="cv-dl cv-dl-paid">${priceLabel}</span>
       </div>
     </div>
   </div>`;
@@ -2020,9 +2055,15 @@ function buildFreeCard(m, idx) {
 
 function buildCard(m) {
   const idx = models.indexOf(m);
-  // Modelos gratuitos (incluye los "Mini Pack") → tarjeta nueva. Premium y
-  // la card de encargo ("Comisión") siguen con el diseño anterior, sin tocar.
-  if (!m.isPremium && !m.isCommission) return buildFreeCard(m, idx);
+  // Modelos gratuitos (incluye los "Mini Pack") y premium → tarjeta nueva.
+  // Solo la card de encargo ("Comisión") sigue con el diseño anterior.
+  if (m.isCommission) {
+    // sigue más abajo con el código viejo, sin cambios
+  } else if (!m.isPremium) {
+    return buildFreeCard(m, idx);
+  } else {
+    return buildPremiumCard(m, idx);
+  }
   const previewCount = m.singleCover ? 1 : 2;
   const previewImgs = m.imgs.slice(0, previewCount);
   const imgs = previewImgs.map((src, i) =>
