@@ -212,6 +212,12 @@
     .fc-box-label { font-size: 0.58rem; color: #a3a39c; text-transform: uppercase; letter-spacing: 0.3px; }
     .fc-action-row {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 2px;
+      align-items: center;
+    }
+    .fc-caption {
+      grid-column: 1 / span 2;
+      font-size: 0.68rem; color: #a3a39c;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     }
     .fc-dl {
       grid-column: 3 / span 2;
@@ -1994,7 +2000,7 @@ function buildFreeCard(m, idx) {
   const isComingSoon = !m.file || m.file === '#';
   const dlBtn = isComingSoon
     ? `<span class="fc-dl fc-dl-soon" onclick="event.stopPropagation()">Próximamente</span>`
-    : `<a class="fc-dl" href="${m.file}" target="_blank" rel="noopener" onclick="event.stopPropagation()">DESCARGAR GRATIS</a>`;
+    : `<a class="fc-dl" href="${m.file}" target="_blank" rel="noopener" onclick="event.stopPropagation()">GRATIS &rarr;</a>`;
 
   return `<div class="card card-free" onclick="openModal(${idx})" role="button" tabindex="0" aria-label="Ver detalle de ${m.name}">
     <div class="fc-img-wrap">
@@ -2004,7 +2010,10 @@ function buildFreeCard(m, idx) {
       <div class="fc-title">${m.name}</div>
       ${secondaryLine}
       <div class="fc-boxes">${boxesHtml}</div>
-      <div class="fc-action-row">${dlBtn}</div>
+      <div class="fc-action-row">
+        <span class="fc-caption">Modelo papercraft</span>
+        ${dlBtn}
+      </div>
     </div>
   </div>`;
 }
