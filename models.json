@@ -14,6 +14,45 @@
     }
   },
   {
+    "name": "Ferrari 296 GT3 #51 — AF Corse-Francorchamps Motors (GT World Challenge Europe)",
+    "desc": "Modelo a escala del Ferrari 296 GT3 del equipo AF Corse-Francorchamps Motors, auto #51, en papercraft. Con este auto, Alessandro Pier Guidi y Alessio Rovera se consagraron campeones de pilotos en la Endurance Cup del GT World Challenge Europe 2024, y en 2025 el trío, junto a Vincent Abril, ganó de forma absoluta las 24 Horas de Spa. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:20",
+    "tags": [
+      "GT3",
+      "Ferrari",
+      "AF Corse",
+      "GTWC",
+      "2024"
+    ],
+    "meta": {
+      "Auto": "Ferrari 296 GT3 #51",
+      "Equipo": "AF Corse-Francorchamps Motors",
+      "Campeonato": "GT World Challenge Europe",
+      "Escala": "1:20",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/KLA1.png",
+      "imgs/KLA2.png",
+      "imgs/KLA3.png",
+      "imgs/KLA4.png"
+    ],
+    "file": "https://ko-fi.com/s/26cb0dfb84",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9,
+    "priceCurrency": "USD",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/KLA5.png",
+        "imgs/KLA6.png"
+      ]
+    }
+  },
+  {
     "name": "Ferrari 296 GT3 #54 — Vista AF Corse (FIA WEC 2024)",
     "desc": "Modelo a escala del Ferrari 296 GT3 del equipo Vista AF Corse, auto #54, en papercraft. Lleva la livery plateada con gráficos rojos que el equipo usó en su debut en el FIA WEC 2024, manejado por Thomas Flohr, Francesco Castellacci y el piloto oficial de Ferrari Davide Rigon. Con este auto, Vista AF Corse logró la primera victoria de la historia del 296 LMGT3 en el WEC, en las 6 Horas de Fuji. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:20",
