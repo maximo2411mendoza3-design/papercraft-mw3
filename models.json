@@ -14,6 +14,39 @@
     }
   },
   {
+    "name": "Casco Fernando Alonso — Réplica a escala",
+    "desc": "Réplica en papercraft del casco de Fernando Alonso a escala 1:5. Modelo detallado, listo para armar en casa. Incluye el desarrollo en Pepakura para usarlo de guía de armado. Solo necesitás tijera y pegamento. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:5",
+    "tags": [
+      "Casco",
+      "Alonso",
+      "F1"
+    ],
+    "meta": {
+      "Tipo": "Casco F1",
+      "Piloto": "Fernando Alonso",
+      "Escala": "1:5",
+      "Formato": "PDF A4",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/GYS1.png",
+      "imgs/GYS2.png",
+      "imgs/GYS3.png"
+    ],
+    "file": "https://www.mediafire.com/file/jr4aqs8t5g21thf/MW3+HELT+ALO.rar/file",
+    "cardClass": "",
+    "isCasco": true,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/GYS4.png",
+        "imgs/GYS5.png"
+      ]
+    }
+  },
+  {
     "name": "Ferrari 296 GT3 #51 — AF Corse-Francorchamps Motors (GT World Challenge Europe)",
     "desc": "Modelo a escala del Ferrari 296 GT3 del equipo AF Corse-Francorchamps Motors, auto #51, en papercraft. Con este auto, Alessandro Pier Guidi y Alessio Rovera se consagraron campeones de pilotos en la Endurance Cup del GT World Challenge Europe 2024, y en 2025 el trío, junto a Vincent Abril, ganó de forma absoluta las 24 Horas de Spa. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:20",
