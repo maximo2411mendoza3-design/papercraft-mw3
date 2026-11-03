@@ -14,19 +14,100 @@
     }
   },
   {
-    "name": "Casco Fernando Alonso — Réplica a escala",
-    "desc": "Réplica en papercraft del casco de Fernando Alonso a escala 1:5. Modelo detallado, listo para armar en casa. Incluye el desarrollo en Pepakura para usarlo de guía de armado. Solo necesitás tijera y pegamento. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "name": "Casco Kimi Antonelli — GP de Italia (Monza) Bandera Italiana",
+    "desc": "Casco a escala 1:5 en papercraft de Kimi Antonelli, con el diseño tricolor especial que usó en el GP de Italia, en Monza. Con la bandera italiana como protagonista, es un homenaje a Valentino Rossi y a su casco de Mugello 2002, diseñado por Aldo Drudi. Con este casco, Antonelli ganó su Gran Premio de local partiendo desde el puesto 19. Incluye base de exhibición. PDF listo para imprimir y armar. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "tags": [
+      "Casco",
+      "Antonelli",
+      "Mercedes",
+      "GP Italia"
+    ],
+    "meta": {
+      "Auto": "Casco F1",
+      "Piloto": "Kimi Antonelli",
+      "Equipo": "Mercedes",
+      "Evento": "GP Italia (Monza) 2026",
+      "Escala": "1:5",
+      "Formato": "PDF",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/JKH1.png",
+      "imgs/JKH2.png",
+      "imgs/JKH3.png"
+    ],
+    "file": "https://ko-fi.com/s/b6b242dfd5",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/JKH4.png",
+        "imgs/JKH5.png"
+      ]
+    },
+    "scale": "1:5",
+    "cardClass": "premium",
+    "isPremium": true,
+    "isCasco": true,
+    "price": 4.25,
+    "priceCurrency": "USD",
+    "mpFinalPriceLabel": "$5.000 ARS",
+    "mpBadgeLabel": "Precio con Mercado Pago"
+  },
+  {
+    "name": "Casco Max Verstappen — Red Bull Racing",
+    "desc": "Casco a escala 1:5 en papercraft de Max Verstappen, con el diseño que usa en Red Bull Racing. Réplica detallada, con visera y decoración lista para armar en casa. Incluye base de exhibición. PDF listo para imprimir y armar. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "tags": [
+      "Casco",
+      "Verstappen",
+      "Red Bull"
+    ],
+    "meta": {
+      "Auto": "Casco F1",
+      "Piloto": "Max Verstappen",
+      "Equipo": "Red Bull Racing",
+      "Escala": "1:5",
+      "Formato": "PDF",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/YU1.png",
+      "imgs/YU2.png",
+      "imgs/YU3.png",
+      "imgs/YU4.png"
+    ],
+    "file": "https://ko-fi.com/s/f95df98133",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/YU5.png",
+        "imgs/YU6.png"
+      ]
+    },
+    "scale": "1:5",
+    "cardClass": "premium",
+    "isPremium": true,
+    "isCasco": true,
+    "price": 4.25,
+    "priceCurrency": "USD",
+    "mpFinalPriceLabel": "$5.000 ARS",
+    "mpBadgeLabel": "Precio con Mercado Pago"
+  },
+  {
+    "name": "Casco F1 — Fernando Alonso (Aston Martin)",
+    "desc": "Réplica de casco de F1 en papercraft de Fernando Alonso, escala 1:5. Diseño detallado, con visera y decoración lista para armar en casa. PDF listo para imprimir en A4, incluye todas las piezas e instrucciones de ensamblaje. Solo necesitás tijera y pegamento. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:5",
     "tags": [
       "Casco",
       "Alonso",
-      "F1"
+      "Aston Martin"
     ],
     "meta": {
-      "Tipo": "Casco F1",
+      "Auto": "Casco F1",
       "Piloto": "Fernando Alonso",
+      "Equipo": "Aston Martin",
       "Escala": "1:5",
-      "Formato": "PDF A4",
       "Dificultad": "Media"
     },
     "imgs": [
