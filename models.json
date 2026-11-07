@@ -14,6 +14,47 @@
     }
   },
   {
+    "name": "Casco Kimi Antonelli — GP de Brasil 2026 (Homenaje a Ayrton Senna)",
+    "desc": "Casco a escala 1:5 en papercraft de Kimi Antonelli, con el diseño especial que usa en el GP de Brasil, en Interlagos: un homenaje a Ayrton Senna a 35 años de su primera victoria como local, en 1991. El casco toma el amarillo de Senna junto con el verde y el azul de la bandera de Brasil, y suma el logo \"S\" de Senna. Atrás lleva un esquema de caja de cambios con la sexta marcha seleccionada, en referencia a aquella victoria en la que Senna terminó con la caja trabada en sexta. Antonelli le agregó además los colores de Italia como tributo a su país. Es el primer casco especial que usa como campeón del mundo. Incluye base de exhibición. PDF listo para imprimir y armar. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:5",
+    "tags": [
+      "Casco",
+      "Antonelli",
+      "Mercedes",
+      "GP Brasil"
+    ],
+    "meta": {
+      "Auto": "Casco F1",
+      "Piloto": "Kimi Antonelli",
+      "Equipo": "Mercedes",
+      "Evento": "GP Brasil 2026",
+      "Escala": "1:5",
+      "Formato": "PDF",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/IOL1.png",
+      "imgs/IOL2.png",
+      "imgs/IOL3.png"
+    ],
+    "file": "https://ko-fi.com/s/306f8c9c81",
+    "cardClass": "premium",
+    "isPremium": true,
+    "isCasco": true,
+    "price": 4.25,
+    "priceCurrency": "USD",
+    "mpFinalPriceLabel": "$5.000 ARS",
+    "mpBadgeLabel": "Precio con Mercado Pago",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/IOL4.png",
+        "imgs/IOL5.png"
+      ]
+    }
+  },
+  {
     "name": "Casco Kimi Antonelli — GP de Italia (Monza) Bandera Italiana",
     "desc": "Casco a escala 1:5 en papercraft de Kimi Antonelli, con el diseño tricolor especial que usó en el GP de Italia, en Monza. Con la bandera italiana como protagonista, es un homenaje a Valentino Rossi y a su casco de Mugello 2002, diseñado por Aldo Drudi. Con este casco, Antonelli ganó su Gran Premio de local partiendo desde el puesto 19. Incluye base de exhibición. PDF listo para imprimir y armar. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "tags": [
