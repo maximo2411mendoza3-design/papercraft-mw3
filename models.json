@@ -14,6 +14,42 @@
     }
   },
   {
+    "name": "Casco Franco Colapinto — Williams F1 2024",
+    "desc": "Casco a escala 1:5 en papercraft de Franco Colapinto, con el diseño habitual que usó en su paso por Williams en la temporada 2024. Lleva la bandera argentina como protagonista, en homenaje a ser el primer piloto argentino en la F1 en más de 20 años, desde su debut en el GP de Italia, en Monza. Incluye base de exhibición. PDF listo para imprimir y armar. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:5",
+    "tags": [
+      "Casco",
+      "Colapinto",
+      "Williams",
+      "2024"
+    ],
+    "meta": {
+      "Auto": "Casco F1",
+      "Piloto": "Franco Colapinto",
+      "Equipo": "Williams",
+      "Temporada": "F1 2024",
+      "Escala": "1:5",
+      "Formato": "PDF",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/COL1.png",
+      "imgs/COL2.png",
+      "imgs/COL3.png"
+    ],
+    "file": "https://www.mediafire.com/file/1xbs2cus3lcohme/MW3+COL+1+HELT.rar/file",
+    "cardClass": "",
+    "isCasco": true,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/COL4.png",
+        "imgs/COL5.png"
+      ]
+    }
+  },
+  {
     "name": "Casco Kimi Antonelli — GP de Brasil 2026 (Homenaje a Ayrton Senna)",
     "desc": "Casco a escala 1:5 en papercraft de Kimi Antonelli, con el diseño especial que usa en el GP de Brasil, en Interlagos: un homenaje a Ayrton Senna a 35 años de su primera victoria como local, en 1991. El casco toma el amarillo de Senna junto con el verde y el azul de la bandera de Brasil, y suma el logo \"S\" de Senna. Atrás lleva un esquema de caja de cambios con la sexta marcha seleccionada, en referencia a aquella victoria en la que Senna terminó con la caja trabada en sexta. Antonelli le agregó además los colores de Italia como tributo a su país. Es el primer casco especial que usa como campeón del mundo. Incluye base de exhibición. PDF listo para imprimir y armar. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:5",
