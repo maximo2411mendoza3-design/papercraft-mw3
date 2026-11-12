@@ -36,10 +36,10 @@
       "Dificultad": "Media"
     },
     "imgs": [
-      "imgs/VRS6.png",
       "imgs/VRS1.png",
       "imgs/VRS2.png",
-      "imgs/VRS3.png"
+      "imgs/VRS3.png",
+      "imgs/VRS4.png"
     ],
     "file": "https://ko-fi.com/s/877cf3750d",
     "cardClass": "premium",
@@ -50,8 +50,8 @@
       "title": "Vista previa en Pepakura",
       "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
       "imgs": [
-        "imgs/VRS4.png",
-        "imgs/VRS5.png"
+        "imgs/VRS5.png",
+        "imgs/VRS6.png"
       ]
     }
   },
