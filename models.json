@@ -14,6 +14,48 @@
     }
   },
   {
+    "name": "Ferrari 296 GT3 #31 — Emil Frey Racing (Max Verstappen, NLS9 2025)",
+    "desc": "Modelo a escala del Ferrari 296 GT3 #31 de Emil Frey Racing, en papercraft. Con este auto, Max Verstappen y Chris Lulham lograron la victoria en la NLS9 de 2025, disputada en el circuito Nürburgring Nordschleife, durante el 57.º ADAC Barbarossapreis. Fue el debut de Verstappen en una carrera de GT3 y su primera victoria en el automovilismo real fuera de la Fórmula 1. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
+    "scale": "1:20",
+    "tags": [
+      "GT3",
+      "Ferrari",
+      "Emil Frey Racing",
+      "Max Verstappen",
+      "NLS",
+      "2025"
+    ],
+    "meta": {
+      "Auto": "Ferrari 296 GT3 #31",
+      "Pilotos": "Max Verstappen / Chris Lulham",
+      "Equipo": "Emil Frey Racing",
+      "Campeonato": "ADAC Nürburgring Langstrecken-Serie (NLS)",
+      "Evento": "NLS9 — 57.º ADAC Barbarossapreis 2025",
+      "Escala": "1:20",
+      "Páginas": "—",
+      "Dificultad": "Media"
+    },
+    "imgs": [
+      "imgs/VRS6.png",
+      "imgs/VRS1.png",
+      "imgs/VRS2.png",
+      "imgs/VRS3.png"
+    ],
+    "file": "https://ko-fi.com/s/877cf3750d",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 9,
+    "priceCurrency": "USD",
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
+      "imgs": [
+        "imgs/VRS4.png",
+        "imgs/VRS5.png"
+      ]
+    }
+  },
+  {
     "name": "Casco Kimi Antonelli — GP de Brasil 2026 (Homenaje a Ayrton Senna)",
     "desc": "Casco a escala 1:5 en papercraft de Kimi Antonelli, con el diseño especial que usa en el GP de Brasil, en Interlagos: un homenaje a Ayrton Senna a 35 años de su primera victoria como local, en 1991. El casco toma el amarillo de Senna junto con el verde y el azul de la bandera de Brasil, y suma el logo \"S\" de Senna. Atrás lleva un esquema de caja de cambios con la sexta marcha seleccionada, en referencia a aquella victoria en la que Senna terminó con la caja trabada en sexta. Antonelli le agregó además los colores de Italia como tributo a su país. Es el primer casco especial que usa como campeón del mundo. Incluye base de exhibición. PDF listo para imprimir y armar. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:5",
@@ -243,48 +285,6 @@
       "imgs": [
         "imgs/FL5.png",
         "imgs/FL6.png"
-      ]
-    }
-  },
-  {
-    "name": "Ferrari 296 GT3 #31 — Emil Frey Racing (Max Verstappen, NLS9 2025)",
-    "desc": "Modelo a escala del Ferrari 296 GT3 #31 de Emil Frey Racing, en papercraft. Con este auto, Max Verstappen y Chris Lulham lograron la victoria en la NLS9 de 2025, disputada en el circuito Nürburgring Nordschleife, durante el 57.º ADAC Barbarossapreis. Fue el debut de Verstappen en una carrera de GT3 y su primera victoria en el automovilismo real fuera de la Fórmula 1. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
-    "scale": "1:20",
-    "tags": [
-      "GT3",
-      "Ferrari",
-      "Emil Frey Racing",
-      "Max Verstappen",
-      "NLS",
-      "2025"
-    ],
-    "meta": {
-      "Auto": "Ferrari 296 GT3 #31",
-      "Pilotos": "Max Verstappen / Chris Lulham",
-      "Equipo": "Emil Frey Racing",
-      "Campeonato": "ADAC Nürburgring Langstrecken-Serie (NLS)",
-      "Evento": "NLS9 — 57.º ADAC Barbarossapreis 2025",
-      "Escala": "1:20",
-      "Páginas": "—",
-      "Dificultad": "Media"
-    },
-    "imgs": [
-      "imgs/VRS6.png",
-      "imgs/VRS1.png",
-      "imgs/VRS2.png",
-      "imgs/VRS3.png"
-    ],
-    "file": "https://ko-fi.com/s/877cf3750d",
-    "cardClass": "premium",
-    "isPremium": true,
-    "price": 9,
-    "priceCurrency": "USD",
-    "pepakura": {
-      "title": "Vista previa en Pepakura",
-      "desc": "Así se ve este modelo desarrollado en Pepakura antes de imprimirlo y armarlo. Las dos imágenes muestran cómo quedan distribuidas las piezas del papercraft.",
-      "imgs": [
-        "imgs/VRS4.png",
-        "imgs/VRS5.png"
       ]
     }
   },
