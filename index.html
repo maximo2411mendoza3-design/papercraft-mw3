@@ -2459,6 +2459,14 @@ function imageDimensionAttributes(src) {
   return ` width="${dimensions.width}" height="${dimensions.height}"`;
 }
 
+function getPepakuraPreviewImages(model) {
+  const images = model.pepakura && Array.isArray(model.pepakura.imgs) ? model.pepakura.imgs : [];
+  const dimensions = window.MW3_IMAGE_DIMENSIONS;
+  return images
+    .filter(src => typeof src === 'string' && src && (!dimensions || Object.prototype.hasOwnProperty.call(dimensions, src)))
+    .slice(0, 2);
+}
+
 function buildCardV2(m, idx) {
   const c = m.cardV2 || {};
   const meta = m.meta || {};
@@ -2836,7 +2844,7 @@ function openModalV2(m, idx) {
   for (let i = 0; i < m.imgs.length; i += 2) m2Pairs.push(m.imgs.slice(i, i + 2));
   m2Pos = 0; m2Idx = 0; m2Sliding = false;
   const n = m2Pairs.length;
-  m2Pepa = (m.pepakura && Array.isArray(m.pepakura.imgs)) ? m.pepakura.imgs.filter(src => imageDimensionAttributes(src)).slice(0, 2) : [];
+  m2Pepa = getPepakuraPreviewImages(m);
 
   const imgTag = (src, alt) => `<img src="${src}" alt="${alt}"${imageDimensionAttributes(src)} draggable="false" onload="this.classList.add('in')" onerror="this.classList.add('in')">`;
   const slideHtml = (pair, p) => `<div class="m2-slide">` + pair.map((src, i) =>
@@ -3085,9 +3093,7 @@ function openModal(idx) {
   const pepaImgsEl = document.getElementById('pepakura-imgs');
   const pepaDescEl = document.getElementById('pepakura-desc');
   closePepakuraPanel();
-  const validPepakuraImages = m.pepakura && Array.isArray(m.pepakura.imgs)
-    ? m.pepakura.imgs.filter(src => imageDimensionAttributes(src)).slice(0, 2)
-    : [];
+  const validPepakuraImages = getPepakuraPreviewImages(m);
   if (validPepakuraImages.length >= 2) {
     pepaToggleWrap.innerHTML = `<div class="pepakura-toggle" onclick="openPepakuraPanel()" role="button" tabindex="0" aria-label="Ver vista previa en Pepakura">
       <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
