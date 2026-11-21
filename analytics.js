@@ -1,6 +1,6 @@
 (() => {
   // Set this to the real GA4 ID (format: G-XXXXXXXXXX) to enable analytics.
-  const GA4_MEASUREMENT_ID = '';
+  const GA4_MEASUREMENT_ID = 'G-DXNNF06BHY';
   const validMeasurementId = /^G-[A-Z0-9]+$/i.test(GA4_MEASUREMENT_ID);
 
   if (validMeasurementId) {
