@@ -1,1 +1,54 @@
+name: Generate MW3 SEO pages
 
+on:
+  push:
+    paths:
+      - index.html
+      - models.json
+      - analytics.js
+      - scripts/generate-seo.ps1
+      - .github/workflows/generate-seo.yml
+      - CNAME
+      - robots.txt
+      - imgs/**
+      - pdfs/**
+      - '*.png'
+      - '*.jpg'
+      - '*.jpeg'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - name: Generate static site and SEO files
+        shell: pwsh
+        run: ./scripts/generate-seo.ps1 -OutputRoot _site -CopySiteFiles
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.ref_name == github.event.repository.default_branch
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
