@@ -1916,23 +1916,23 @@
       "Precio": "—"
     },
     "imgs": [
-      "imgs/m1.png",
-      "imgs/m2.png",
-      "imgs/m3.png",
+      "imgs/M1.png",
+      "imgs/M2.png",
+      "imgs/M3.png",
       "imgs/mc4.png"
     ],
     "liveries": [
       {
         "label": "Vista 1",
-        "img": "imgs/m1.png"
+        "img": "imgs/M1.png"
       },
       {
         "label": "Vista 2",
-        "img": "imgs/m2.png"
+        "img": "imgs/M2.png"
       },
       {
         "label": "Vista 3",
-        "img": "imgs/m3.png"
+        "img": "imgs/M3.png"
       },
       {
         "label": "Vista 4",
