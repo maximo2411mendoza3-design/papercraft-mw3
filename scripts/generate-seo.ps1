@@ -53,6 +53,7 @@ foreach ($model in $models) {
 
 $categories = @(
   [pscustomobject]@{ Id = 'f1'; Title = 'Fórmula 1'; Route = 'categories/formula-1' },
+  [pscustomobject]@{ Id = 'formula-e'; Title = 'Formula E'; Route = 'categories/formula-e' },
   [pscustomobject]@{ Id = 'gt3'; Title = 'Autos GT3'; Route = 'categories/gt3' },
   [pscustomobject]@{ Id = 'cascos'; Title = 'Cascos'; Route = 'categories/helmets' },
   [pscustomobject]@{ Id = 'figuras'; Title = 'Figuras'; Route = 'categories/figures' },
@@ -120,9 +121,48 @@ function Get-CategoryId {
   if ($Model.isCasco -or ($tags | Where-Object { $_ -ieq 'Casco' })) { return 'cascos' }
   if (($tags | Where-Object { $_ -ieq 'Piloto' }) -or ([string]$Model.name -match '(?i)figura')) { return 'figuras' }
   if (($tags | Where-Object { $_ -match '(?i)trofeo' }) -or ([string]$Model.name -match '(?i)trofeo')) { return 'otros' }
+  if (($tags | Where-Object { $_ -ieq 'Formula E' }) -or ([string]$Model.name -match '(?i)\bFormula\s+E\b')) { return 'formula-e' }
   if (($tags | Where-Object { $_ -match '(?i)gt[\s-]?3' }) -or ([string]$Model.name -match '(?i)gt[\s-]?3')) { return 'gt3' }
   if (($tags | Where-Object { $_ -ieq 'F1' }) -or ([string]$Model.name -match '(?i)\bf1\b')) { return 'f1' }
   return 'otros'
+}
+
+function Get-ModelPublicationDate {
+  param([object]$Model)
+  if (-not $script:gitHistoryAvailable) { return $null }
+
+  $jsonName = ConvertTo-Json -InputObject ([string]$Model.name) -Compress
+  $searchPattern = '"name": ' + $jsonName
+  $commitDates = @(& $script:gitExecutable -C $script:root log --reverse '--format=%cI' "-S$searchPattern" -- models.json 2>$null)
+  if ($LASTEXITCODE -ne 0) {
+    Write-Warning "No se pudo consultar el historial de '$($Model.name)'; se omitirá su fecha de publicación."
+    return $null
+  }
+  $firstCommitDate = $commitDates | Where-Object { [string]$_ -match '^\d{4}-\d{2}-\d{2}T' } | Select-Object -First 1
+  if (-not $firstCommitDate) { return $null }
+
+  try {
+    $date = [DateTimeOffset]::Parse([string]$firstCommitDate, [Globalization.CultureInfo]::InvariantCulture, [Globalization.DateTimeStyles]::RoundtripKind)
+    return $date.ToString("yyyy-MM-dd'T'HH:mm:sszzz", [Globalization.CultureInfo]::InvariantCulture)
+  } catch {
+    Write-Warning "La fecha Git de '$($Model.name)' no es válida; se omitirá su fecha de publicación."
+    return $null
+  }
+}
+
+$script:gitExecutable = $null
+$script:gitHistoryAvailable = $false
+$gitCommand = Get-Command git -ErrorAction SilentlyContinue
+if ($gitCommand) {
+  $script:gitExecutable = $gitCommand.Source
+  $gitRoot = & $script:gitExecutable -C $root rev-parse --show-toplevel 2>$null
+  if ($LASTEXITCODE -eq 0) {
+    $shallowRepository = & $script:gitExecutable -C $root rev-parse --is-shallow-repository 2>$null
+    if ($LASTEXITCODE -eq 0 -and [string]$shallowRepository -eq 'true') {
+      throw 'El historial Git es superficial. Configure actions/checkout con fetch-depth: 0 antes de generar fechas de publicación.'
+    }
+    $script:gitHistoryAvailable = $LASTEXITCODE -eq 0
+  }
 }
 
 function Get-ImageDimensions {
@@ -223,6 +263,7 @@ function Build-Head {
     main{padding:28px 0 56px}.breadcrumbs{font-size:.84rem;color:var(--muted);margin:0 0 18px}.breadcrumbs ol{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
     h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.2;margin:.2rem 0 1rem}h2{font-size:1.25rem;margin:2rem 0 .6rem}
     .lead{font-size:1.05rem;color:#333;max-width:75ch}.hero-image{margin:24px 0;background:var(--soft);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+    .published-date{margin:-.65rem 0 1rem;color:var(--muted);font-size:.82rem}
     .hero-image img{display:block;width:100%;height:auto}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px}
     .gallery figure,.related-card,.category-card{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
     .gallery img,.related-card img,.category-card img{display:block;width:100%;height:auto;background:var(--soft)}
@@ -258,6 +299,12 @@ function Build-ModelPage {
   $imageUrl = Get-AssetUrl $Entry.PrimaryImage
   $imageAlt = "$name — imagen del modelo de papercraft"
   $category = $Entry.Category
+  $publishedDateMarkup = ''
+  if ($model.publishedAt) {
+    $publishedDate = [DateTimeOffset]::Parse([string]$model.publishedAt, [Globalization.CultureInfo]::InvariantCulture, [Globalization.DateTimeStyles]::RoundtripKind)
+    $publishedDateLabel = $publishedDate.ToString("d 'de' MMMM 'de' yyyy", [Globalization.CultureInfo]::GetCultureInfo('es-AR'))
+    $publishedDateMarkup = "<p class=`"published-date`">Publicado el $(ConvertTo-Html $publishedDateLabel)</p>"
+  }
 
   $imagesMarkup = New-Object System.Collections.Generic.List[string]
   $imageUrls = New-Object System.Collections.Generic.List[string]
@@ -298,7 +345,7 @@ function Build-ModelPage {
   if ($model.scale -and -not ($model.meta -and $model.meta.Escala)) {
     $facts.Add("<div><dt>Escala</dt><dd>$(ConvertTo-Html $model.scale)</dd></div>")
   }
-  if ($model.isPremium) {
+  if ($model.isPremium -and -not $model.hidePremiumLabel) {
     $priceText = ''
     if ($null -ne $model.price -and $model.priceCurrency) {
       $priceText = " $($model.priceCurrency) $($model.price)"
@@ -398,6 +445,7 @@ function Build-ModelPage {
     $breadcrumbMarkup
     <article>
       <h1>$safeName</h1>
+      $publishedDateMarkup
       <p class="lead">$(ConvertTo-Html $plainDescription)</p>
       $($imagesMarkup[0])
       $actionsMarkup
@@ -465,6 +513,24 @@ function Build-CategoryPage {
 "@
 }
 
+$modelsWithoutPublicationDate = New-Object System.Collections.Generic.List[string]
+foreach ($model in $models) {
+  $publicationDate = Get-ModelPublicationDate $model
+  if ($publicationDate) {
+    Add-Member -InputObject $model -NotePropertyName publishedAt -NotePropertyValue $publicationDate -Force
+  } else {
+    $modelsWithoutPublicationDate.Add([string]$model.name)
+  }
+}
+if ($modelsWithoutPublicationDate.Count -gt 0) {
+  $historyReason = if ($script:gitHistoryAvailable) { 'no se encontró un commit de incorporación confiable' } elseif ($gitCommand) { 'el proyecto no está dentro de un repositorio Git' } else { 'Git no está disponible en este entorno' }
+  Write-Warning "No se asignaron fechas porque $historyReason. Publicaciones sin fecha: $($modelsWithoutPublicationDate -join '; ')"
+}
+if ($OutputRoot -ne [System.IO.Path]::GetFullPath($root)) {
+  $modelsOutput = ConvertTo-Json -InputObject ([object[]]$models) -Depth 24
+  Write-Utf8File -Path (Join-Path $OutputRoot 'models.json') -Content $modelsOutput
+}
+
 $entries = New-Object System.Collections.Generic.List[object]
 $usedRoutes = @{}
 foreach ($model in $models) {
@@ -485,7 +551,11 @@ foreach ($model in $models) {
     throw "La publicación '$($model.name)' no tiene una imagen principal válida."
   }
   $plain = ConvertTo-PlainText $model.desc
-  $description = Get-MetaDescription $plain "$($model.name), publicación de papercraft de MW3."
+  $description = if (-not [string]::IsNullOrWhiteSpace([string]$model.seoDescription)) {
+    [string]$model.seoDescription
+  } else {
+    Get-MetaDescription $plain "$($model.name), publicación de papercraft de MW3."
+  }
   $entry = [pscustomobject]@{
     Model = $model
     Category = $category
@@ -493,7 +563,7 @@ foreach ($model in $models) {
     Route = $route
     Canonical = (Get-PageUrl $route)
     PrimaryImage = [string]$primaryImage
-    SeoTitle = "$($model.name) | Papercraft MW3"
+    SeoTitle = if (-not [string]::IsNullOrWhiteSpace([string]$model.seoTitle)) { [string]$model.seoTitle } else { "$($model.name) | Papercraft MW3" }
     Description = $description
   }
   $entries.Add($entry)
