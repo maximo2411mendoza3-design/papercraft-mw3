@@ -787,7 +787,6 @@
     .nav-btn.about-toggle[aria-expanded="true"] { box-shadow: 0 3px 10px rgba(0,0,0,0.16); }
     .nav-btn.news-toggle { align-self: center; padding: 0.55rem 0.85rem; border: 1px solid #100C08; border-radius: 999px; background: #100C08; color: #FFFFFF; font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
     .nav-btn.news-toggle:hover, .nav-btn.news-toggle:hover span { color: #FFFFFF; background: #100C08; }
-    .nav-btn.news-toggle[aria-expanded="true"] { box-shadow: 0 3px 10px rgba(0,0,0,0.2); }
     @media (prefers-reduced-motion: reduce) { .faq-icon, .faq-panel, .faq-panel-inner { transition: none; } }
     @media (prefers-reduced-motion: reduce) { .about-section { animation: none; } }
     @media (max-width: 700px) {
@@ -1922,7 +1921,7 @@
       <span class="theme-label-dark">Modo claro</span>
     </button>
     <button class="nav-btn about-toggle" id="about-toggle" type="button" aria-expanded="false" aria-controls="about-mw3" onclick="toggleAboutSection()">Qué es MW3</button>
-    <button class="nav-btn news-toggle" id="news-toggle" type="button" aria-expanded="false" aria-controls="news-mw3" onclick="toggleNewsSection()">Novedades</button>
+    <a class="nav-btn news-toggle" href="#news-mw3" onclick="scrollToNewsSection(); return false;">Novedades</a>
     <a class="nav-btn nav-instagram" href="https://www.instagram.com/mw3model/" target="_blank" rel="noopener noreferrer" style="margin-left:auto;">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -1999,6 +1998,7 @@
       <nav class="footer-column" aria-label="Explorar categorías">
         <h2>Explorar</h2>
         <a href="#category-f1" onclick="scrollToCategory('f1'); return false;">Autos</a>
+        <a href="#category-formula-e" onclick="scrollToCategory('formula-e'); return false;">Formula E</a>
         <a href="#category-cascos" onclick="scrollToCategory('cascos'); return false;">Cascos</a>
         <a href="#category-figuras" onclick="scrollToCategory('figuras'); return false;">Figuras</a>
         <a href="#category-otros" onclick="scrollToCategory('otros'); return false;">Otros</a>
@@ -2265,6 +2265,9 @@
    ║  2. Pegalo DESPUÉS del último } y ANTES del ]        ║
    ║  3. Separalo con una coma del bloque anterior        ║
    ║  4. Listo — index.html lee todo desde acá solo       ║
+   ║  Fecha: se genera desde el primer commit del modelo ║
+   ║  durante la compilación; no la edites manualmente.  ║
+   ║  Novedades toma automáticamente los 4 más recientes.║
    ║                                                      ║
    ║  PARA CAMBIAR UNA IMAGEN:                            ║
    ║  1. Subí la imagen a la carpeta imgs/ en GitHub      ║
@@ -2275,31 +2278,8 @@
 let models = []; // Los modelos se cargan desde models.json
 let latestModels = [];
 let mw3AboutOpen = false;
-let mw3NewsOpen = false;
 const MW3_ABOUT_TITLE = 'MW3 — Motorsport, reimagined in papercraft.';
-// Orden de salida solicitado para la selección de Novedades.
-const MW3_LATEST_MODEL_NAMES = [
-  'Ferrari 296 GT3 #31 — Emil Frey Racing (Max Verstappen, NLS9 2025)',
-  'Casco Kimi Antonelli — GP de Brasil 2026 (Homenaje a Ayrton Senna)',
-  'Casco Kimi Antonelli — GP de Italia (Monza) Bandera Italiana',
-  'Casco Max Verstappen — Red Bull Racing',
-  'Casco F1 — Fernando Alonso (Aston Martin)',
-  'Ferrari 296 GT3 #51 — AF Corse-Francorchamps Motors (GT World Challenge Europe)',
-  'Ferrari 296 GT3 #54 — Vista AF Corse (FIA WEC 2024)',
-  'Mercedes W17 F1 2026 — Pack Actualizaciones + Livery Especial GP Baréin (Russell + Antonelli) + Casco Especial',
-  'Figura de Piloto F1 2026 — Lando Norris (McLaren)',
-  'Pack Trofeos GP Azerbaiyán 2026',
-  'Pack Casco Max Verstappen — GP Austria + GP Miami',
-  'McLaren MCL40 F1 2026 — Pack Livery Base + Livery Especial OKX + Number Boards',
-  'McLaren MCL40 F1 2026 — GP Italia y Madrid · Livery Especial OKX + Number Boards',
-  'McLaren MCL40 F1 2026 — Livery Base + Number Boards',
-  'Figura de Piloto F1 2026 — Charles Leclerc (Ferrari)',
-  'Figura de Piloto F1 2026 — Charles Leclerc, Mono Especial GP Singapur (Ferrari)',
-  'McLaren F1 2025 — Lando Norris',
-  'Mercedes W17 F1 2026 — Pack Russell + Antonelli (Normal + GP Japón "Wolf")',
-  'TGR Haas F1 2026 — Pack Normal + GP Japón "Godzilla"',
-  'TGR Haas F1 2026 — GP Japón · Livery Especial "Godzilla"'
-];
+const MW3_LATEST_MODELS_LIMIT = 4;
 const MW3_ABOUT_PARAGRAPHS = [
   'Mi nombre es Máximo, soy de Formosa, una ciudad al norte de Argentina, y MW3 es mi proyecto personal, un espacio donde comparto exclusivamente modelos de papercraft diseñados y desarrollados por mí, inspirados en el mundo del automovilismo.',
   'Este proyecto nace de mi pasión por el motorsport y de la ambición de llevar el papercraft mucho más allá de lo convencional. Busco crear modelos que alcancen un alto nivel de realismo, precisión y calidad, utilizando técnicas propias, investigación constante y herramientas desarrolladas internamente para perfeccionar cada etapa del diseño y la construcción.',
@@ -2310,16 +2290,18 @@ const MW3_ABOUT_PARAGRAPHS = [
 ];
 
 function resolveLatestModels() {
-  const resolved = [];
-  MW3_LATEST_MODEL_NAMES.forEach(name => {
-    const matches = models.filter(model => model.name === name);
-    if (matches.length !== 1) {
-      console.error(`Novedades: se esperaba un modelo llamado "${name}", encontrados: ${matches.length}.`);
-      return;
-    }
-    resolved.push(matches[0]);
-  });
-  return resolved;
+  const seenNames = new Set();
+  const catalogModels = models
+    .filter(model => {
+      if (model.isCommission || !model.name || seenNames.has(model.name)) return false;
+      seenNames.add(model.name);
+      return true;
+    });
+  const hasCompleteDates = catalogModels.every(model => Number.isFinite(Date.parse(model.publishedAt || '')));
+  const orderedModels = hasCompleteDates
+    ? catalogModels.sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt) || models.indexOf(a) - models.indexOf(b))
+    : catalogModels;
+  return orderedModels.slice(0, MW3_LATEST_MODELS_LIMIT);
 }
 
 function renderMw3AboutFaq() {
@@ -2660,14 +2642,13 @@ function buildMw3AboutSection() {
 }
 
 function buildMw3NewsSection(list) {
-  const hidden = mw3NewsOpen ? '' : ' hidden';
   const newsModels = latestModels.filter(model => list.includes(model));
   const cards = newsModels.length
     ? `<div class="category-grid">${newsModels.map(model => buildCard(model)).join('')}</div>`
     : '<p class="news-empty">No hay novedades que coincidan con la búsqueda.</p>';
-  return `<section class="about-section news-section" id="news-mw3" aria-labelledby="news-mw3-title"${hidden}>
+  return `<section class="about-section news-section" id="news-mw3" aria-labelledby="news-mw3-title">
     <h2 id="news-mw3-title">Novedades</h2>
-    <p class="news-intro">Esta sección reúne los últimos 20 lanzamientos. Los modelos aparecen según su orden de salida original en el catálogo.</p>
+    <p class="news-intro">Los cuatro modelos incorporados más recientemente aparecen primero.</p>
     ${cards}
   </section>`;
 }
@@ -2940,7 +2921,9 @@ function openModalV2(m, idx) {
       <div class="m2-secure">${shieldIcon} El archivo todavía no está disponible</div>`;
   } else if (m.isPremium) {
     const p = getPricing(m);
-    const buttonPrice = `$${Math.floor(p.price)}`;
+    const buttonPrice = m.exactPriceOnBuyButton
+      ? `${p.currency} ${Number(p.price).toFixed(2)}`
+      : `$${Math.floor(p.price)}`;
     const mpFinal = String(p.finalPrice).replace(/^([A-Z]{3}) \$/, '$1 ');
     footer = `<div class="m2-pay">
         <a class="m2-pill m2-buy" href="${m.file}" target="_blank" rel="noopener noreferrer" aria-label="Comprar por ${buttonPrice}; verificá el total final en Ko-fi"><span>Comprar ${buttonPrice}</span></a>
@@ -3317,6 +3300,7 @@ document.addEventListener('keydown', e => {
 const CATEGORY_PAGE_SIZE = 8;
 const CATEGORY_SECTIONS = [
   { id: 'f1', title: 'Fórmula 1' },
+  { id: 'formula-e', title: 'Formula E' },
   { id: 'gt3', title: 'Autos GT3' },
   { id: 'cascos', title: 'Cascos' },
   { id: 'figuras', title: 'Figuras' },
@@ -3337,6 +3321,7 @@ function getCategory(m) {
   if (m.isCasco || tags.some(t => t.toLowerCase() === 'casco')) return 'cascos';
   if (tags.some(t => t.toLowerCase() === 'piloto') || name.includes('figura')) return 'figuras';
   if (tags.some(t => t.toLowerCase().includes('trofeo')) || name.includes('trofeo')) return 'otros';
+  if (tags.some(t => t.toLowerCase() === 'formula e') || /\bformula\s+e\b/i.test(name)) return 'formula-e';
   if (tags.some(t => /gt[\s-]?3/i.test(t)) || /gt[\s-]?3/i.test(name)) return 'gt3';
   if (tags.some(t => t.toLowerCase() === 'f1') || /\bf1\b/i.test(name)) return 'f1';
   return 'otros';
@@ -3350,7 +3335,7 @@ function filter() {
     (m.tags||[]).some(t=>t.toLowerCase().includes(q)) ||
     (m.scale||'').includes(q)
   );
-  const categoryOrder = { f1: 0, gt3: 1, cascos: 2, figuras: 3, otros: 4 };
+  const categoryOrder = { f1: 0, 'formula-e': 1, gt3: 2, cascos: 3, figuras: 4, otros: 5 };
   list.sort((a, b) => {
     const order = categoryOrder[getCategory(a)] - categoryOrder[getCategory(b)];
     if (order) return order;
@@ -3502,16 +3487,11 @@ function togglePastina() {
 }
 
 /* ── NAVIGATION ── */
-function toggleNewsSection() {
-  mw3NewsOpen = !mw3NewsOpen;
+function scrollToNewsSection() {
   const search = document.getElementById('search');
   if (search) search.value = '';
   filter();
   showSection('inicio', null, false);
-
-  const button = document.getElementById('news-toggle');
-  if (button) button.setAttribute('aria-expanded', String(mw3NewsOpen));
-  if (!mw3NewsOpen) return;
 
   window.requestAnimationFrame(() => {
     const newsSection = document.getElementById('news-mw3');

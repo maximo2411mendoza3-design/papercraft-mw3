@@ -14,6 +14,79 @@
     }
   },
   {
+    "name": "Formula E Pascal Wehrlein 2026",
+    "desc": "Modelo de papercraft del Porsche Formula E Gen3 Evo de Pascal Wehrlein para la temporada 2026, a escala 1:18.",
+    "seoTitle": "Formula E Pascal Wehrlein 2026 Gen3 Evo Papercraft | MW3",
+    "seoDescription": "Download the Pascal Wehrlein 2026 Formula E Gen3 Evo papercraft model in 1:18 scale. An original and detailed MW3 design.",
+    "scale": "1:18",
+    "tags": [
+      "Formula E",
+      "Porsche",
+      "Pascal Wehrlein",
+      "Gen3 Evo",
+      "2026"
+    ],
+    "meta": {
+      "Auto": "Porsche Formula E Gen3 Evo",
+      "Equipo": "Porsche",
+      "Piloto": "Pascal Wehrlein",
+      "Generación": "Gen3 Evo",
+      "Temporada": "2026",
+      "Escala": "1:18",
+      "Formato": "PDF"
+    },
+    "imgs": [
+      "imgs/FOR1.png",
+      "imgs/FOR2.png",
+      "imgs/FOR3.png",
+      "imgs/FOR4.png",
+      "imgs/FOR5.png",
+      "imgs/FOR6.png"
+    ],
+    "file": "https://ko-fi.com/s/46a2e95756",
+    "cardClass": "premium",
+    "isPremium": true,
+    "price": 7.49,
+    "priceCurrency": "USD",
+    "exactPriceOnBuyButton": true,
+    "hidePremiumLabel": true,
+    "pepakura": {
+      "title": "Vista previa en Pepakura",
+      "desc": "Vistas previas del modelo desarrollado en Pepakura antes de imprimirlo y armarlo.",
+      "imgs": [
+        "imgs/FOR7.png",
+        "imgs/FOR8.png"
+      ]
+    },
+    "cardV2": {
+      "subtitle": "Formula E · Porsche · Gen3 Evo",
+      "year": "2026",
+      "format": "PDF",
+      "pepakura": "PDO",
+      "kind": "Modelo papercraft",
+      "modal": {
+        "rows": [
+          {
+            "icon": "flag",
+            "label": "Categoría",
+            "value": "Formula E"
+          },
+          {
+            "icon": "team",
+            "label": "Equipo",
+            "value": "Porsche"
+          },
+          {
+            "icon": "driver",
+            "label": "Piloto",
+            "value": "Pascal Wehrlein"
+          }
+        ],
+        "desc": "Modelo Formula E Porsche Gen3 Evo de Pascal Wehrlein para la temporada 2026."
+      }
+    }
+  },
+  {
     "name": "Ferrari 296 GT3 #31 — Emil Frey Racing (Max Verstappen, NLS9 2025)",
     "desc": "Modelo a escala del Ferrari 296 GT3 #31 de Emil Frey Racing, en papercraft. Con este auto, Max Verstappen y Chris Lulham lograron la victoria en la NLS9 de 2025, disputada en el circuito Nürburgring Nordschleife, durante el 57.º ADAC Barbarossapreis. Fue el debut de Verstappen en una carrera de GT3 y su primera victoria en el automovilismo real fuera de la Fórmula 1. Incluye detalles de carrocería, alerones y soporte de exhibición. Recomendado imprimir en cartulina de 200g para obtener el mejor resultado.<br><br><b>La descarga, ya sea gratuita o de pago, no otorga derecho a modificar, redistribuir ni subir a otros sitios los modelos de MW3 sin autorización expresa del autor.</b>",
     "scale": "1:20",
